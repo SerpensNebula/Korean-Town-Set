@@ -1283,7 +1283,7 @@ if (sw_override == 1) {
             // HIGH_FLOOR_BUILDING_2010_A_west // empty
                 spritelayout layout_HIGH_FLOOR_BUILDING_2010_A_west {
                     ground {
-                        sprite:          set_HIGH_FLOOR_BUILDING_2010_A_GROUND;
+                        sprite:          set_HIGH_FLOOR_BUILDING_2010_A_west;
                     }
 
                     building {
@@ -1324,7 +1324,7 @@ if (sw_override == 1) {
                         substitute:                     87; // 2x1
                         name:                           string(STR_HIGH_FLOOR_BUILDING_NAME);
                         availability_mask:              [bitmask(TOWNZONE_CENTRE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
-                        probability:                    4;
+                        probability:                    8;
                         years_available:                [2010, 50000];
                         minimum_lifetime:               10;
 
