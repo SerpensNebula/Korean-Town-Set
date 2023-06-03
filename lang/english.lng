@@ -11,7 +11,7 @@ STR_PARAM_OVERRIDE_NAME                           :OpenTTD 기본 건물 생성�
 STR_PARAM_OVERRIDE_DESC                           :STR_PARAM_OVERRIDE_DESC
 
 # Building names
+STR_SHOPPING_DIST_NAME                            :저층 상가
 STR_LOW_FLOOR_BUILDING_NAME                       :고층 상가
 STR_MID_FLOOR_BUILDING_NAME                       :저층 오피스 빌딩
 STR_HIGH_FLOOR_BUILDING_NAME                      :고층 오피스 빌딩
-STR_SHOPPING_DIST_NAME                            :저층 상가

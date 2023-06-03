@@ -11,7 +11,7 @@ STR_PARAM_OVERRIDE_NAME                           :기본 건물 생성하지 �
 STR_PARAM_OVERRIDE_DESC                           :OpenGFX의 건물이 더이상 나타나지 않게 해줍니다.
 
 # Building names
+STR_SHOPPING_DIST_NAME                            :저층 상가
 STR_LOW_FLOOR_BUILDING_NAME                       :고층 상가
 STR_MID_FLOOR_BUILDING_NAME                       :저층 오피스 빌딩
 STR_HIGH_FLOOR_BUILDING_NAME                      :고층 오피스 빌딩
-STR_SHOPPING_DIST_NAME                            :저층 상가
