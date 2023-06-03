@@ -1,0 +1,17 @@
+##grflangid 0x3A
+
+# GRF name and description
+STR_GRF_NAME                                      :한국 도시 세트 alpha0.1.0
+STR_GRF_DESC                                      :이 NewGRF는 북한을 제외한 한국 스타일의 건물을 추가해줍니다.
+
+STR_GRF_URL                                       :https://github.com/SerpensNebula/Korean-Early-Train-Set
+
+# Parameters
+STR_PARAM_OVERRIDE_NAME                           :기본 건물 생성하지 않기
+STR_PARAM_OVERRIDE_DESC                           :OpenGFX의 건물이 더이상 나타나지 않게 해줍니다.
+
+# Building names
+STR_LOW_FLOOR_BUILDING_NAME                       :고층 상가
+STR_MID_FLOOR_BUILDING_NAME                       :저층 오피스 빌딩
+STR_HIGH_FLOOR_BUILDING_NAME                      :고층 오피스 빌딩
+STR_SHOPPING_DIST_NAME                            :저층 상가
