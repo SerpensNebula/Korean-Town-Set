@@ -1,3 +1,3 @@
-# Korean-Town-Set alpha0.1.0
+# Korean-Town-Set alpha0.2.0
 
-![3](https://github.com/SerpensNebula/Korean-Town-Set/assets/75788864/f8b6efc8-4422-4077-8c06-7bb3b05b539f)
+![1](https://github.com/SerpensNebula/Korean-Town-Set/assets/75788864/0e2f866f-1381-4070-9af2-54b57855fa65)
