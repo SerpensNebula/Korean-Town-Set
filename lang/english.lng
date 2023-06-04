@@ -1,16 +1,19 @@
 ##grflangid 0x01
 
 # GRF name and description
-STR_GRF_NAME                                      :Korean Town Set alpha0.1.0
+STR_GRF_NAME                                      :Korean Town Set alpha0.2.0
 STR_GRF_DESC                                      :Korean Town Set includes Korean style buildings except North Korea.
 
 STR_GRF_URL                                       :https://github.com/SerpensNebula/Korean-Early-Train-Set
 
 # Parameters
-STR_PARAM_OVERRIDE_NAME                           :OpenTTD 기본 건물 생성하지 않기
-STR_PARAM_OVERRIDE_DESC                           :STR_PARAM_OVERRIDE_DESC
+STR_PARAM_OVERRIDE_NAME                           :기본 건물 생성하지 않기
+STR_PARAM_OVERRIDE_DESC                           :오픈트타 기본 건물이 더이상 나타나지 않게 해줍니다.
+STR_PARAM_LIFETIME_NAME                           :건물 최소수명 설정
+STR_PARAM_LIFETIME_DESC                           :모든 건물의 최소수명을 설정합니다. 최소수명을 줄이면 건물들의 재건축 빈도가 짧아지고 도시의 모습도 빠르게 바뀝니다.
 
 # Building names
+STR_APT_HIGH_NAME                                 :고층 아파트
 STR_SHOPPING_DIST_NAME                            :저층 상가
 STR_LOW_FLOOR_BUILDING_NAME                       :고층 상가
 STR_MID_FLOOR_BUILDING_NAME                       :저층 오피스 빌딩
