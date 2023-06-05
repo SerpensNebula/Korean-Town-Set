@@ -2366,6 +2366,8 @@ if (para_override == 1) {
                         recolour_mode:   RECOLOUR_REMAP;
                         palette:         PALETTE_USE_DEFAULT;
                     }
+
+
                 }
 
                 spriteset (set_TALL_APT_2005_B_high_north, "./Korean_Town_Set/gfx/APT_2005.png") {
@@ -2399,6 +2401,10 @@ if (para_override == 1) {
                         recolour_mode:   RECOLOUR_REMAP;
                         palette:         PALETTE_USE_DEFAULT;
                     }
+
+                    building {
+                        sprite:          set_TALL_APT_2005_B_TREE;
+                    }
                 }
 
                 spriteset (set_TALL_APT_2005_B_high_east, "./Korean_Town_Set/gfx/APT_2005.png") {
@@ -2412,6 +2418,10 @@ if (para_override == 1) {
 
                 spriteset (set_TALL_APT_2005_B_GROUND_east, "./Korean_Town_Set/gfx/APT_2005.png") {
                     tmpl_mid_building_1x2_east(600, 400)
+                }
+
+                spriteset (set_TALL_APT_2005_B_TREE, "./Korean_Town_Set/gfx/TREE.png") {
+                    [0, 0, 38, 56, -5, -36]
                 }
 
             // Switch
