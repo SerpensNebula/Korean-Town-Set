@@ -1,8 +1,8 @@
 ##grflangid 0x3A
 
 # GRF name and description
-STR_GRF_NAME                                      :한국 도시 세트 alpha0.2.0
-STR_GRF_DESC                                      :이 NewGRF는 북한을 제외한 한국 스타일의 건물을 추가해줍니다. {}{}{YELLOW}2020년 이후부터 플레이를 권장합니다. 과거의 건물들은 추가 예정입니다!
+STR_GRF_NAME                                      :한국 도시 세트 alpha0.3.0
+STR_GRF_DESC                                      :이 NewGRF는 북한을 제외한 한국 스타일의 건물을 추가해줍니다. {}{}{YELLOW}2010년 이후부터 플레이를 권장합니다. 과거의 건물들은 추가 예정입니다!
 
 STR_GRF_URL                                       :https://github.com/SerpensNebula/Korean-Early-Train-Set
 
@@ -15,8 +15,14 @@ STR_PARAM_LIFETIME_DESC                           :모든 건물의 최소수명
 # Building names
 STR_SINGLE_HOUSE_NAME                             :단독주택
 STR_VILLA_NAME                                    :빌라
-STR_APT_HIGH_NAME                                 :고층 아파트
-STR_SHOPPING_DIST_NAME                            :저층 상가
-STR_LOW_FLOOR_BUILDING_NAME                       :고층 상가
-STR_MID_FLOOR_BUILDING_NAME                       :저층 오피스 빌딩
-STR_HIGH_FLOOR_BUILDING_NAME                      :고층 오피스 빌딩
+STR_LOW_APT_NAME                                  :저층 아파트
+STR_MID_APT_NAME                                  :고층 아파트
+STR_TALL_APT_NAME                                 :초고층 아파트
+STR_SHOP_NAME                                     :가게
+STR_SMALL_SHOPPING_DIST_NAME                      :저층 상가
+STR_MID_SHOPPING_DIST_NAME                        :고층 상가
+STR_LARGE_SHOPPING_DIST_NAME                      :초고층 상가
+STR_SMALL_OFFICE_NAME                             :저층 오피스 빌딩
+STR_MID_OFFICE_NAME                               :고층 오피스 빌딩
+STR_LARGE_OFFICE_NAME                             :초고층 오피스 빌딩
+STR_PLAYGROUND_APT_NAME                           :아파트 놀이터
