@@ -27,6 +27,7 @@
                 }
             }
     }
+
 // etc.
     if (para_override == 1) {
         disable_item(FEAT_HOUSES, 0, 109);
@@ -99,6 +100,32 @@
         template tmpl_high_building_2x1_north(x, y) {
             [x, y, 110, 290, -70, -242]
         }
+
+// switches
+    switch(FEAT_HOUSES, SELF, sw_check_near_APT, nearest_house_matching_criterion(1, SEARCH_HOUSE_BY_CLASS)) {
+        0:return 0;
+        return 1;
+    }                               
+
+    switch(FEAT_HOUSES, SELF, sw_check_avoid_APT, nearest_house_matching_criterion(10, SEARCH_HOUSE_BY_CLASS)) {
+        0:return 1;
+        return sw_check_near_APT;
+    }
+
+    switch(FEAT_HOUSES, PARENT, sw_check_pop_8000, population > 8000) {
+        0:return 0;
+        return sw_check_avoid_APT;
+    }
+
+    switch(FEAT_HOUSES, PARENT, sw_check_pop_10000, population > 10000) {
+        0:return 0;
+        return sw_check_avoid_APT;
+    }
+
+    switch(FEAT_HOUSES, PARENT, sw_check_pop_20000, population > 20000) {
+        0:return 0;
+        return sw_check_avoid_APT;
+    }
 
 // buildings_1970
     // MID_FLOOR_BUILDINGS
@@ -309,7 +336,7 @@
                         local_authority_impact:         105;
                         removal_cost_multiplier:        130;
 
-                        building_class:                 2;
+                        building_class:                 4;
                     }
 
                     graphics {
@@ -412,10 +439,10 @@
                     layout_building_SINGLE_HOUSE_1990_A;
                 }
 
-                switch(FEAT_HOUSES, SELF, sw_check_avoid_SINGLE_HOUSE_1990_A, nearest_house_matching_criterion(2, SEARCH_HOUSE_BY_CLASS)) {
+                switch(FEAT_HOUSES, SELF, sw_check_near_SINGLE_HOUSE_1990_A, nearest_house_matching_criterion(1, SEARCH_HOUSE_BY_CLASS)) {
                     0:return 1;
                     return 0;
-                }
+                }  
 
             // Item definition
                 item(FEAT_HOUSES, kt_SINGLE_HOUSE_1990_A, 115, HOUSE_SIZE_1X1) {
@@ -423,7 +450,7 @@
                         substitute:                     0; // 1x1
                         name:                           string(STR_SINGLE_HOUSE_NAME);
                         availability_mask:              [bitmask(TOWNZONE_EDGE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
-                        probability:                    4;
+                        probability:                    1;
                         years_available:                [1990, 65535];
                         minimum_lifetime:               2*(para_lifetime);
 
@@ -434,13 +461,13 @@
                         local_authority_impact:         75;
                         removal_cost_multiplier:        70;
 
-                        building_class:                 7;
+                        building_class:                 1;
                     }
 
                     graphics {
                         default:                        sw_SINGLE_HOUSE_1990_A;
                         colour:                         random_bits%15+775;
-                        construction_check:             sw_check_avoid_SINGLE_HOUSE_1990_A;
+                        construction_check:             sw_check_near_SINGLE_HOUSE_1990_A;
                     }
                 }
 
@@ -590,7 +617,7 @@
                         local_authority_impact:         80;
                         removal_cost_multiplier:        80;
 
-                        building_class:                 1;
+                        building_class:                 2;
                     }
 
                     graphics {
@@ -696,7 +723,7 @@
                         local_authority_impact:         80;
                         removal_cost_multiplier:        80;
 
-                        building_class:                 1;
+                        building_class:                 2;
                     }
 
                     graphics {
@@ -849,7 +876,7 @@
                         local_authority_impact:         110;
                         removal_cost_multiplier:        140;
 
-                        building_class:                 2;
+                        building_class:                 4;
                     }
 
                     graphics {
@@ -1038,11 +1065,13 @@
                         local_authority_impact:         100;
                         removal_cost_multiplier:        125;
 
-                        building_class:                 2;
+                        building_class:                 4;
                     }
 
                     graphics {
                         default:                        sw_LOW_FLOOR_BUILDING_2000_B;
+                        graphics_north:                 sw_LOW_FLOOR_BUILDING_2000_B;
+                        graphics_east:                  sw_LOW_FLOOR_BUILDING_2000_B;
                     }
                 }
     
@@ -1239,7 +1268,7 @@
                         local_authority_impact:         120;
                         removal_cost_multiplier:        150;
 
-                        building_class:                 3;
+                        building_class:                 5;
                         building_flags:                 bitmask(HOUSE_FLAG_ANIMATE);
                         animation_info:                 [ANIMATION_LOOPING, 2];
                         animation_speed:                6;
@@ -1370,7 +1399,7 @@
                         local_authority_impact:         120;
                         removal_cost_multiplier:        150;
 
-                        building_class:                 3;
+                        building_class:                 5;
                         building_flags:                 bitmask(HOUSE_FLAG_ANIMATE);
                         animation_info:                 [ANIMATION_LOOPING, 2];
                         animation_speed:                6;
@@ -1670,7 +1699,7 @@
                         local_authority_impact:         95;
                         removal_cost_multiplier:        130;
 
-                        building_class:                 1;
+                        building_class:                 3;
                     }
 
                     graphics {
@@ -1882,7 +1911,7 @@
                         local_authority_impact:         160;
                         removal_cost_multiplier:        200;
 
-                        building_class:                 5;
+                        building_class:                 6;
                         building_flags:                 bitmask(HOUSE_FLAG_ANIMATE);
                         animation_info:                 [ANIMATION_LOOPING, 2];
                         animation_speed:                7;
@@ -1962,29 +1991,13 @@
                 }
 
             // Switch
-
                 switch(FEAT_HOUSES, SELF, sw_graphic_LOW_APT_2000_A1, construction_state ) {
                     0..2: sw_const_LOW_APT_2000_A1;
                     layout_building_LOW_APT_2000_A1;
-                }
-
-                switch(FEAT_HOUSES, SELF, sw_check_near_LOW_APT_2000, nearest_house_matching_criterion(1, SEARCH_HOUSE_BY_CLASS)) {
-                    0:return 0;
-                    return 1;
-                }                               
-
-                switch(FEAT_HOUSES, SELF, sw_check_avoid_LOW_APT_2000, nearest_house_matching_criterion(8, SEARCH_HOUSE_BY_CLASS)) {
-                    0:return 1;
-                    return sw_check_near_LOW_APT_2000;
-                }
-
-                switch(FEAT_HOUSES, PARENT, sw_check_pop_LOW_APT_2000, population > 5000) {
-                    0:return 0;
-                    return sw_check_avoid_LOW_APT_2000;
-                }
+                }                
 
             // Item definition main         
-                item(FEAT_HOUSES, kt_LOW_APT_2000, 165, HOUSE_SIZE_1X1) {
+                item(FEAT_HOUSES, kt_LOW_APT_2000, 159, HOUSE_SIZE_1X1) {
                     property {
                         substitute:                     0; // 1x1
                         name:                           string(STR_LOW_APT_NAME);
@@ -2006,12 +2019,130 @@
 
                     graphics {
                         default:                        sw_graphic_LOW_APT_2000_A1;
-                        construction_check:             sw_check_pop_LOW_APT_2000;
+                        construction_check:             sw_check_pop_8000;
                     }
                 }
 
-    // MID_APTS 
-        // MID_APT_2000_A
+    // MID_APTS
+        // MID_APT_1990
+            // construction_1
+                spritelayout layout_const_MID_APT_1990_A_1 {
+                    ground {
+                        sprite:          set_const_ground_MID_APT_1990_A;
+                    }
+
+                    building {
+                        sprite:          set_const_building_MID_APT_1990_A_1;
+                    }
+                }
+
+                spriteset(set_const_building_MID_APT_1990_A_1, "./Korean_Town_Set/gfx/MID_APT_1990.png") {
+                    tmpl_mid_building(0, 0)
+                }
+
+            // construction_2
+                spritelayout layout_const_MID_APT_1990_A_2 {
+                    ground {
+                        sprite:          set_const_ground_MID_APT_1990_A;
+                    }
+
+                    building {
+                        sprite:          set_const_building_MID_APT_1990_A_2;
+                    }                    
+                }
+
+                spriteset(set_const_building_MID_APT_1990_A_2, "./Korean_Town_Set/gfx/MID_APT_1990.png") {
+                    tmpl_mid_building(80, 0)
+                }
+
+            // construction general
+                switch(FEAT_HOUSES, SELF, sw_const_MID_APT_1990_A, construction_state) {
+                    0: layout_const_MID_APT_1990_A_1;
+                    1: layout_const_MID_APT_1990_A_2;
+                    2: layout_const_MID_APT_1990_A_2;
+                }
+
+            // MID_APT_1990_A
+                spritelayout layout_building_MID_APT_1990_A_high {
+                    ground {
+                        sprite:          set_ground_MID_APT_1990_A;
+                    }
+
+                    building {
+                        sprite:          set_building_MID_APT_1990_A_high;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_MID_APT_1990_A_high, "./Korean_Town_Set/gfx/MID_APT_1990.png") {
+                    tmpl_mid_building(160, 0)
+                }
+
+                spritelayout layout_building_MID_APT_1990_A_low {
+                    ground {
+                        sprite:          set_ground_MID_APT_1990_A;
+                    }
+
+                    building {
+                        sprite:          set_building_MID_APT_1990_A_low;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_MID_APT_1990_A_low, "./Korean_Town_Set/gfx/MID_APT_1990.png") {
+                    tmpl_mid_building(240, 0)
+                }              
+
+            // etc.
+                spriteset(set_const_ground_MID_APT_1990_A, "./Korean_Town_Set/gfx/MID_APT_1990.png") {
+                    tmpl_mid_building(320, 0)
+                }
+
+                spriteset (set_ground_MID_APT_1990_A, "./Korean_Town_Set/gfx/MID_APT_1990.png") {
+                    tmpl_mid_building(400, 0)
+                }
+
+            // Switch
+                switch(FEAT_HOUSES, SELF, sw_random_MID_APT_1990_A_height, random_bits % 2 ) {
+                    1: layout_building_MID_APT_1990_A_high;
+                    layout_building_MID_APT_1990_A_low;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_building_MID_APT_1990_A, construction_state ) {
+                    0..2: sw_const_MID_APT_1990_A;
+                    sw_random_MID_APT_1990_A_height;
+                }
+
+            // Item definition main         
+                item(FEAT_HOUSES, kt_MID_APT_1990, 165, HOUSE_SIZE_1X1) {
+                    property {
+                        substitute:                     0; // 1x1
+                        name:                           string(STR_MID_APT_NAME);
+                        availability_mask:              [ALL_TOWNZONES & ~bitmask(TOWNZONE_CENTRE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+                        random_colours:                 [COLOUR_CREAM, COLOUR_GREY, COLOUR_BROWN, COLOUR_PINK];
+                        probability:                    4;
+                        years_available:                [1990, 65535];
+                        minimum_lifetime:               4*(para_lifetime);
+
+                        population:                     115;
+                        mail_multiplier:                30;
+                        accepted_cargos:                [[PASS, 7], [MAIL, 4], [GOOD, 2]];
+                    
+                        local_authority_impact:         125;
+                        removal_cost_multiplier:        165;
+
+                        building_class:                 8;
+                    }
+
+                    graphics {
+                        default:                        sw_building_MID_APT_1990_A;
+                        construction_check:             sw_check_pop_8000;
+                    }
+                }
+
+        // MID_APT_2000_A1
             // construction_1
                 spritelayout layout_const_MID_APT_2000_A1_1 {
                     ground {
@@ -2117,23 +2248,8 @@
                     sw_random_MID_APT_2000_A1_roof;
                 }
 
-                switch(FEAT_HOUSES, SELF, sw_check_near_MID_APT_2000, nearest_house_matching_criterion(1, SEARCH_HOUSE_BY_CLASS) > 0) {
-                    0:return 0;
-                    return 1;
-                }                               
-
-                switch(FEAT_HOUSES, SELF, sw_check_avoid_MID_APT_2000, nearest_house_matching_criterion(8, SEARCH_HOUSE_BY_CLASS)) {
-                    0:return 1;
-                    return sw_check_near_MID_APT_2000;
-                }
-
-                switch(FEAT_HOUSES, PARENT, sw_check_pop_MID_APT_2000, population > 10000) {
-                    0:return 0;
-                    return sw_check_avoid_MID_APT_2000;
-                }
-
             // Item definition main         
-                item(FEAT_HOUSES, kt_MID_APT_2000_MAIN, 160, HOUSE_SIZE_1X1) {
+                item(FEAT_HOUSES, kt_MID_APT_2000_A1, 160, HOUSE_SIZE_1X1) {
                     property {
                         substitute:                     0; // 1x1
                         name:                           string(STR_MID_APT_NAME);
@@ -2150,16 +2266,16 @@
                         local_authority_impact:         125;
                         removal_cost_multiplier:        165;
 
-                        building_class:                 6;
+                        building_class:                 9;
                     }
 
                     graphics {
                         default:                        sw_building_MID_APT_2000_A1;
-                        construction_check:             sw_check_pop_MID_APT_2000;
+                        construction_check:             sw_check_pop_10000;
                     }
                 }
 
-        // MID_APT_2000_A
+        // MID_APT_2000_A2
             // construction_1
                 spritelayout layout_const_MID_APT_2000_A2_1_north {
                     ground {
@@ -2380,7 +2496,7 @@
                     sw_MID_APT_2000_A2_high;
                 }
 
-            // Item definition main         
+            // Item definition
                 item(FEAT_HOUSES, kt_MID_APT_2000_A2, 162, HOUSE_SIZE_1X2) {
                     property {
                         substitute:                     68; // 1x2
@@ -2398,12 +2514,166 @@
                         local_authority_impact:         125;
                         removal_cost_multiplier:        165;
 
-                        building_class:                 6;
+                        building_class:                 9;
                     }
 
                     graphics {
-                        default:                        sw_random_MID_APT_2000_A2;
-                        construction_check:             sw_check_pop_MID_APT_2000;
+                        default:                        sw_random_MID_APT_2000_A2;                        
+                        graphics_north:                 sw_random_MID_APT_2000_A2;
+                        graphics_east:                  sw_random_MID_APT_2000_A2;
+                        construction_check:             sw_check_pop_10000;
+                    }
+                }
+
+        // MID_APT_2010
+            // construction_1
+                spritelayout layout_const_MID_APT_2010_A1_1 {
+                    ground {
+                        sprite:          set_const_ground_MID_APT_2010_A1;
+                    }
+
+                    building {
+                        sprite:          set_const_building_MID_APT_2010_A1_1;
+                    }
+                }
+
+                spriteset(set_const_building_MID_APT_2010_A1_1, "./Korean_Town_Set/gfx/MID_APT_2010.png") {
+                    tmpl_mid_building(0, 0)
+                }
+
+            // construction_2
+                spritelayout layout_const_MID_APT_2010_A1_2 {
+                    ground {
+                        sprite:          set_const_ground_MID_APT_2010_A1;
+                    }
+
+                    building {
+                        sprite:          set_const_building_MID_APT_2010_A1_2;
+                    }                    
+                }
+
+                spriteset(set_const_building_MID_APT_2010_A1_2, "./Korean_Town_Set/gfx/MID_APT_2010.png") {
+                    tmpl_mid_building(80, 0)
+                }
+
+            // construction general
+                switch(FEAT_HOUSES, SELF, sw_const_MID_APT_2010_A1, construction_state) {
+                    0: layout_const_MID_APT_2010_A1_1;
+                    1: layout_const_MID_APT_2010_A1_2;
+                    2: layout_const_MID_APT_2010_A1_2;
+                }
+
+            // MID_APT_2010_A1
+                spritelayout layout_building_MID_APT_2010_A1_1_low {
+                    ground {
+                        sprite:          set_building_ground_MID_APT_2010_A1;
+                    }
+
+                    building {
+                        sprite:          set_building_MID_APT_2010_A1_1_low;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_MID_APT_2010_A1_1_low, "./Korean_Town_Set/gfx/MID_APT_2010.png") {
+                    tmpl_mid_building(160, 0)
+                }
+
+                spritelayout layout_building_MID_APT_2010_A1_1_high {
+                    ground {
+                        sprite:          set_building_ground_MID_APT_2010_A1;
+                    }
+
+                    building {
+                        sprite:          set_building_MID_APT_2010_A1_1_high;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_MID_APT_2010_A1_1_high, "./Korean_Town_Set/gfx/MID_APT_2010.png") {
+                    tmpl_mid_building(240, 0)
+                }
+
+                spritelayout layout_building_MID_APT_2010_A1_2_low {
+                    ground {
+                        sprite:          set_building_ground_MID_APT_2010_A1;
+                    }
+
+                    building {
+                        sprite:          set_building_MID_APT_2010_A1_2_low;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_MID_APT_2010_A1_2_low, "./Korean_Town_Set/gfx/MID_APT_2010.png") {
+                    tmpl_mid_building(320, 0)
+                }
+
+                spritelayout layout_building_MID_APT_2010_A1_2_high {
+                    ground {
+                        sprite:          set_building_ground_MID_APT_2010_A1;
+                    }
+
+                    building {
+                        sprite:          set_building_MID_APT_2010_A1_2_high;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_MID_APT_2010_A1_2_high, "./Korean_Town_Set/gfx/MID_APT_2010.png") {
+                    tmpl_mid_building(400, 0)
+                }             
+
+            // etc.
+                spriteset(set_const_ground_MID_APT_2010_A1, "./Korean_Town_Set/gfx/MID_APT_2010.png") {
+                    tmpl_mid_building(480, 0)
+                }
+
+                spriteset (set_building_ground_MID_APT_2010_A1, "./Korean_Town_Set/gfx/MID_APT_2010.png") {
+                    tmpl_mid_building(560, 0)
+                }
+
+            // Switch
+                switch(FEAT_HOUSES, SELF, sw_random_MID_APT_2010_A1_height, random_bits % 4 ) {
+                    1: layout_building_MID_APT_2010_A1_1_low;
+                    2: layout_building_MID_APT_2010_A1_1_high;
+                    3: layout_building_MID_APT_2010_A1_2_low;
+                    layout_building_MID_APT_2010_A1_2_high;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_building_MID_APT_2010_A1, construction_state ) {
+                    0..2: sw_const_MID_APT_2010_A1;
+                    sw_random_MID_APT_2010_A1_height;
+                }
+
+            // Item definition main         
+                item(FEAT_HOUSES, kt_MID_APT_2010_A1, 166, HOUSE_SIZE_1X1) {
+                    property {
+                        substitute:                     0; // 1x1
+                        name:                           string(STR_MID_APT_NAME);
+                        availability_mask:              [ALL_TOWNZONES & ~bitmask(TOWNZONE_CENTRE, TOWNZONE_EDGE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+                        random_colours:                 [COLOUR_ORANGE, COLOUR_BLUE, COLOUR_PINK, COLOUR_PURPLE];
+                        probability:                    4;
+                        years_available:                [2010, 65535];
+                        minimum_lifetime:               4*(para_lifetime);
+
+                        population:                     105;
+                        mail_multiplier:                30;
+                        accepted_cargos:                [[PASS, 8], [MAIL, 4], [GOOD, 4]];
+                    
+                        local_authority_impact:         125;
+                        removal_cost_multiplier:        165;
+
+                        building_class:                 10;
+                    }
+
+                    graphics {
+                        default:                        sw_building_MID_APT_2010_A1;
+                        construction_check:             sw_check_pop_20000;
                     }
                 }
 
@@ -2426,17 +2696,6 @@
                     tmpl_low_building(0, 0)
                 }
 
-            // switch
-                switch(FEAT_HOUSES, SELF, sw_check_avoid_PLAYGROUND_APT, nearest_house_matching_criterion(5, SEARCH_HOUSE_BY_TYPE)) {
-                    1:return 0;
-                    return 1;
-                }
-
-                switch(FEAT_HOUSES, SELF, sw_check_near_PLAYGROUND_APT, nearest_house_matching_criterion(1, SEARCH_HOUSE_BY_CLASS) > 0) {
-                    1:return sw_check_avoid_PLAYGROUND_APT;
-                    return 0;
-                }   
-
             // Item Definition
                 item(FEAT_HOUSES, kt_PLAYGROUND_APT_2000, 164, HOUSE_SIZE_1X1) {
                     property {
@@ -2445,7 +2704,7 @@
                         availability_mask:              [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
                         probability:                    1;
                         years_available:                [2000, 65535];
-                        minimum_lifetime:               2*(para_lifetime);
+                        minimum_lifetime:               4*(para_lifetime);
 
                         population:                     0;
                         mail_multiplier:                0;
@@ -2454,12 +2713,43 @@
                         local_authority_impact:         35;
                         removal_cost_multiplier:        50;
 
-                        building_class:                 6; // MID_APT_2000
+                        building_class:                 9; // MID_APT_2000
                     }
 
                     graphics {
                         default:                        layout_PLAYGROUND_APT_2000;
                         colour:                         random_bits%15+775;
-                        construction_check:             sw_check_near_PLAYGROUND_APT;
+                        construction_check:             sw_check_avoid_APT;
                     }
                 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* item_ID & building_class
+    kt_SINGLE_HOUSE_1990_A:                             115,    1
+
+    kt_VILLA_2000_A:                                    130,    2
+    kt_VILLA_2000_B:                                    131,    2
+
+    kt_SHOP:
+    
+    kt_SHOPPING_DIST_SMALL_2010:                        150,    3
+
+    kt_LOW_FLOOR_BUILDING_1980_A:                       180,    4
+    kt_LOW_FLOOR_BUILDING_2000_A:                       185,    4
+    kt_LOW_FLOOR_BUILDING_2000_B:                       186,    4
+
+    kt_MID_FLOOR_BUILDING_2000_A:                       200,    5
+    kt_MID_FLOOR_BUILDING_2000_B:                       201,    5
+
+    kt_HIGH_FLOOR_BUILDING_2010_A:                      220,    6
+
+    kt_LOW_APT_2000:                                    159,    7
+
+    kt_MID_APT_1990:                                    165,    8
+    kt_MID_APT_2000_A1:                                 160,    9
+    kt_MID_APT_2000_A2:                                 162,    9
+    kt_MID_APT_2010_A1:                                 166,    10
+
+    kt_PLAYGROUND_APT_2000:                             164,    9
+    */
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

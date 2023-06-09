@@ -10,7 +10,7 @@ STR_GRF_URL                                       :https://github.com/SerpensNeb
 STR_PARAM_OVERRIDE_NAME                           :기본 건물을 생성하지 않게 함
 STR_PARAM_OVERRIDE_DESC                           :이 매개변수를 키면 오픈트타 기본 건물이 더이상 나타나지 않게 해줍니다.
 STR_PARAM_LIFETIME_NAME                           :건물 최소수명 설정
-STR_PARAM_LIFETIME_DESC                           :모든 건물의 최소수명을 설정합니다. 최소수명을 줄이면 건물들의 재건축 빈도가 짧아지고 도시의 모습도 빠르게 바뀝니다. 0 으로 하면 건물이 준공되자마자 철거될 수 있습니다. {}{}JGR패치팩의 '1일의 길이 조절' 기능을 쓸때 같이 조정하는 것이 좋습니다.
+STR_PARAM_LIFETIME_DESC                           :모든 건물의 최소수명을 설정합니다. 최소수명을 줄이면 건물들의 재건축 빈도가 짧아지고 도시의 모습도 빠르게 바뀝니다. 0 으로 하면 건물이 준공되자마자 철거될 수 있습니다. {}{}JGR패치팩의 '1일의 길이 조절' 기능을 쓸때 같이 조정하면 좋습니다.
 
 # Building names
 STR_SINGLE_HOUSE_NAME                             :단독주택
