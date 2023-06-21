@@ -1,10 +1,10 @@
 ##grflangid 0x01
 
 # GRF name and description
-STR_GRF_NAME                                      :Korean Town Set beta0.1.0
+STR_GRF_NAME                                      :Korean Town Set beta0.1.1
 STR_GRF_DESC                                      :Korean Town Set includes Korean style buildings except North Korea. {}{}{YELLOW}Highly recommanded to use this NewGRF after year 2010. Older buildings will be added soon!
 
-STR_GRF_URL                                       :https://github.com/SerpensNebula/Korean-Early-Train-Set
+STR_GRF_URL                                       :https://github.com/SerpensNebula/Korean-Town-Set
 
 # Parameters
 STR_PARAM_OVERRIDE_NAME                           :Override original buildings
