@@ -1,28 +1,28 @@
 ##grflangid 0x01
 
 # GRF name and description
-STR_GRF_NAME                                      :Korean Town Set alpha0.5.0
-STR_GRF_DESC                                      :Korean Town Set includes Korean style buildings except North Korea. {}{}{YELLOW}Highly recommanded to use this NewGRF after year 2010. Old buildings will be added soon!
+STR_GRF_NAME                                      :Korean Town Set beta0.1.0
+STR_GRF_DESC                                      :Korean Town Set includes Korean style buildings except North Korea. {}{}{YELLOW}Highly recommanded to use this NewGRF after year 2010. Older buildings will be added soon!
 
 STR_GRF_URL                                       :https://github.com/SerpensNebula/Korean-Early-Train-Set
 
 # Parameters
-STR_PARAM_OVERRIDE_NAME                           :기본 건물을 생성하지 않게 함
-STR_PARAM_OVERRIDE_DESC                           :이 매개변수를 키면 오픈트타 기본 건물이 더이상 나타나지 않게 해줍니다.
-STR_PARAM_LIFETIME_NAME                           :건물 최소수명 설정
-STR_PARAM_LIFETIME_DESC                           :모든 건물의 최소수명을 설정합니다. 최소수명을 줄이면 건물들의 재건축 빈도가 짧아지고 도시의 모습도 빠르게 바뀝니다. 0 으로 하면 건물이 준공되자마자 철거될 수 있습니다. {}{}JGR패치팩의 '1일의 길이 조절' 기능을 쓸때 같이 조정하면 좋습니다.
+STR_PARAM_OVERRIDE_NAME                           :Override original buildings
+STR_PARAM_OVERRIDE_DESC                           :If you enable this setting, default OpenTTD buildings never appears on the map.
+STR_PARAM_LIFETIME_NAME                           :Set minimal lifetime
+STR_PARAM_LIFETIME_DESC                           :Set minimal lifetime of all buildings. The shorter this setting, the more frequent the building will be rebuilt. It is recommanded to use with 'Day length factor' setting from JGR's patchpack.
 
 # Building names
-STR_SINGLE_HOUSE_NAME                             :단독주택
-STR_VILLA_NAME                                    :빌라
-STR_LOW_APT_NAME                                  :저층 아파트
-STR_MID_APT_NAME                                  :고층 아파트
-STR_TALL_APT_NAME                                 :초고층 아파트
-STR_SHOP_NAME                                     :가게
-STR_SMALL_SHOPPING_DIST_NAME                      :저층 상가
-STR_MID_SHOPPING_DIST_NAME                        :고층 상가
-STR_LARGE_SHOPPING_DIST_NAME                      :초고층 상가
-STR_SMALL_OFFICE_NAME                             :저층 오피스 빌딩
-STR_MID_OFFICE_NAME                               :고층 오피스 빌딩
-STR_LARGE_OFFICE_NAME                             :초고층 오피스 빌딩
-STR_PLAYGROUND_APT_NAME                           :아파트 놀이터
+STR_SINGLE_HOUSE_NAME                             :Detached house
+STR_VILLA_NAME                                    :Town houses
+STR_LOW_APT_NAME                                  :Lower-floor apartment
+STR_MID_APT_NAME                                  :Apartment
+STR_TALL_APT_NAME                                 :High-rise apartment
+STR_SHOP_NAME                                     :Shops
+STR_SMALL_SHOPPING_DIST_NAME                      :Small shopping district
+STR_MID_SHOPPING_DIST_NAME                        :Middle shopping district
+STR_LARGE_SHOPPING_DIST_NAME                      :Large shopping district 
+STR_SMALL_OFFICE_NAME                             :Lower-floor office building
+STR_MID_OFFICE_NAME                               :Office building
+STR_LARGE_OFFICE_NAME                             :Skyscraper
+STR_PLAYGROUND_APT_NAME                           :Apartment park
