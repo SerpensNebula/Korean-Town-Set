@@ -1,8 +1,8 @@
 ##grflangid 0x01
 
 # GRF name and description
-STR_GRF_NAME                                      :Korean Town Set beta0.1.2
-STR_GRF_DESC                                      :Korean Town Set includes Korean style buildings except North Korea. {}{}{YELLOW}Highly recommanded to use this NewGRF after year 2010. Older buildings will be added soon!
+STR_GRF_NAME                                      :Korean Town Set beta0.2.0
+STR_GRF_DESC                                      :Korean Town Set includes Korean style buildings except North Korea. {}{}{YELLOW}Highly recommanded to use this NewGRF after year 2000. Older buildings will be added soon!
 
 STR_GRF_URL                                       :https://github.com/SerpensNebula/Korean-Town-Set
 
@@ -10,19 +10,19 @@ STR_GRF_URL                                       :https://github.com/SerpensNeb
 STR_PARAM_OVERRIDE_NAME                           :Override original buildings
 STR_PARAM_OVERRIDE_DESC                           :If you enable this setting, default OpenTTD buildings never appears on the map.
 STR_PARAM_LIFETIME_NAME                           :Set minimal lifetime
-STR_PARAM_LIFETIME_DESC                           :Set minimal lifetime of all buildings. The shorter this setting, the more frequent the building will be rebuilt. It is recommanded to use with 'Day length factor' setting from JGR's patchpack.
+STR_PARAM_LIFETIME_DESC                           :Set minimal lifetime of all buildings. The shorter this setting, the more frequent the building will be rebuilt. It is recommanded to use with 'Day length factor' setting from JGR's patchpack. {}{}Default is x5(20 years).
 
 # Building names
-STR_SINGLE_HOUSE_NAME                             :Detached house
-STR_VILLA_NAME                                    :Town houses
-STR_LOW_APT_NAME                                  :Lower-floor apartment
+STR_SINGLE_HOUSE_NAME                             :House
+STR_VILLA_NAME                                    :Townhouse
+STR_LOW_APT_NAME                                  :Low-rise apartment
 STR_MID_APT_NAME                                  :Apartment
 STR_TALL_APT_NAME                                 :High-rise apartment
 STR_SHOP_NAME                                     :Shops
 STR_SMALL_SHOPPING_DIST_NAME                      :Small shopping district
 STR_MID_SHOPPING_DIST_NAME                        :Middle shopping district
 STR_LARGE_SHOPPING_DIST_NAME                      :Large shopping district 
-STR_SMALL_OFFICE_NAME                             :Lower-floor office building
-STR_MID_OFFICE_NAME                               :Office building
+STR_SMALL_OFFICE_NAME                             :Low-rise office building
+STR_MID_OFFICE_NAME                               :High-rise office building
 STR_LARGE_OFFICE_NAME                             :Skyscraper
-STR_PLAYGROUND_APT_NAME                           :Apartment park
+STR_PARK_NAME                                     :Park

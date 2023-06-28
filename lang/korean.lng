@@ -1,8 +1,8 @@
 ##grflangid 0x3A
 
 # GRF name and description
-STR_GRF_NAME                                      :한국 도시 세트 beta0.1.2
-STR_GRF_DESC                                      :이 NewGRF는 북한을 제외한 한국 스타일의 건물을 추가해줍니다. {}{}{YELLOW}2010년 이후부터 플레이를 권장합니다. 과거의 건물들은 추가 예정입니다!
+STR_GRF_NAME                                      :한국 도시 세트 beta0.2.0
+STR_GRF_DESC                                      :이 NewGRF는 북한을 제외한 한국 스타일의 건물을 추가해줍니다. {}{}{YELLOW}2000년 이후부터 플레이를 권장합니다. 과거의 건물들은 추가 예정입니다!
 
 STR_GRF_URL                                       :https://github.com/SerpensNebula/Korean-Town-Set
 
@@ -10,7 +10,7 @@ STR_GRF_URL                                       :https://github.com/SerpensNeb
 STR_PARAM_OVERRIDE_NAME                           :기본 건물을 생성하지 않게 함
 STR_PARAM_OVERRIDE_DESC                           :이 매개변수를 키면 오픈트타 기본 건물이 더이상 나타나지 않게 해줍니다.
 STR_PARAM_LIFETIME_NAME                           :건물 최소수명 설정
-STR_PARAM_LIFETIME_DESC                           :모든 건물의 최소수명을 설정합니다. 최소수명을 줄이면 건물들의 재건축 빈도가 짧아지고 도시의 모습도 빠르게 바뀝니다. 0 으로 하면 건물이 준공되자마자 철거될 수 있습니다. {}{}JGR패치팩의 '1일의 길이 조절' 기능을 쓸때 같이 조정하면 좋습니다.
+STR_PARAM_LIFETIME_DESC                           :모든 건물의 최소수명을 설정합니다. 최소수명을 줄이면 건물들의 재건축 빈도가 짧아지고 도시의 모습도 빠르게 바뀝니다. 0 으로 하면 건물이 준공되자마자 철거될 수 있습니다. {}{}JGR패치팩의 '1일의 길이 조절' 기능을 쓸때 같이 조정하면 좋습니다. {}{}기본값은 x5(20년)입니다.
 
 # Building names
 STR_SINGLE_HOUSE_NAME                             :단독주택
@@ -25,4 +25,4 @@ STR_LARGE_SHOPPING_DIST_NAME                      :고층 상가
 STR_SMALL_OFFICE_NAME                             :저층 오피스 빌딩
 STR_MID_OFFICE_NAME                               :고층 오피스 빌딩
 STR_LARGE_OFFICE_NAME                             :초고층 마천루
-STR_PLAYGROUND_APT_NAME                           :아파트 놀이터
+STR_PARK_NAME                                     :공원
