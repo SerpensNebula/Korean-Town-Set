@@ -3,7 +3,7 @@
         name:                               string(STR_GRF_NAME);
         desc:                               string(STR_GRF_DESC);
         url:                                string(STR_GRF_URL);
-        version:                            230628;
+        version:                            230711;
         min_compatible_version:             230624;
     
         // Parameters
@@ -102,40 +102,858 @@
         }
 
 // Switches
-    switch(FEAT_HOUSES, SELF, sw_check_near_APT, nearest_house_matching_criterion(1, SEARCH_HOUSE_BY_CLASS)) {
+    switch(FEAT_HOUSES, SELF, sw_check_near, nearest_house_matching_criterion(1, SEARCH_HOUSE_BY_CLASS)) {
         0:return 0;
         return 1;
     }                               
 
-    switch(FEAT_HOUSES, SELF, sw_check_avoid_APT, nearest_house_matching_criterion(10, SEARCH_HOUSE_BY_CLASS)) {
+    switch(FEAT_HOUSES, SELF, sw_check_avoid_10, nearest_house_matching_criterion(10, SEARCH_HOUSE_BY_CLASS)) {
         0:return 1;
-        return sw_check_near_APT;
+        return sw_check_near;
+    }
+
+    switch(FEAT_HOUSES, SELF, sw_check_avoid_15, nearest_house_matching_criterion(15, SEARCH_HOUSE_BY_CLASS)) {
+        0:return 1;
+        return sw_check_near;
     }
 
     switch(FEAT_HOUSES, PARENT, sw_check_pop_6000, population > 6000) {
         0:return 0;
-        return sw_check_avoid_APT;
+        return sw_check_avoid_10;
     }
 
     switch(FEAT_HOUSES, PARENT, sw_check_pop_8000, population > 8000) {
         0:return 0;
-        return sw_check_avoid_APT;
+        return sw_check_avoid_10;
     }
 
     switch(FEAT_HOUSES, PARENT, sw_check_pop_10000, population > 10000) {
         0:return 0;
-        return sw_check_avoid_APT;
+        return sw_check_avoid_10;
     }
 
     switch(FEAT_HOUSES, PARENT, sw_check_pop_15000, population > 15000) {
         0:return 0;
-        return sw_check_avoid_APT;
+        return sw_check_avoid_10;
     }
 
     switch(FEAT_HOUSES, PARENT, sw_is_city, is_city) {
         1:return 1;
         return 0;
     }
+
+// Buildings_0
+    // TRADITIONAL_HOUSES 
+        // THATCHED_ROOF_HOUSE
+            // construction_1
+                spritelayout layout_const1_THATCHED_ROOF_HOUSE_A {
+                    ground {
+                        sprite:          set_const1_ground_THATCHED_ROOF_HOUSE_A;
+                    }
+
+                    building {
+                        sprite:          set_const1_building_THATCHED_ROOF_HOUSE_A;
+                    }
+                }
+
+                spriteset(set_const1_building_THATCHED_ROOF_HOUSE_A, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(0, 0)
+                }
+
+                spritelayout layout_const1_THATCHED_ROOF_HOUSE_B {
+                    ground {
+                        sprite:          set_const1_ground_THATCHED_ROOF_HOUSE_B;
+                    }
+
+                    building {
+                        sprite:          set_const1_building_THATCHED_ROOF_HOUSE_B;
+                    }
+                }
+
+                spriteset(set_const1_building_THATCHED_ROOF_HOUSE_B, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(0, 100)
+                }
+
+                spritelayout layout_const1_THATCHED_ROOF_HOUSE_C {
+                    ground {
+                        sprite:          set_const1_ground_THATCHED_ROOF_HOUSE_C;
+                    }
+
+                    building {
+                        sprite:          set_const1_building_THATCHED_ROOF_HOUSE_C;
+                    }
+                }
+
+                spriteset(set_const1_building_THATCHED_ROOF_HOUSE_C, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(0, 200)
+                }
+
+                spritelayout layout_const1_THATCHED_ROOF_HOUSE_D {
+                    ground {
+                        sprite:          set_const1_ground_THATCHED_ROOF_HOUSE_D;
+                    }
+
+                    building {
+                        sprite:          set_const1_building_THATCHED_ROOF_HOUSE_D;
+                    }
+                }
+
+                spriteset(set_const1_building_THATCHED_ROOF_HOUSE_D, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(0, 300)
+                }
+
+            // construction general
+                switch(FEAT_HOUSES, SELF, sw_const_THATCHED_ROOF_HOUSE_A, construction_state) {
+                    0: layout_const1_THATCHED_ROOF_HOUSE_A;
+                    1: layout_const1_THATCHED_ROOF_HOUSE_A;
+                    2: layout_const1_THATCHED_ROOF_HOUSE_A;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_const_THATCHED_ROOF_HOUSE_B, construction_state) {
+                    0: layout_const1_THATCHED_ROOF_HOUSE_B;
+                    1: layout_const1_THATCHED_ROOF_HOUSE_B;
+                    2: layout_const1_THATCHED_ROOF_HOUSE_B;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_const_THATCHED_ROOF_HOUSE_C, construction_state) {
+                    0: layout_const1_THATCHED_ROOF_HOUSE_C;
+                    1: layout_const1_THATCHED_ROOF_HOUSE_C;
+                    2: layout_const1_THATCHED_ROOF_HOUSE_C;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_const_THATCHED_ROOF_HOUSE_D, construction_state) {
+                    0: layout_const1_THATCHED_ROOF_HOUSE_D;
+                    1: layout_const1_THATCHED_ROOF_HOUSE_D;
+                    2: layout_const1_THATCHED_ROOF_HOUSE_D;
+                }
+
+            // THATCHED_ROOF_HOUSE
+                spritelayout layout_building_normal_THATCHED_ROOF_HOUSE_A {
+                    ground {
+                        sprite:          set_building_ground_normal_THATCHED_ROOF_HOUSE_A;
+                    }
+
+                    building {
+                        sprite:          set_building_normal_THATCHED_ROOF_HOUSE_A;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_normal_THATCHED_ROOF_HOUSE_A, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(80, 0)
+                }
+
+                spritelayout layout_building_normal_THATCHED_ROOF_HOUSE_B {
+                    ground {
+                        sprite:          set_building_ground_normal_THATCHED_ROOF_HOUSE_B;
+                    }
+
+                    building {
+                        sprite:          set_building_normal_THATCHED_ROOF_HOUSE_B;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_normal_THATCHED_ROOF_HOUSE_B, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(80, 100)
+                }
+
+                spritelayout layout_building_normal_THATCHED_ROOF_HOUSE_C {
+                    ground {
+                        sprite:          set_building_ground_normal_THATCHED_ROOF_HOUSE_C;
+                    }
+
+                    building {
+                        sprite:          set_building_normal_THATCHED_ROOF_HOUSE_C;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_normal_THATCHED_ROOF_HOUSE_C, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(80, 200)
+                }
+
+                spritelayout layout_building_normal_THATCHED_ROOF_HOUSE_D {
+                    ground {
+                        sprite:          set_building_ground_normal_THATCHED_ROOF_HOUSE_D;
+                    }
+
+                    building {
+                        sprite:          set_building_normal_THATCHED_ROOF_HOUSE_D;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_normal_THATCHED_ROOF_HOUSE_D, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(80, 300)
+                }
+
+            // THATCHED_ROOF_HOUSE_snow
+                spritelayout layout_building_snow_THATCHED_ROOF_HOUSE_A {
+                    ground {
+                        sprite:          set_building_ground_snow_THATCHED_ROOF_HOUSE_A;
+                    }
+
+                    building {
+                        sprite:          set_building_snow_THATCHED_ROOF_HOUSE_A;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_snow_THATCHED_ROOF_HOUSE_A, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(320, 0)
+                }
+
+                spritelayout layout_building_snow_THATCHED_ROOF_HOUSE_B {
+                    ground {
+                        sprite:          set_building_ground_snow_THATCHED_ROOF_HOUSE_B;
+                    }
+
+                    building {
+                        sprite:          set_building_snow_THATCHED_ROOF_HOUSE_B;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_snow_THATCHED_ROOF_HOUSE_B, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(320, 100)
+                }
+
+                spritelayout layout_building_snow_THATCHED_ROOF_HOUSE_C {
+                    ground {
+                        sprite:          set_building_ground_snow_THATCHED_ROOF_HOUSE_C;
+                    }
+
+                    building {
+                        sprite:          set_building_snow_THATCHED_ROOF_HOUSE_C;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_snow_THATCHED_ROOF_HOUSE_C, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(320, 200)
+                }
+
+                spritelayout layout_building_snow_THATCHED_ROOF_HOUSE_D {
+                    ground {
+                        sprite:          set_building_ground_snow_THATCHED_ROOF_HOUSE_D;
+                    }
+
+                    building {
+                        sprite:          set_building_snow_THATCHED_ROOF_HOUSE_D;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_snow_THATCHED_ROOF_HOUSE_D, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(320, 300)
+                }
+
+            // etc.
+                spriteset(set_const1_ground_THATCHED_ROOF_HOUSE_A, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(160, 0)
+                }
+
+                spriteset(set_const1_ground_THATCHED_ROOF_HOUSE_B, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(160, 100)
+                }
+
+                spriteset(set_const1_ground_THATCHED_ROOF_HOUSE_C, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(160, 200)
+                }
+
+                spriteset(set_const1_ground_THATCHED_ROOF_HOUSE_D, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(160, 300)
+                }
+
+                spriteset (set_building_ground_normal_THATCHED_ROOF_HOUSE_A, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(240, 0)
+                }
+
+                spriteset (set_building_ground_normal_THATCHED_ROOF_HOUSE_B, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(240, 100)
+                }
+
+                spriteset (set_building_ground_normal_THATCHED_ROOF_HOUSE_C, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(240, 200)
+                }
+
+                spriteset (set_building_ground_normal_THATCHED_ROOF_HOUSE_D, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(240, 300)
+                }
+
+                spriteset (set_building_ground_snow_THATCHED_ROOF_HOUSE_A, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(400, 0)
+                }
+
+                spriteset (set_building_ground_snow_THATCHED_ROOF_HOUSE_B, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(400, 100)
+                }
+
+                spriteset (set_building_ground_snow_THATCHED_ROOF_HOUSE_C, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(400, 200)
+                }
+
+                spriteset (set_building_ground_snow_THATCHED_ROOF_HOUSE_D, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(400, 300)
+                }
+
+            // Switch
+                switch(FEAT_HOUSES, SELF, sw_building_THATCHED_ROOF_HOUSE_A, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_normal_THATCHED_ROOF_HOUSE_A;
+                    TILETYPE_SNOW:                      layout_building_snow_THATCHED_ROOF_HOUSE_A;            
+                    layout_building_normal_THATCHED_ROOF_HOUSE_A;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_building_THATCHED_ROOF_HOUSE_B, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_normal_THATCHED_ROOF_HOUSE_B;
+                    TILETYPE_SNOW:                      layout_building_snow_THATCHED_ROOF_HOUSE_B;            
+                    layout_building_normal_THATCHED_ROOF_HOUSE_B;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_building_THATCHED_ROOF_HOUSE_C, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_normal_THATCHED_ROOF_HOUSE_C;
+                    TILETYPE_SNOW:                      layout_building_snow_THATCHED_ROOF_HOUSE_C;            
+                    layout_building_normal_THATCHED_ROOF_HOUSE_C;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_building_THATCHED_ROOF_HOUSE_D, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_normal_THATCHED_ROOF_HOUSE_D;
+                    TILETYPE_SNOW:                      layout_building_snow_THATCHED_ROOF_HOUSE_D;            
+                    layout_building_normal_THATCHED_ROOF_HOUSE_D;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_THATCHED_ROOF_HOUSE_A, construction_state) {
+                    0..2: sw_const_THATCHED_ROOF_HOUSE_A;
+                    sw_building_THATCHED_ROOF_HOUSE_A;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_THATCHED_ROOF_HOUSE_B, construction_state) {
+                    0..2: sw_const_THATCHED_ROOF_HOUSE_B;
+                    sw_building_THATCHED_ROOF_HOUSE_B;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_THATCHED_ROOF_HOUSE_C, construction_state) {
+                    0..2: sw_const_THATCHED_ROOF_HOUSE_C;
+                    sw_building_THATCHED_ROOF_HOUSE_C;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_THATCHED_ROOF_HOUSE_D, construction_state) {
+                    0..2: sw_const_THATCHED_ROOF_HOUSE_D;
+                    sw_building_THATCHED_ROOF_HOUSE_D;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_graphic_THATCHED_ROOF_HOUSE, random_bits % 4) {
+                    1: sw_THATCHED_ROOF_HOUSE_B;
+                    2: sw_THATCHED_ROOF_HOUSE_C;
+                    3: sw_THATCHED_ROOF_HOUSE_D;
+                    sw_THATCHED_ROOF_HOUSE_A;
+                }
+
+            // Item definition main         
+                item(FEAT_HOUSES, kt_THATCHED_ROOF_HOUSE, 110, HOUSE_SIZE_1X1) {
+                    property {
+                        substitute:                     0; // 1x1
+                        name:                           string(STR_THATCHED_ROOF_HOUSE);
+                        availability_mask:              [ALL_TOWNZONES & ~bitmask(TOWNZONE_CENTRE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+                        probability:                    4;
+                        years_available:                [0, 1950];
+                        minimum_lifetime:               4*(para_lifetime);
+
+                        population:                     12;
+                        mail_multiplier:                4;
+                        accepted_cargos:                [[PASS, 2], [MAIL, 1], [GOOD, 2]];
+                    
+                        local_authority_impact:         70;
+                        removal_cost_multiplier:        70;
+
+                        building_class:                 1;
+                    }
+
+                    graphics {
+                        default:                        sw_graphic_THATCHED_ROOF_HOUSE;
+                    }
+                }
+
+        // TILED_ROOF_HOUSE
+            // construction_1
+                spritelayout layout_const1_TILED_ROOF_HOUSE_A {
+                    ground {
+                        sprite:          set_const1_ground_TILED_ROOF_HOUSE_A;
+                    }
+
+                    building {
+                        sprite:          set_const1_building_TILED_ROOF_HOUSE_A;
+                    }
+                }
+
+                spriteset(set_const1_building_TILED_ROOF_HOUSE_A, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(0, 400)
+                }
+
+                spritelayout layout_const1_TILED_ROOF_HOUSE_B {
+                    ground {
+                        sprite:          set_const1_ground_TILED_ROOF_HOUSE_B;
+                    }
+
+                    building {
+                        sprite:          set_const1_building_TILED_ROOF_HOUSE_B;
+                    }
+                }
+
+                spriteset(set_const1_building_TILED_ROOF_HOUSE_B, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(0, 500)
+                }
+
+                spritelayout layout_const1_TILED_ROOF_HOUSE_C {
+                    ground {
+                        sprite:          set_const1_ground_TILED_ROOF_HOUSE_C;
+                    }
+
+                    building {
+                        sprite:          set_const1_building_TILED_ROOF_HOUSE_C;
+                    }
+                }
+
+                spriteset(set_const1_building_TILED_ROOF_HOUSE_C, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(0, 600)
+                }
+
+                spritelayout layout_const1_TILED_ROOF_HOUSE_D {
+                    ground {
+                        sprite:          set_const1_ground_TILED_ROOF_HOUSE_D;
+                    }
+
+                    building {
+                        sprite:          set_const1_building_TILED_ROOF_HOUSE_D;
+                    }
+                }
+
+                spriteset(set_const1_building_TILED_ROOF_HOUSE_D, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(0, 1000)
+                }
+
+            // construction general
+                switch(FEAT_HOUSES, SELF, sw_const_TILED_ROOF_HOUSE_A, construction_state) {
+                    0: layout_const1_TILED_ROOF_HOUSE_A;
+                    1: layout_const1_TILED_ROOF_HOUSE_A;
+                    2: layout_const1_TILED_ROOF_HOUSE_A;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_const_TILED_ROOF_HOUSE_B, construction_state) {
+                    0: layout_const1_TILED_ROOF_HOUSE_B;
+                    1: layout_const1_TILED_ROOF_HOUSE_B;
+                    2: layout_const1_TILED_ROOF_HOUSE_B;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_const_TILED_ROOF_HOUSE_C, construction_state) {
+                    0: layout_const1_TILED_ROOF_HOUSE_C;
+                    1: layout_const1_TILED_ROOF_HOUSE_C;
+                    2: layout_const1_TILED_ROOF_HOUSE_C;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_const_TILED_ROOF_HOUSE_D, construction_state) {
+                    0: layout_const1_TILED_ROOF_HOUSE_D;
+                    1: layout_const1_TILED_ROOF_HOUSE_D;
+                    2: layout_const1_TILED_ROOF_HOUSE_D;
+                }
+
+            // TILED_ROOF_HOUSE
+                spritelayout layout_building_normal_TILED_ROOF_HOUSE_A {
+                    ground {
+                        sprite:          set_building_ground_normal_TILED_ROOF_HOUSE_A;
+                    }
+
+                    building {
+                        sprite:          set_building_normal_TILED_ROOF_HOUSE_A;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_normal_TILED_ROOF_HOUSE_A, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(80, 400)
+                }
+
+                spritelayout layout_building_normal_TILED_ROOF_HOUSE_B {
+                    ground {
+                        sprite:          set_building_ground_normal_TILED_ROOF_HOUSE_B;
+                    }
+
+                    building {
+                        sprite:          set_building_normal_TILED_ROOF_HOUSE_B;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_normal_TILED_ROOF_HOUSE_B, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(80, 500)
+                }
+
+                spritelayout layout_building_normal_TILED_ROOF_HOUSE_C1 {
+                    ground {
+                        sprite:          set_building_ground_normal_TILED_ROOF_HOUSE_C;
+                    }
+
+                    building {
+                        sprite:          set_building_normal_TILED_ROOF_HOUSE_C1;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_normal_TILED_ROOF_HOUSE_C1, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(80, 600)
+                }
+
+                spritelayout layout_building_normal_TILED_ROOF_HOUSE_C2 {
+                    ground {
+                        sprite:          set_building_ground_normal_TILED_ROOF_HOUSE_C;
+                    }
+
+                    building {
+                        sprite:          set_building_normal_TILED_ROOF_HOUSE_C2;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_normal_TILED_ROOF_HOUSE_C2, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(80, 700)
+                }
+
+                spritelayout layout_building_normal_TILED_ROOF_HOUSE_C3 {
+                    ground {
+                        sprite:          set_building_ground_normal_TILED_ROOF_HOUSE_C;
+                    }
+
+                    building {
+                        sprite:          set_building_normal_TILED_ROOF_HOUSE_C3;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_normal_TILED_ROOF_HOUSE_C3, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(80, 800)
+                }
+
+                spritelayout layout_building_normal_TILED_ROOF_HOUSE_C4 {
+                    ground {
+                        sprite:          set_building_ground_normal_TILED_ROOF_HOUSE_C;
+                    }
+
+                    building {
+                        sprite:          set_building_normal_TILED_ROOF_HOUSE_C4;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_normal_TILED_ROOF_HOUSE_C4, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(80, 900)
+                }
+
+                spritelayout layout_building_normal_TILED_ROOF_HOUSE_D {
+                    ground {
+                        sprite:          set_building_ground_normal_TILED_ROOF_HOUSE_D;
+                    }
+
+                    building {
+                        sprite:          set_building_normal_TILED_ROOF_HOUSE_D;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_normal_TILED_ROOF_HOUSE_D, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(80, 1000)
+                }
+
+            // TILED_ROOF_HOUSE_snow
+                spritelayout layout_building_snow_TILED_ROOF_HOUSE_A {
+                    ground {
+                        sprite:          set_building_ground_snow_TILED_ROOF_HOUSE_A;
+                    }
+
+                    building {
+                        sprite:          set_building_snow_TILED_ROOF_HOUSE_A;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_snow_TILED_ROOF_HOUSE_A, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(320, 400)
+                }
+
+                spritelayout layout_building_snow_TILED_ROOF_HOUSE_B {
+                    ground {
+                        sprite:          set_building_ground_snow_TILED_ROOF_HOUSE_B;
+                    }
+
+                    building {
+                        sprite:          set_building_snow_TILED_ROOF_HOUSE_B;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_snow_TILED_ROOF_HOUSE_B, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(320, 500)
+                }
+
+                spritelayout layout_building_snow_TILED_ROOF_HOUSE_C1 {
+                    ground {
+                        sprite:          set_building_ground_snow_TILED_ROOF_HOUSE_C;
+                    }
+
+                    building {
+                        sprite:          set_building_snow_TILED_ROOF_HOUSE_C1;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_snow_TILED_ROOF_HOUSE_C1, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(320, 600)
+                }
+
+                spritelayout layout_building_snow_TILED_ROOF_HOUSE_C2 {
+                    ground {
+                        sprite:          set_building_ground_snow_TILED_ROOF_HOUSE_C;
+                    }
+
+                    building {
+                        sprite:          set_building_snow_TILED_ROOF_HOUSE_C2;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_snow_TILED_ROOF_HOUSE_C2, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(320, 700)
+                }
+
+                spritelayout layout_building_snow_TILED_ROOF_HOUSE_C3 {
+                    ground {
+                        sprite:          set_building_ground_snow_TILED_ROOF_HOUSE_C;
+                    }
+
+                    building {
+                        sprite:          set_building_snow_TILED_ROOF_HOUSE_C3;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_snow_TILED_ROOF_HOUSE_C3, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(320, 800)
+                }
+
+                spritelayout layout_building_snow_TILED_ROOF_HOUSE_C4 {
+                    ground {
+                        sprite:          set_building_ground_snow_TILED_ROOF_HOUSE_C;
+                    }
+
+                    building {
+                        sprite:          set_building_snow_TILED_ROOF_HOUSE_C4;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_snow_TILED_ROOF_HOUSE_C4, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(320, 900)
+                }
+
+                spritelayout layout_building_snow_TILED_ROOF_HOUSE_D {
+                    ground {
+                        sprite:          set_building_ground_snow_TILED_ROOF_HOUSE_D;
+                    }
+
+                    building {
+                        sprite:          set_building_snow_TILED_ROOF_HOUSE_D;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_snow_TILED_ROOF_HOUSE_D, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(320, 1000)
+                }
+
+            // etc.
+                spriteset(set_const1_ground_TILED_ROOF_HOUSE_A, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(160, 400)
+                }
+
+                spriteset(set_const1_ground_TILED_ROOF_HOUSE_B, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(160, 500)
+                }
+
+                spriteset(set_const1_ground_TILED_ROOF_HOUSE_C, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(160, 600)
+                }
+
+                spriteset(set_const1_ground_TILED_ROOF_HOUSE_D, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(160, 1000)
+                }
+
+                spriteset (set_building_ground_normal_TILED_ROOF_HOUSE_A, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(240, 400)
+                }
+
+                spriteset (set_building_ground_normal_TILED_ROOF_HOUSE_B, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(240, 500)
+                }
+
+                spriteset (set_building_ground_normal_TILED_ROOF_HOUSE_C, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(240, 600)
+                }
+
+                spriteset (set_building_ground_normal_TILED_ROOF_HOUSE_D, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(240, 1000)
+                }
+
+                spriteset (set_building_ground_snow_TILED_ROOF_HOUSE_A, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(400, 400)
+                }
+
+                spriteset (set_building_ground_snow_TILED_ROOF_HOUSE_B, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(400, 500)
+                }
+
+                spriteset (set_building_ground_snow_TILED_ROOF_HOUSE_C, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(400, 600)
+                }
+
+                spriteset (set_building_ground_snow_TILED_ROOF_HOUSE_D, "./Korean_Town_Set/gfx/TRADITIONAL_HOUSE.png") {
+                    tmpl_low_building(400, 1000)
+                }
+
+            // Switch
+                switch(FEAT_HOUSES, SELF, sw_building_TILED_ROOF_HOUSE_A, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_normal_TILED_ROOF_HOUSE_A;
+                    TILETYPE_SNOW:                      layout_building_snow_TILED_ROOF_HOUSE_A;            
+                    layout_building_normal_TILED_ROOF_HOUSE_A;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_building_TILED_ROOF_HOUSE_B, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_normal_TILED_ROOF_HOUSE_B;
+                    TILETYPE_SNOW:                      layout_building_snow_TILED_ROOF_HOUSE_B;            
+                    layout_building_normal_TILED_ROOF_HOUSE_B;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_building_TILED_ROOF_HOUSE_C1, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_normal_TILED_ROOF_HOUSE_C1;
+                    TILETYPE_SNOW:                      layout_building_snow_TILED_ROOF_HOUSE_C1;            
+                    layout_building_normal_TILED_ROOF_HOUSE_C1;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_building_TILED_ROOF_HOUSE_C2, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_normal_TILED_ROOF_HOUSE_C2;
+                    TILETYPE_SNOW:                      layout_building_snow_TILED_ROOF_HOUSE_C2;            
+                    layout_building_normal_TILED_ROOF_HOUSE_C2;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_building_TILED_ROOF_HOUSE_C3, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_normal_TILED_ROOF_HOUSE_C3;
+                    TILETYPE_SNOW:                      layout_building_snow_TILED_ROOF_HOUSE_C3;            
+                    layout_building_normal_TILED_ROOF_HOUSE_C3;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_building_TILED_ROOF_HOUSE_C4, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_normal_TILED_ROOF_HOUSE_C4;
+                    TILETYPE_SNOW:                      layout_building_snow_TILED_ROOF_HOUSE_C4;            
+                    layout_building_normal_TILED_ROOF_HOUSE_C4;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_building_TILED_ROOF_HOUSE_D, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_normal_TILED_ROOF_HOUSE_D;
+                    TILETYPE_SNOW:                      layout_building_snow_TILED_ROOF_HOUSE_D;            
+                    layout_building_normal_TILED_ROOF_HOUSE_D;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_TILED_ROOF_HOUSE_A, construction_state) {
+                    0..2: sw_const_TILED_ROOF_HOUSE_A;
+                    sw_building_TILED_ROOF_HOUSE_A;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_TILED_ROOF_HOUSE_B, construction_state) {
+                    0..2: sw_const_TILED_ROOF_HOUSE_B;
+                    sw_building_TILED_ROOF_HOUSE_B;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_TILED_ROOF_HOUSE_C1, construction_state) {
+                    0..2: sw_const_TILED_ROOF_HOUSE_C;
+                    sw_building_TILED_ROOF_HOUSE_C1;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_TILED_ROOF_HOUSE_C2, construction_state) {
+                    0..2: sw_const_TILED_ROOF_HOUSE_C;
+                    sw_building_TILED_ROOF_HOUSE_C2;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_TILED_ROOF_HOUSE_C3, construction_state) {
+                    0..2: sw_const_TILED_ROOF_HOUSE_C;
+                    sw_building_TILED_ROOF_HOUSE_C3;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_TILED_ROOF_HOUSE_C4, construction_state) {
+                    0..2: sw_const_TILED_ROOF_HOUSE_C;
+                    sw_building_TILED_ROOF_HOUSE_C4;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_TILED_ROOF_HOUSE_D, construction_state) {
+                    0..2: sw_const_TILED_ROOF_HOUSE_D;
+                    sw_building_TILED_ROOF_HOUSE_D;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_graphic_TILED_ROOF_HOUSE, random_bits % 16) {
+                    1..4: sw_TILED_ROOF_HOUSE_B;
+                    5: sw_TILED_ROOF_HOUSE_C1;
+                    6: sw_TILED_ROOF_HOUSE_C2;
+                    7: sw_TILED_ROOF_HOUSE_C3;
+                    8: sw_TILED_ROOF_HOUSE_C4;
+                    9..12: sw_TILED_ROOF_HOUSE_D;
+                    13..15: sw_TILED_ROOF_HOUSE_A;
+                    sw_TILED_ROOF_HOUSE_A;
+                }
+
+            // Item definition main         
+                item(FEAT_HOUSES, kt_TILED_ROOF_HOUSE, 111, HOUSE_SIZE_1X1) {
+                    property {
+                        substitute:                     0; // 1x1
+                        name:                           string(STR_TILED_ROOF_HOUSE);
+                        availability_mask:              [ALL_TOWNZONES & ~bitmask(TOWNZONE_EDGE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+                        probability:                    4;
+                        years_available:                [0, 1950];
+                        minimum_lifetime:               4*(para_lifetime);
+
+                        population:                     17;
+                        mail_multiplier:                6;
+                        accepted_cargos:                [[PASS, 3], [MAIL, 1], [GOOD, 2]];
+                    
+                        local_authority_impact:         80;
+                        removal_cost_multiplier:        80;
+
+                        building_class:                 1;
+                    }
+
+                    graphics {
+                        default:                        sw_graphic_TILED_ROOF_HOUSE;
+                    }
+                }
 
 // Buildings_1970
     // OFFICES
@@ -256,7 +1074,7 @@
                     property {
                         substitute:                     0; // 1x1
                         name:                           string(STR_MID_OFFICE_NAME);
-                        availability_mask:              [bitmask(TOWNZONE_CENTRE, TOWNZONE_INNER_SUBURB), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+                        availability_mask:              [bitmask(TOWNZONE_CENTRE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
                         probability:                    1;
                         years_available:                [1970, 65535];
                         minimum_lifetime:               4*(para_lifetime);
@@ -600,7 +1418,7 @@
                     property {
                         substitute:                     0; // 1x1
                         name:                           string(STR_VILLA_NAME);
-                        availability_mask:              [bitmask(TOWNZONE_OUTSKIRT, TOWNZONE_EDGE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+                        availability_mask:              [bitmask(TOWNZONE_OUTER_SUBURB, TOWNZONE_OUTSKIRT, TOWNZONE_EDGE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
                         probability:                    4;
                         years_available:                [1980, 65535];
                         minimum_lifetime:               4*(para_lifetime);
@@ -804,7 +1622,7 @@
                     property {
                         substitute:                     0; // 1x1
                         name:                           string(STR_SMALL_OFFICE_NAME);
-                        availability_mask:              [ALL_TOWNZONES & ~bitmask(TOWNZONE_EDGE, TOWNZONE_OUTSKIRT), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+                        availability_mask:              [bitmask(TOWNZONE_CENTRE, TOWNZONE_INNER_SUBURB), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
                         probability:                    2;
                         years_available:                [1980, 65535];
                         minimum_lifetime:               4*(para_lifetime);
@@ -822,6 +1640,7 @@
                     graphics {
                         default:                        sw_SMALL_OFFICE_1980;
                         colour:                         random_bits%15+775;
+                        construction_check:             sw_is_city;
                     }
                 }
 
@@ -913,7 +1732,7 @@
                     property {
                         substitute:                     0; // 1x1
                         name:                           string(STR_SINGLE_HOUSE_NAME);
-                        availability_mask:              [bitmask(TOWNZONE_EDGE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+                        availability_mask:              [bitmask(TOWNZONE_OUTSKIRT, TOWNZONE_EDGE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
                         probability:                    1;
                         years_available:                [1990, 65535];
                         minimum_lifetime:               4*(para_lifetime);
@@ -1307,11 +2126,11 @@
                 }
 
             // Item Definition
-                item(FEAT_HOUSES, kt_MID_SHOPPING_DIST_1990_B, 164, HOUSE_SIZE_1X1) {
+                item(FEAT_HOUSES, kt_MID_SHOPPING_DIST_1990, 164, HOUSE_SIZE_1X1) {
                     property {
                         substitute:                     0; // 1x1
                         name:                           string(STR_MID_SHOPPING_DIST_NAME);
-                        availability_mask:              [ALL_TOWNZONES & ~bitmask(TOWNZONE_EDGE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+                        availability_mask:              [bitmask(TOWNZONE_CENTRE, TOWNZONE_INNER_SUBURB, TOWNZONE_OUTER_SUBURB), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
                         probability:                    4;
                         years_available:                [1990, 65535];
                         minimum_lifetime:               4*(para_lifetime);
@@ -1457,7 +2276,7 @@
                     property {
                         substitute:                     0; // 1x1
                         name:                           string(STR_MID_OFFICE_NAME);
-                        availability_mask:              [bitmask(TOWNZONE_CENTRE, TOWNZONE_INNER_SUBURB), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+                        availability_mask:              [bitmask(TOWNZONE_CENTRE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
                         probability:                    1;
                         years_available:                [1990, 65535];
                         minimum_lifetime:               4*(para_lifetime);
@@ -1565,7 +2384,7 @@
                 }
 
             // VILLA_2000_A
-                spritelayout layout_building_normal_VILLA_2000_A1 { // tree
+                spritelayout layout_building_normal_VILLA_2000_A1 { // tree_1
                     ground {
                         sprite:             set_building_ground_normal_VILLA_2000_A;
                     }
@@ -1576,8 +2395,8 @@
                         palette:            PALETTE_USE_DEFAULT;
                     }
 
-                    building {           
-                        sprite:             set_VILLA_2000_TREE;          
+                    childsprite {           
+                        sprite:             set_VILLA_2000_TREE1;          
                     }
                 }
 
@@ -1585,7 +2404,7 @@
                     tmpl_low_building(80, 0)
                 }
 
-                spritelayout layout_building_normal_VILLA_2000_A2 {
+                spritelayout layout_building_normal_VILLA_2000_A2 { // tree_2
                     ground {
                         sprite:             set_building_ground_normal_VILLA_2000_A;
                     }
@@ -1595,13 +2414,17 @@
                         recolour_mode:      RECOLOUR_REMAP;
                         palette:            PALETTE_USE_DEFAULT;
                     }
+
+                    childsprite {           
+                        sprite:             set_VILLA_2000_TREE2;          
+                    }
                 }
 
                 spriteset (set_buliding_normal_VILLA_2000_A2, "./Korean_Town_Set/gfx/VILLA_2000.png") {
                     tmpl_low_building(160, 0)
                 }
 
-                spritelayout layout_building_snow_VILLA_2000_A1 { // tree
+                spritelayout layout_building_snow_VILLA_2000_A1 { // tree_1
                     ground {
                         sprite:             set_building_ground_snow_VILLA_2000_A;
                     }
@@ -1612,8 +2435,8 @@
                         palette:            PALETTE_USE_DEFAULT;
                     }
 
-                    building {           
-                        sprite:             set_VILLA_2000_TREE_snow;          
+                    childsprite {           
+                        sprite:             set_VILLA_2000_TREE1_snow;          
                     }
                 }
 
@@ -1621,7 +2444,7 @@
                     tmpl_low_building(400, 0)
                 }
 
-                spritelayout layout_building_snow_VILLA_2000_A2 {
+                spritelayout layout_building_snow_VILLA_2000_A2 { // tree_2
                     ground {
                         sprite:             set_building_ground_snow_VILLA_2000_A;
                     }
@@ -1630,6 +2453,10 @@
                         sprite:             set_buliding_snow_VILLA_2000_A2;
                         recolour_mode:      RECOLOUR_REMAP;
                         palette:            PALETTE_USE_DEFAULT;
+                    }
+
+                    childsprite {           
+                        sprite:             set_VILLA_2000_TREE2_snow;          
                     }
                 }
 
@@ -1881,12 +2708,20 @@
                     tmpl_low_building(560, 300)
                 }
 
-                spriteset (set_VILLA_2000_TREE, "./Korean_Town_Set/gfx/TREE.png") {
-                    [0, 0, 38, 56, -18, -28]
+                spriteset (set_VILLA_2000_TREE1, "./Korean_Town_Set/gfx/TREE.png") {
+                    [80, 0, 38, 56, 17, 29]
                 }
 
-                spriteset (set_VILLA_2000_TREE_snow, "./Korean_Town_Set/gfx/TREE.png") {
-                    [40, 0, 38, 56, -18, -28]
+                spriteset (set_VILLA_2000_TREE1_snow, "./Korean_Town_Set/gfx/TREE.png") {
+                    [120, 0, 38, 56, 17, 29]
+                }
+
+                spriteset (set_VILLA_2000_TREE2, "./Korean_Town_Set/gfx/TREE.png") {
+                    [160, 0, 38, 56, 17, 29]
+                }
+
+                spriteset (set_VILLA_2000_TREE2_snow, "./Korean_Town_Set/gfx/TREE.png") {
+                    [200, 0, 38, 56, 17, 29]
                 }
 
             // Switch
@@ -1938,55 +2773,55 @@
                     layout_building_normal_VILLA_2000_D2;
                 }
 
-                switch(FEAT_HOUSES, SELF, sw_random2_VILLA_2000_A1, construction_state ) {
+                switch(FEAT_HOUSES, SELF, sw_random_VILLA_2000_A1, construction_state ) {
                     0..2: layout_const_VILLA_2000_A;
                     sw_building_VILLA_2000_A1;
                 }
 
-                switch(FEAT_HOUSES, SELF, sw_random2_VILLA_2000_A2, construction_state ) {
+                switch(FEAT_HOUSES, SELF, sw_random_VILLA_2000_A2, construction_state ) {
                     0..2: layout_const_VILLA_2000_A;
                     sw_building_VILLA_2000_A2;
                 }
 
-                switch(FEAT_HOUSES, SELF, sw_random2_VILLA_2000_B1, construction_state ) {
+                switch(FEAT_HOUSES, SELF, sw_random_VILLA_2000_B1, construction_state ) {
                     0..2: layout_const_VILLA_2000_B;
                     sw_building_VILLA_2000_B1;
                 }
 
-                switch(FEAT_HOUSES, SELF, sw_random2_VILLA_2000_B2, construction_state ) {
+                switch(FEAT_HOUSES, SELF, sw_random_VILLA_2000_B2, construction_state ) {
                     0..2: layout_const_VILLA_2000_B;
                     sw_building_VILLA_2000_B2;
                 }
 
-                switch(FEAT_HOUSES, SELF, sw_random2_VILLA_2000_C1, construction_state ) {
+                switch(FEAT_HOUSES, SELF, sw_random_VILLA_2000_C1, construction_state ) {
                     0..2: layout_const_VILLA_2000_C;
                     sw_building_VILLA_2000_C1;
                 }
 
-                switch(FEAT_HOUSES, SELF, sw_random2_VILLA_2000_C2, construction_state ) {
+                switch(FEAT_HOUSES, SELF, sw_random_VILLA_2000_C2, construction_state ) {
                     0..2: layout_const_VILLA_2000_C;
                     sw_building_VILLA_2000_C2;
                 }
 
-                switch(FEAT_HOUSES, SELF, sw_random2_VILLA_2000_D1, construction_state ) {
+                switch(FEAT_HOUSES, SELF, sw_random_VILLA_2000_D1, construction_state ) {
                     0..2: layout_const_VILLA_2000_D;
                     sw_building_VILLA_2000_D1;
                 }
 
-                switch(FEAT_HOUSES, SELF, sw_random2_VILLA_2000_D2, construction_state ) {
+                switch(FEAT_HOUSES, SELF, sw_random_VILLA_2000_D2, construction_state ) {
                     0..2: layout_const_VILLA_2000_D;
                     sw_building_VILLA_2000_D2;
                 }
 
-                switch(FEAT_HOUSES, SELF, sw_random_VILLA_2000, random_bits % 8) {
-                    1: sw_random2_VILLA_2000_B1;
-                    2: sw_random2_VILLA_2000_B2;
-                    3: sw_random2_VILLA_2000_C1;
-                    4: sw_random2_VILLA_2000_C2;
-                    5: sw_random2_VILLA_2000_D1;
-                    6: sw_random2_VILLA_2000_D2;
-                    7: sw_random2_VILLA_2000_A1;
-                    sw_random2_VILLA_2000_A2;
+                switch(FEAT_HOUSES, SELF, sw_graphic_VILLA_2000, random_bits % 8) {
+                    1: sw_random_VILLA_2000_B1;
+                    2: sw_random_VILLA_2000_B2;
+                    3: sw_random_VILLA_2000_C1;
+                    4: sw_random_VILLA_2000_C2;
+                    5: sw_random_VILLA_2000_D1;
+                    6: sw_random_VILLA_2000_D2;
+                    7: sw_random_VILLA_2000_A1;
+                    sw_random_VILLA_2000_A2;
                 }
 
             // Item Definition
@@ -1994,7 +2829,7 @@
                     property {
                         substitute:                     0; // 1x1
                         name:                           string(STR_VILLA_NAME);
-                        availability_mask:              [bitmask(TOWNZONE_OUTSKIRT, TOWNZONE_EDGE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+                        availability_mask:              [bitmask(TOWNZONE_OUTER_SUBURB, TOWNZONE_OUTSKIRT, TOWNZONE_EDGE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
                         probability:                    8;
                         years_available:                [2000, 65535];
                         minimum_lifetime:               4*(para_lifetime);
@@ -2010,7 +2845,7 @@
                     }
 
                     graphics {
-                        default:                        sw_random_VILLA_2000;
+                        default:                        sw_graphic_VILLA_2000;
                         colour:                         random_bits%2+788;
                     }
                 }  
@@ -2358,14 +3193,14 @@
                     property {
                         substitute:                     0; // 1x1
                         name:                           string(STR_SMALL_OFFICE_NAME);
-                        availability_mask:              [ALL_TOWNZONES & ~bitmask(TOWNZONE_OUTSKIRT, TOWNZONE_EDGE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+                        availability_mask:              [bitmask(TOWNZONE_CENTRE, TOWNZONE_INNER_SUBURB), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
                         probability:                    3;
                         years_available:                [2000, 65535];
                         minimum_lifetime:               4*(para_lifetime);
 
                         population:                     70;
                         mail_multiplier:                45;
-                        accepted_cargos:                [[PASS, 8], [MAIL, 3], [GOOD, 4]];
+                        accepted_cargos:                [[PASS, 6], [MAIL, 3], [GOOD, 4]];
                     
                         local_authority_impact:         110;
                         removal_cost_multiplier:        140;
@@ -2375,6 +3210,7 @@
 
                     graphics {
                         default:                        sw_random_SMALL_OFFICE_2000;
+                        construction_check:             sw_is_city;
                     }
                 }
 
@@ -2667,7 +3503,7 @@
                     property {
                         substitute:                     0; // 1x1
                         name:                           string(STR_MID_OFFICE_NAME);
-                        availability_mask:              [bitmask(TOWNZONE_CENTRE, TOWNZONE_INNER_SUBURB), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+                        availability_mask:              [bitmask(TOWNZONE_CENTRE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
                         probability:                    4;
                         years_available:                [2000, 65535];
                         minimum_lifetime:               4*(para_lifetime);
@@ -2689,6 +3525,253 @@
                         default:                        sw_random_MID_OFFICE_2000;
                         construction_check:             sw_is_city;
                         colour:                         random_bits%15+775;
+                    }
+                }
+
+    // PARKS
+        // PARK_2000
+            // PARK_2000_normal
+                spritelayout layout_building_normal_PARK_2000_A1 {
+                    ground {
+                        sprite:                         set_ground_normal_PARK_2000_A;
+                    }
+
+                    building {
+                        sprite:                         set_building_normal_PARK_2000_A1;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_normal_PARK_2000_A1, "./Korean_Town_Set/gfx/PARK.png") {
+                    tmpl_low_building(80, 100)
+                }
+
+                spritelayout layout_building_normal_PARK_2000_A2 {
+                    ground {
+                        sprite:                         set_ground_normal_PARK_2000_A;
+                    }
+
+                    building {
+                        sprite:                         set_building_normal_PARK_2000_A2;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_normal_PARK_2000_A2, "./Korean_Town_Set/gfx/PARK.png") {
+                    tmpl_low_building(80, 200)
+                }
+
+                spritelayout layout_building_normal_PARK_2000_B1 {
+                    ground {
+                        sprite:                         set_ground_normal_PARK_2000_B;
+                    }
+
+                    building {
+                        sprite:                         set_building_normal_PARK_2000_B1;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_normal_PARK_2000_B1, "./Korean_Town_Set/gfx/PARK.png") {
+                    tmpl_low_building(240, 100)
+                }
+
+                spritelayout layout_building_normal_PARK_2000_B2 {
+                    ground {
+                        sprite:                         set_ground_normal_PARK_2000_B;
+                    }
+
+                    building {
+                        sprite:                         set_building_normal_PARK_2000_B2;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_normal_PARK_2000_B2, "./Korean_Town_Set/gfx/PARK.png") {
+                    tmpl_low_building(240, 200)
+                }
+
+                spritelayout layout_building_normal_PARK_2000_C {
+                    ground {
+                        sprite:                         set_building_normal_PARK_2000_C;
+                    }
+
+                    building {
+                        sprite:                         set_building_normal_PARK_2000_C;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_normal_PARK_2000_C, "./Korean_Town_Set/gfx/PARK.png") {
+                    tmpl_low_building(320, 100)
+                }
+
+            // PARK_2000_snow
+                spritelayout layout_building_snow_PARK_2000_A1 {
+                    ground {
+                        sprite:                         set_ground_snow_PARK_2000_A;
+                    }
+
+                    building {
+                        sprite:                         set_building_snow_PARK_2000_A1;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_snow_PARK_2000_A1, "./Korean_Town_Set/gfx/PARK.png") {
+                    tmpl_low_building(480, 100)
+                }
+
+                spritelayout layout_building_snow_PARK_2000_A2 {
+                    ground {
+                        sprite:                         set_ground_snow_PARK_2000_A;
+                    }
+
+                    building {
+                        sprite:                         set_building_snow_PARK_2000_A2;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_snow_PARK_2000_A2, "./Korean_Town_Set/gfx/PARK.png") {
+                    tmpl_low_building(480, 200)
+                }
+
+                spritelayout layout_building_snow_PARK_2000_B1 {
+                    ground {
+                        sprite:                         set_ground_snow_PARK_2000_B;
+                    }
+
+                    building {
+                        sprite:                         set_building_snow_PARK_2000_B1;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_snow_PARK_2000_B1, "./Korean_Town_Set/gfx/PARK.png") {
+                    tmpl_low_building(640, 100)
+                }
+
+                spritelayout layout_building_snow_PARK_2000_B2 {
+                    ground {
+                        sprite:                         set_ground_snow_PARK_2000_B;
+                    }
+
+                    building {
+                        sprite:                         set_building_snow_PARK_2000_B2;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_snow_PARK_2000_B2, "./Korean_Town_Set/gfx/PARK.png") {
+                    tmpl_low_building(640, 200)
+                }
+
+                spritelayout layout_building_snow_PARK_2000_C {
+                    ground {
+                        sprite:                         set_building_snow_PARK_2000_C;
+                    }
+
+                    building {
+                        sprite:                         set_building_snow_PARK_2000_C;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_snow_PARK_2000_C, "./Korean_Town_Set/gfx/PARK.png") {
+                    tmpl_low_building(720, 100)
+                }
+
+            // Ground
+                spriteset (set_ground_normal_PARK_2000_A, "./Korean_Town_Set/gfx/PARK.png") {
+                    tmpl_low_building(0, 100)
+                }
+
+                spriteset (set_ground_normal_PARK_2000_B, "./Korean_Town_Set/gfx/PARK.png") {
+                    tmpl_low_building(160, 100)
+                }
+
+                spriteset (set_ground_snow_PARK_2000_A, "./Korean_Town_Set/gfx/PARK.png") {
+                    tmpl_low_building(400, 100)
+                }
+
+                spriteset (set_ground_snow_PARK_2000_B, "./Korean_Town_Set/gfx/PARK.png") {
+                    tmpl_low_building(560, 100)
+                }
+
+            // Switch
+                switch(FEAT_HOUSES, SELF, sw_building_PARK_2000_A1, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_normal_PARK_2000_A1;
+                    TILETYPE_SNOW:                      layout_building_snow_PARK_2000_A1;
+                    layout_building_normal_PARK_2000_A1;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_building_PARK_2000_A2, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_normal_PARK_2000_A2;
+                    TILETYPE_SNOW:                      layout_building_snow_PARK_2000_A2;
+                    layout_building_normal_PARK_2000_A2;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_building_PARK_2000_B1, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_normal_PARK_2000_B1;
+                    TILETYPE_SNOW:                      layout_building_snow_PARK_2000_B1;
+                    layout_building_normal_PARK_2000_B1;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_building_PARK_2000_B2, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_normal_PARK_2000_B2;
+                    TILETYPE_SNOW:                      layout_building_snow_PARK_2000_B2;
+                    layout_building_normal_PARK_2000_B2;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_building_PARK_2000_C, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_normal_PARK_2000_C;
+                    TILETYPE_SNOW:                      layout_building_snow_PARK_2000_C;
+                    layout_building_normal_PARK_2000_C;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_random_PARK_2000, random_bits % 5) {
+                    1: sw_building_PARK_2000_A2;
+                    2: sw_building_PARK_2000_B1;
+                    3: sw_building_PARK_2000_B2;
+                    4: sw_building_PARK_2000_C;
+                    sw_building_PARK_2000_A1;
+                }
+
+            // Item Definition
+                item(FEAT_HOUSES, kt_PARK_2000, 235, HOUSE_SIZE_1X1) {
+                    property {
+                        substitute:                     0; // 1x1
+                        name:                           string(STR_PARK_NAME);
+                        availability_mask:              [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+                        probability:                    15;
+                        years_available:                [2000, 65535];
+                        minimum_lifetime:               4*(para_lifetime);
+
+                        population:                     0;
+                        mail_multiplier:                0;
+                        accepted_cargos:                [[PASS, 2]];
+                    
+                        local_authority_impact:         75;
+                        removal_cost_multiplier:        60;
+
+                        building_class:                 45;
+                    }
+
+                    graphics {
+                        default:                        sw_random_PARK_2000;
+                        colour:                         random_bits%15+775;
+                        construction_check:             sw_check_avoid_15;
                     }
                 }
 
@@ -3692,7 +4775,7 @@
                         name:                           string(STR_LOW_APT_NAME);
                         availability_mask:              [ALL_TOWNZONES & ~bitmask(TOWNZONE_CENTRE, TOWNZONE_INNER_SUBURB), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
                         random_colours:                 [COLOUR_DARK_GREEN, COLOUR_PINK, COLOUR_CREAM, COLOUR_MAUVE];
-                        probability:                    8;
+                        probability:                    15;
                         years_available:                [1990, 65535];
                         minimum_lifetime:               6*(para_lifetime);
 
@@ -3821,7 +4904,7 @@
                         name:                           string(STR_LOW_APT_NAME);
                         availability_mask:              [ALL_TOWNZONES & ~bitmask(TOWNZONE_CENTRE, TOWNZONE_INNER_SUBURB), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
                         random_colours:                 [COLOUR_DARK_GREEN, COLOUR_BROWN, COLOUR_GREY, COLOUR_MAUVE];
-                        probability:                    8;
+                        probability:                    15;
                         years_available:                [2000, 65535];
                         minimum_lifetime:               6*(para_lifetime);
 
@@ -4205,7 +5288,7 @@
                         name:                           string(STR_MID_APT_NAME);
                         availability_mask:              [ALL_TOWNZONES & ~bitmask(TOWNZONE_CENTRE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
                         random_colours:                 [COLOUR_CREAM, COLOUR_GREY, COLOUR_BROWN, COLOUR_PINK];
-                        probability:                    8;
+                        probability:                    15;
                         years_available:                [1990, 65535];
                         minimum_lifetime:               6*(para_lifetime);
 
@@ -4241,18 +5324,32 @@
                     tmpl_mid_building(0, 0)
                 }
 
-                spritelayout layout_const1_diagnal_MID_APT_2000 {
+                spritelayout layout_const1_diagnal_right_MID_APT_2000 {
                     ground {
-                        sprite:          set_const_ground_diagnal_MID_APT_2000;
+                        sprite:          set_const_ground_diagnal_right_MID_APT_2000;
                     }
 
                     building {
-                        sprite:          set_const1_building_diagnal_MID_APT_2000;
+                        sprite:          set_const1_building_diagnal_right_MID_APT_2000;
                     }
                 }
 
-                spriteset(set_const1_building_diagnal_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
+                spriteset(set_const1_building_diagnal_right_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
                     tmpl_mid_building(0, 200)
+                }
+
+                spritelayout layout_const1_diagnal_front_MID_APT_2000 {
+                    ground {
+                        sprite:          set_const_ground_diagnal_front_MID_APT_2000;
+                    }
+
+                    building {
+                        sprite:          set_const1_building_diagnal_front_MID_APT_2000;
+                    }
+                }
+
+                spriteset(set_const1_building_diagnal_front_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
+                    tmpl_mid_building(0, 400)
                 }
 
             // construction_2
@@ -4270,18 +5367,32 @@
                     tmpl_mid_building(80, 0)
                 }
 
-                spritelayout layout_const2_diagnal_MID_APT_2000 {
+                spritelayout layout_const2_diagnal_right_MID_APT_2000 {
                     ground {
-                        sprite:          set_const_ground_diagnal_MID_APT_2000;
+                        sprite:          set_const_ground_diagnal_right_MID_APT_2000;
                     }
 
                     building {
-                        sprite:          set_const2_building_diagnal_MID_APT_2000;
+                        sprite:          set_const2_building_diagnal_right_MID_APT_2000;
                     }
                 }
 
-                spriteset(set_const2_building_diagnal_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
+                spriteset(set_const2_building_diagnal_right_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
                     tmpl_mid_building(80, 200)
+                }
+
+                spritelayout layout_const2_diagnal_front_MID_APT_2000 {
+                    ground {
+                        sprite:          set_const_ground_diagnal_front_MID_APT_2000;
+                    }
+
+                    building {
+                        sprite:          set_const2_building_diagnal_front_MID_APT_2000;
+                    }
+                }
+
+                spriteset(set_const2_building_diagnal_front_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
+                    tmpl_mid_building(80, 400)
                 }
 
             // construction general
@@ -4291,10 +5402,16 @@
                     2: layout_const2_straight_MID_APT_2000;
                 }
 
-                switch(FEAT_HOUSES, SELF, sw_const_diagnal_MID_APT_2000, construction_state) {
-                    0: layout_const1_diagnal_MID_APT_2000;
-                    1: layout_const1_diagnal_MID_APT_2000;
-                    2: layout_const2_diagnal_MID_APT_2000;
+                switch(FEAT_HOUSES, SELF, sw_const_diagnal_right_MID_APT_2000, construction_state) {
+                    0: layout_const1_diagnal_right_MID_APT_2000;
+                    1: layout_const1_diagnal_right_MID_APT_2000;
+                    2: layout_const2_diagnal_right_MID_APT_2000;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_const_diagnal_front_MID_APT_2000, construction_state) {
+                    0: layout_const1_diagnal_front_MID_APT_2000;
+                    1: layout_const2_diagnal_front_MID_APT_2000;
+                    2: layout_const2_diagnal_front_MID_APT_2000;
                 }
 
             // MID_APT_2000_normal
@@ -4330,36 +5447,68 @@
                     tmpl_mid_building(240, 0)
                 }
 
-                spritelayout layout_building_diagnal_low_normal_MID_APT_2000 {
+                spritelayout layout_building_diagnal_right_low_normal_MID_APT_2000 {
                     ground {
-                        sprite:          set_building_ground_diagnal_normal_MID_APT_2000;
+                        sprite:          set_building_ground_diagnal_right_normal_MID_APT_2000;
                     }
 
                     building {
-                        sprite:          set_building_diagnal_low_normal_MID_APT_2000;
+                        sprite:          set_building_diagnal_right_low_normal_MID_APT_2000;
                         recolour_mode:   RECOLOUR_REMAP;
                         palette:         PALETTE_USE_DEFAULT;
                     }
                 }
 
-                spriteset (set_building_diagnal_low_normal_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
+                spriteset (set_building_diagnal_right_low_normal_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
                     tmpl_mid_building(160, 200)
                 }
 
-                spritelayout layout_building_diagnal_high_normal_MID_APT_2000 {
+                spritelayout layout_building_diagnal_right_high_normal_MID_APT_2000 {
                     ground {
-                        sprite:          set_building_ground_diagnal_normal_MID_APT_2000;
+                        sprite:          set_building_ground_diagnal_right_normal_MID_APT_2000;
                     }
 
                     building {
-                        sprite:          set_building_diagnal_high_normal_MID_APT_2000;
+                        sprite:          set_building_diagnal_right_high_normal_MID_APT_2000;
                         recolour_mode:   RECOLOUR_REMAP;
                         palette:         PALETTE_USE_DEFAULT;
                     }
                 }
 
-                spriteset (set_building_diagnal_high_normal_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
+                spriteset (set_building_diagnal_right_high_normal_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
                     tmpl_mid_building(240, 200)
+                }
+
+                spritelayout layout_building_diagnal_front_low_normal_MID_APT_2000 {
+                    ground {
+                        sprite:          set_building_ground_diagnal_front_normal_MID_APT_2000;
+                    }
+
+                    building {
+                        sprite:          set_building_diagnal_front_low_normal_MID_APT_2000;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_diagnal_front_low_normal_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
+                    tmpl_mid_building(160, 400)
+                }
+
+                spritelayout layout_building_diagnal_front_high_normal_MID_APT_2000 {
+                    ground {
+                        sprite:          set_building_ground_diagnal_front_normal_MID_APT_2000;
+                    }
+
+                    building {
+                        sprite:          set_building_diagnal_front_high_normal_MID_APT_2000;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_diagnal_front_high_normal_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
+                    tmpl_mid_building(240, 400)
                 }
 
             // MID_APT_2000_snow
@@ -4395,36 +5544,68 @@
                     tmpl_mid_building(560, 0)
                 }
 
-                spritelayout layout_building_diagnal_low_snow_MID_APT_2000 {
+                spritelayout layout_building_diagnal_right_low_snow_MID_APT_2000 {
                     ground {
-                        sprite:          set_building_ground_diagnal_snow_MID_APT_2000;
+                        sprite:          set_building_ground_diagnal_right_snow_MID_APT_2000;
                     }
 
                     building {
-                        sprite:          set_building_diagnal_low_snow_MID_APT_2000;
+                        sprite:          set_building_diagnal_right_low_snow_MID_APT_2000;
                         recolour_mode:   RECOLOUR_REMAP;
                         palette:         PALETTE_USE_DEFAULT;
                     }
                 }
 
-                spriteset (set_building_diagnal_low_snow_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
+                spriteset (set_building_diagnal_right_low_snow_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
                     tmpl_mid_building(480, 200)
                 }
 
-                spritelayout layout_building_diagnal_high_snow_MID_APT_2000 {
+                spritelayout layout_building_diagnal_right_high_snow_MID_APT_2000 {
                     ground {
-                        sprite:          set_building_ground_diagnal_snow_MID_APT_2000;
+                        sprite:          set_building_ground_diagnal_right_snow_MID_APT_2000;
                     }
 
                     building {
-                        sprite:          set_building_diagnal_high_snow_MID_APT_2000;
+                        sprite:          set_building_diagnal_right_high_snow_MID_APT_2000;
                         recolour_mode:   RECOLOUR_REMAP;
                         palette:         PALETTE_USE_DEFAULT;
                     }
                 }
 
-                spriteset (set_building_diagnal_high_snow_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
+                spriteset (set_building_diagnal_right_high_snow_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
                     tmpl_mid_building(560, 200)
+                }
+
+                spritelayout layout_building_diagnal_front_low_snow_MID_APT_2000 {
+                    ground {
+                        sprite:          set_building_ground_diagnal_front_snow_MID_APT_2000;
+                    }
+
+                    building {
+                        sprite:          set_building_diagnal_front_low_snow_MID_APT_2000;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_diagnal_front_low_snow_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
+                    tmpl_mid_building(480, 400)
+                }
+
+                spritelayout layout_building_diagnal_front_high_snow_MID_APT_2000 {
+                    ground {
+                        sprite:          set_building_ground_diagnal_front_snow_MID_APT_2000;
+                    }
+
+                    building {
+                        sprite:          set_building_diagnal_front_high_snow_MID_APT_2000;
+                        recolour_mode:   RECOLOUR_REMAP;
+                        palette:         PALETTE_USE_DEFAULT;
+                    }
+                }
+
+                spriteset (set_building_diagnal_front_high_snow_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
+                    tmpl_mid_building(560, 400)
                 }
 
             // etc.
@@ -4432,24 +5613,36 @@
                     tmpl_mid_building(320, 0)
                 }
 
-                spriteset(set_const_ground_diagnal_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
+                spriteset(set_const_ground_diagnal_right_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
                     tmpl_mid_building(320, 200)
+                }
+
+                spriteset(set_const_ground_diagnal_front_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
+                    tmpl_mid_building(320, 400)
                 }
 
                 spriteset (set_building_ground_straight_normal_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
                     tmpl_mid_building(400, 0)
                 }
 
-                spriteset (set_building_ground_diagnal_normal_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
+                spriteset (set_building_ground_diagnal_right_normal_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
                     tmpl_mid_building(400, 200)
+                }
+
+                spriteset (set_building_ground_diagnal_front_normal_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
+                    tmpl_mid_building(400, 400)
                 }
 
                 spriteset (set_building_ground_straight_snow_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
                     tmpl_mid_building(640, 0)
                 }
 
-                spriteset (set_building_ground_diagnal_snow_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
+                spriteset (set_building_ground_diagnal_right_snow_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
                     tmpl_mid_building(640, 200)
+                }
+
+                spriteset (set_building_ground_diagnal_front_snow_MID_APT_2000, "./Korean_Town_Set/gfx/MID_APT_2000.png") {
+                    tmpl_mid_building(640, 400)
                 }
 
             // Switch
@@ -4465,16 +5658,28 @@
                     layout_building_straight_roundroof_normal_MID_APT_2000;
                 }
 
-                switch(FEAT_HOUSES, SELF, sw_building_diagnal_low_MID_APT_2000, terrain_type) {
-                    TILETYPE_NORMAL:                    layout_building_diagnal_low_normal_MID_APT_2000;
-                    TILETYPE_SNOW:                      layout_building_diagnal_low_snow_MID_APT_2000;
-                    layout_building_diagnal_low_normal_MID_APT_2000;
+                switch(FEAT_HOUSES, SELF, sw_building_diagnal_right_low_MID_APT_2000, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_diagnal_right_low_normal_MID_APT_2000;
+                    TILETYPE_SNOW:                      layout_building_diagnal_right_low_snow_MID_APT_2000;
+                    layout_building_diagnal_right_low_normal_MID_APT_2000;
                 }
 
-                switch(FEAT_HOUSES, SELF, sw_building_diagnal_high_MID_APT_2000, terrain_type) {
-                    TILETYPE_NORMAL:                    layout_building_diagnal_high_normal_MID_APT_2000;
-                    TILETYPE_SNOW:                      layout_building_diagnal_high_snow_MID_APT_2000;
-                    layout_building_diagnal_high_normal_MID_APT_2000;
+                switch(FEAT_HOUSES, SELF, sw_building_diagnal_right_high_MID_APT_2000, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_diagnal_right_high_normal_MID_APT_2000;
+                    TILETYPE_SNOW:                      layout_building_diagnal_right_high_snow_MID_APT_2000;
+                    layout_building_diagnal_right_high_normal_MID_APT_2000;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_building_diagnal_front_low_MID_APT_2000, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_diagnal_front_low_normal_MID_APT_2000;
+                    TILETYPE_SNOW:                      layout_building_diagnal_front_low_snow_MID_APT_2000;
+                    layout_building_diagnal_front_low_normal_MID_APT_2000;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_building_diagnal_front_high_MID_APT_2000, terrain_type) {
+                    TILETYPE_NORMAL:                    layout_building_diagnal_front_high_normal_MID_APT_2000;
+                    TILETYPE_SNOW:                      layout_building_diagnal_front_high_snow_MID_APT_2000;
+                    layout_building_diagnal_front_high_normal_MID_APT_2000;
                 }
 
                 switch(FEAT_HOUSES, SELF, sw_building_straight_MID_APT_2000, random_bits % 2) {
@@ -4482,9 +5687,14 @@
                     sw_building_straight_roundroof_MID_APT_2000;
                 }
 
-                switch(FEAT_HOUSES, SELF, sw_building_diagnal_MID_APT_2000, random_bits % 2) {
-                    1: sw_building_diagnal_low_MID_APT_2000;
-                    sw_building_diagnal_high_MID_APT_2000;
+                switch(FEAT_HOUSES, SELF, sw_building_diagnal_right_MID_APT_2000, random_bits % 2) {
+                    1: sw_building_diagnal_right_low_MID_APT_2000;
+                    sw_building_diagnal_right_high_MID_APT_2000;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_building_diagnal_front_MID_APT_2000, random_bits % 2) {
+                    1: sw_building_diagnal_front_low_MID_APT_2000;
+                    sw_building_diagnal_front_high_MID_APT_2000;
                 }
 
                 switch(FEAT_HOUSES, SELF, sw_straight_MID_APT_2000, construction_state ) {
@@ -4492,16 +5702,22 @@
                     sw_building_straight_MID_APT_2000;
                 }
 
-                switch(FEAT_HOUSES, SELF, sw_diagnal_MID_APT_2000, construction_state ) {
-                    0..2: sw_const_diagnal_MID_APT_2000;
-                    sw_building_diagnal_MID_APT_2000;
+                switch(FEAT_HOUSES, SELF, sw_diagnal_right_MID_APT_2000, construction_state ) {
+                    0..2: sw_const_diagnal_right_MID_APT_2000;
+                    sw_building_diagnal_right_MID_APT_2000;
                 }
 
-                switch(FEAT_HOUSES, SELF, sw_random_MID_APT_2000, random_bits % 6) {
+                switch(FEAT_HOUSES, SELF, sw_diagnal_front_MID_APT_2000, construction_state ) {
+                    0..2: sw_const_diagnal_front_MID_APT_2000;
+                    sw_building_diagnal_front_MID_APT_2000;
+                }
+
+                switch(FEAT_HOUSES, SELF, sw_random_MID_APT_2000, random_bits % 7) {
                     1: sw_PARK_APT_2000;
                     2..3: sw_straight_MID_APT_2000;
-                    4..5: sw_diagnal_MID_APT_2000;
-                    sw_straight_MID_APT_2000;
+                    4..5: sw_diagnal_right_MID_APT_2000;
+                    6: sw_diagnal_front_MID_APT_2000;
+                    sw_diagnal_front_MID_APT_2000;
                 }
 
             // Item definition main         
@@ -4511,7 +5727,7 @@
                         name:                           string(STR_MID_APT_NAME);
                         availability_mask:              [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
                         random_colours:                 [COLOUR_DARK_GREEN, COLOUR_BROWN, COLOUR_CREAM, COLOUR_MAUVE];
-                        probability:                    8;
+                        probability:                    15;
                         years_available:                [2000, 65535];
                         minimum_lifetime:               6*(para_lifetime);
 
@@ -4754,9 +5970,9 @@
                     property {
                         substitute:                     0; // 1x1
                         name:                           string(STR_MID_APT_NAME);
-                        availability_mask:              [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
+                        availability_mask:              [ALL_TOWNZONES & ~bitmask(TOWNZONE_EDGE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
                         random_colours:                 [COLOUR_ORANGE, COLOUR_BLUE, COLOUR_PINK, COLOUR_PURPLE];
-                        probability:                    8;
+                        probability:                    15;
                         years_available:                [2010, 65535];
                         minimum_lifetime:               6*(para_lifetime);
 
@@ -4857,6 +6073,8 @@
    *kt_TALL_APT_2000:                                   230,    40
    *kt_TALL_APT_2010:                                   231,    41
    *kt_TALL_APT_2020:                                   232,    42
+
+    kt_PARK_2000:                                       235,    45
 
     시청
     구청?
