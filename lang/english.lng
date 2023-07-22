@@ -10,7 +10,7 @@ STR_GRF_URL                                       	:https://github.com/SerpensNe
 STR_PARAM_OVERRIDE_NAME                           	:Override original buildings
 STR_PARAM_OVERRIDE_DESC                           	:If you enable this setting, default OpenTTD buildings never appears on the map.
 STR_PARAM_LIFETIME_NAME                           	:Set minimal lifetime
-STR_PARAM_LIFETIME_DESC                           	:Set minimal lifetime of all buildings. The shorter this setting, the more frequent the building will be rebuilt. It is recommanded to use with 'Day length factor' setting from JGR's patchpack. {}{}Default is x5(20 years).
+STR_PARAM_LIFETIME_DESC                           	:Set minimal lifetime of all buildings. The shorter this setting, the more frequent the building will be rebuilt. It is recommanded to use with 'Day length factor' setting from JGR's patchpack. {}{}Default is 5(x5, most are 20 years).
 
 # Building names
 STR_TILED_ROOF_HOUSE                              	:Tiled-roof Hanok
