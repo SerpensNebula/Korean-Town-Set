@@ -2,7 +2,7 @@
 
 # GRF name and description
 STR_GRF_NAME                                      	:Korean Town Set beta0.3.0
-STR_GRF_DESC                                      	:Korean Town Set includes Korean style buildings except North Korea. {}{}{YELLOW}Highly recommanded to use this NewGRF after year 2000. Older buildings will be added soon!
+STR_GRF_DESC                                      	:Korean Town Set includes Korean style buildings except North Korea. {}{}{YELLOW}Highly recommanded to use this NewGRF after year 2000. Older buildings will be added soon! {}{}{BLACK}License: {SILVER}GNU GPL v3
 
 STR_GRF_URL                                       	:https://github.com/SerpensNebula/Korean-Town-Set
 

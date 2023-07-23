@@ -3,7 +3,7 @@
         name:                               string(STR_GRF_NAME);
         desc:                               string(STR_GRF_DESC);
         url:                                string(STR_GRF_URL);
-        version:                            230722;
+        version:                            230723;
         min_compatible_version:             230624;
     
         // Parameters
@@ -99,6 +99,22 @@
 
         template tmpl_high_building_2x1_west(x, y) {
             [x, y, 110, 290, -38, -258]
+        }
+
+        template tmpl_high_building_2x2_north(x, y) {
+            [x, y, 140, 290, -69, -226]
+        }
+
+        template tmpl_high_building_2x2_east(x, y) {
+            [x, y, 140, 290, -101, -242]
+        }
+
+        template tmpl_high_building_2x2_west(x, y) {
+            [x, y, 140, 290, -37, -242]
+        }
+
+        template tmpl_high_building_2x2_south(x, y) {
+            [x, y, 140, 290, -69, -258]
         }
 
 // Switches
@@ -6808,7 +6824,43 @@
                     }
                 }
 
-// etc. buildings
+// HQ
+    // 0 to 255
+
+    // 256 to 383
+
+    // 384 to 511
+
+    // 512 to 767
+
+    // 768 to 1000
+        replace (2626, "./Korean_Town_Set/gfx/HQ.png") { // building N
+            tmpl_high_building_2x2_north(0, 0)
+        }
+
+        replace (2628, "./Korean_Town_Set/gfx/HQ.png") { // building E
+            tmpl_high_building_2x2_east(150, 0)
+        }
+
+        replace (2630, "./Korean_Town_Set/gfx/HQ.png") { // building W
+            tmpl_high_building_2x2_west(300, 0)
+        }
+
+        replace (2625, "./Korean_Town_Set/gfx/HQ.png") { // ground N
+            tmpl_high_building_2x2_north(450, 0)
+        }
+
+        replace (2627, "./Korean_Town_Set/gfx/HQ.png") { // ground E
+            tmpl_high_building_2x2_east(600, 0)
+        }
+
+        replace (2629, "./Korean_Town_Set/gfx/HQ.png") { // ground W
+            tmpl_high_building_2x2_west(750, 0)
+        }
+
+        replace (2631, "./Korean_Town_Set/gfx/HQ.png") { // ground S
+            tmpl_high_building_2x2_south(900, 0)
+        }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* item_ID & building_class (*: unused yet)
