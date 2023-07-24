@@ -3,7 +3,7 @@
         name:                               string(STR_GRF_NAME);
         desc:                               string(STR_GRF_DESC);
         url:                                string(STR_GRF_URL);
-        version:                            230723;
+        version:                            230724;
         min_compatible_version:             230624;
     
         // Parameters
@@ -489,7 +489,7 @@
                         years_available:                [0, 1950];
                         minimum_lifetime:               4*(para_lifetime);
 
-                        population:                     12;
+                        population:                     17;
                         mail_multiplier:                4;
                         accepted_cargos:                [[PASS, 2], [MAIL, 1], [GOOD, 2]];
                     
@@ -961,7 +961,7 @@
                         years_available:                [0, 1950];
                         minimum_lifetime:               4*(para_lifetime);
 
-                        population:                     17;
+                        population:                     12;
                         mail_multiplier:                6;
                         accepted_cargos:                [[PASS, 3], [MAIL, 1], [GOOD, 2]];
                     
@@ -1100,12 +1100,12 @@
                         years_available:                [1970, 65535];
                         minimum_lifetime:               4*(para_lifetime);
 
-                        population:                     95;
-                        mail_multiplier:                45;
+                        population:                     120;
+                        mail_multiplier:                55;
                         accepted_cargos:                [[PASS, 7], [MAIL, 3], [GOOD, 3]];
                     
-                        local_authority_impact:         115;
-                        removal_cost_multiplier:        145;
+                        local_authority_impact:         120;
+                        removal_cost_multiplier:        150;
 
                         building_class:                 9;
                     }
@@ -1776,152 +1776,205 @@
     // SHOPPING_DISTS
         // SMALL_SHOPPING_DIST_1990
             // construction_1
-                spritelayout layout_const_SMALL_SHOPPING_DIST_1990_A1 {
+                spritelayout layout_const1_SMALL_SHOPPING_DIST_1990_A {
                     ground {
-                        sprite:          set_groundconst_SMALL_SHOPPING_DIST_1990_A;
+                        sprite:          set_ground_const_SMALL_SHOPPING_DIST_1990_A;
                     }
 
                     building {
-                        sprite:          set_const_SMALL_SHOPPING_DIST_1990_A1;
+                        sprite:          set_const1_SMALL_SHOPPING_DIST_1990_A;
                     }                    
                 }
 
-                spriteset(set_const_SMALL_SHOPPING_DIST_1990_A1, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                spriteset(set_const1_SMALL_SHOPPING_DIST_1990_A, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
                     tmpl_low_building(0, 0)
                 }
 
-                spritelayout layout_const_SMALL_SHOPPING_DIST_1990_B1 {
+                spritelayout layout_const1_SMALL_SHOPPING_DIST_1990_B {
                     ground {
-                        sprite:          set_groundconst_SMALL_SHOPPING_DIST_1990_B;
+                        sprite:          set_ground_const_SMALL_SHOPPING_DIST_1990_B;
                     }
 
                     building {
-                        sprite:          set_const_SMALL_SHOPPING_DIST_1990_B1;
+                        sprite:          set_const1_SMALL_SHOPPING_DIST_1990_B;
                     }                    
                 }
 
-                spriteset(set_const_SMALL_SHOPPING_DIST_1990_B1, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                spriteset(set_const1_SMALL_SHOPPING_DIST_1990_B, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
                     tmpl_low_building(0, 100)
                 }
 
-                spritelayout layout_const_SMALL_SHOPPING_DIST_1990_C1 {
+                spritelayout layout_const1_SMALL_SHOPPING_DIST_1990_C {
                     ground {
-                        sprite:          set_groundconst_SMALL_SHOPPING_DIST_1990_C;
+                        sprite:          set_ground_const_SMALL_SHOPPING_DIST_1990_C;
                     }
 
                     building {
-                        sprite:          set_const_SMALL_SHOPPING_DIST_1990_C1;
+                        sprite:          set_const1_SMALL_SHOPPING_DIST_1990_C;
                     }                    
                 }
 
-                spriteset(set_const_SMALL_SHOPPING_DIST_1990_C1, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                spriteset(set_const1_SMALL_SHOPPING_DIST_1990_C, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
                     tmpl_low_building(0, 200)
                 }
 
-                spritelayout layout_const_SMALL_SHOPPING_DIST_1990_D1 {
+                spritelayout layout_const1_SMALL_SHOPPING_DIST_1990_D {
                     ground {
-                        sprite:          GROUNDSPRITE_CLEARED;
+                        sprite:          set_ground_const_SMALL_SHOPPING_DIST_1990_D;
                     }
 
                     building {
-                        sprite:          set_groundconst_SMALL_SHOPPING_DIST_1990_D;
-                    }
-
-                    building {
-                        sprite:          set_const_SMALL_SHOPPING_DIST_1990_D1;
+                        sprite:          set_const1_SMALL_SHOPPING_DIST_1990_D;
                     }                    
                 }
 
-                spriteset(set_const_SMALL_SHOPPING_DIST_1990_D1, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                spriteset(set_const1_SMALL_SHOPPING_DIST_1990_D, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
                     tmpl_low_building(0, 300)
                 }
 
             // construction_2
-                spritelayout layout_const_SMALL_SHOPPING_DIST_1990_A2 {
+                spritelayout layout_const2_SMALL_SHOPPING_DIST_1990_A {
                     ground {
-                        sprite:          set_groundconst_SMALL_SHOPPING_DIST_1990_A;
+                        sprite:          set_ground_const_SMALL_SHOPPING_DIST_1990_A;
                     }
 
                     building {
-                        sprite:          set_const_SMALL_SHOPPING_DIST_1990_A2;
+                        sprite:          set_const2_SMALL_SHOPPING_DIST_1990_A;
                     }                    
                 }
 
-                spriteset(set_const_SMALL_SHOPPING_DIST_1990_A2, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                spriteset(set_const2_SMALL_SHOPPING_DIST_1990_A, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
                     tmpl_low_building(80, 0)
                 }
 
-                spritelayout layout_const_SMALL_SHOPPING_DIST_1990_B2 {
+                spritelayout layout_const2_SMALL_SHOPPING_DIST_1990_B {
                     ground {
-                        sprite:          set_groundconst_SMALL_SHOPPING_DIST_1990_B;
+                        sprite:          set_ground_const_SMALL_SHOPPING_DIST_1990_B;
                     }
 
                     building {
-                        sprite:          set_const_SMALL_SHOPPING_DIST_1990_B1;
+                        sprite:          set_const2_SMALL_SHOPPING_DIST_1990_B;
                     }                    
                 }
 
-                spriteset(set_const_SMALL_SHOPPING_DIST_1990_B2, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                spriteset(set_const2_SMALL_SHOPPING_DIST_1990_B, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
                     tmpl_low_building(80, 100)
                 }
 
-                spritelayout layout_const_SMALL_SHOPPING_DIST_1990_C2 {
+                spritelayout layout_const2_SMALL_SHOPPING_DIST_1990_C {
                     ground {
-                        sprite:          set_groundconst_SMALL_SHOPPING_DIST_1990_C;
+                        sprite:          set_ground_const_SMALL_SHOPPING_DIST_1990_C;
                     }
 
                     building {
-                        sprite:          set_const_SMALL_SHOPPING_DIST_1990_C1;
+                        sprite:          set_const2_SMALL_SHOPPING_DIST_1990_C;
                     }                    
                 }
 
-                spriteset(set_const_SMALL_SHOPPING_DIST_1990_C2, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                spriteset(set_const2_SMALL_SHOPPING_DIST_1990_C, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
                     tmpl_low_building(80, 200)
                 }
 
-                spritelayout layout_const_SMALL_SHOPPING_DIST_1990_D2 {
+                spritelayout layout_const2_SMALL_SHOPPING_DIST_1990_D {
                     ground {
-                        sprite:          set_groundconst_SMALL_SHOPPING_DIST_1990_D;
+                        sprite:          set_ground_const_SMALL_SHOPPING_DIST_1990_D;
                     }
 
                     building {
-                        sprite:          set_const_SMALL_SHOPPING_DIST_1990_D2;
+                        sprite:          set_const2_SMALL_SHOPPING_DIST_1990_D;
                     }                    
                 }
 
-                spriteset(set_const_SMALL_SHOPPING_DIST_1990_D2, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                spriteset(set_const2_SMALL_SHOPPING_DIST_1990_D, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
                     tmpl_low_building(80, 300)
+                }
+
+            // construction_3
+                spritelayout layout_const3_SMALL_SHOPPING_DIST_1990_A {
+                    ground {
+                        sprite:          set_ground_const_SMALL_SHOPPING_DIST_1990_A;
+                    }
+
+                    building {
+                        sprite:          set_const3_SMALL_SHOPPING_DIST_1990_A;
+                    }                    
+                }
+
+                spriteset(set_const3_SMALL_SHOPPING_DIST_1990_A, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                    tmpl_low_building(160, 0)
+                }
+
+                spritelayout layout_const3_SMALL_SHOPPING_DIST_1990_B {
+                    ground {
+                        sprite:          set_ground_const_SMALL_SHOPPING_DIST_1990_B;
+                    }
+
+                    building {
+                        sprite:          set_const3_SMALL_SHOPPING_DIST_1990_B;
+                    }                    
+                }
+
+                spriteset(set_const3_SMALL_SHOPPING_DIST_1990_B, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                    tmpl_low_building(160, 100)
+                }
+
+                spritelayout layout_const3_SMALL_SHOPPING_DIST_1990_C {
+                    ground {
+                        sprite:          set_ground_const_SMALL_SHOPPING_DIST_1990_C;
+                    }
+
+                    building {
+                        sprite:          set_const3_SMALL_SHOPPING_DIST_1990_C;
+                    }                    
+                }
+
+                spriteset(set_const3_SMALL_SHOPPING_DIST_1990_C, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                    tmpl_low_building(160, 200)
+                }
+
+                spritelayout layout_const3_SMALL_SHOPPING_DIST_1990_D {
+                    ground {
+                        sprite:          set_ground_const_SMALL_SHOPPING_DIST_1990_D;
+                    }
+
+                    building {
+                        sprite:          set_const3_SMALL_SHOPPING_DIST_1990_D;
+                    }                    
+                }
+
+                spriteset(set_const3_SMALL_SHOPPING_DIST_1990_D, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                    tmpl_low_building(160, 300)
                 }
 
             // construction general
                 switch(FEAT_HOUSES, SELF, layout_const_SMALL_SHOPPING_DIST_1990_A, construction_state) {
-                    0: layout_const_SMALL_SHOPPING_DIST_1990_A1;
-                    1: layout_const_SMALL_SHOPPING_DIST_1990_A2;
-                    2: layout_const_SMALL_SHOPPING_DIST_1990_A2;
+                    0: layout_const1_SMALL_SHOPPING_DIST_1990_A;
+                    1: layout_const2_SMALL_SHOPPING_DIST_1990_A;
+                    2: layout_const3_SMALL_SHOPPING_DIST_1990_A;
                 }
 
                 switch(FEAT_HOUSES, SELF, layout_const_SMALL_SHOPPING_DIST_1990_B, construction_state) {
-                    0: layout_const_SMALL_SHOPPING_DIST_1990_B1;
-                    1: layout_const_SMALL_SHOPPING_DIST_1990_B2;
-                    2: layout_const_SMALL_SHOPPING_DIST_1990_B2;
+                    0: layout_const1_SMALL_SHOPPING_DIST_1990_B;
+                    1: layout_const2_SMALL_SHOPPING_DIST_1990_B;
+                    2: layout_const3_SMALL_SHOPPING_DIST_1990_B;
                 }
 
                 switch(FEAT_HOUSES, SELF, layout_const_SMALL_SHOPPING_DIST_1990_C, construction_state) {
-                    0: layout_const_SMALL_SHOPPING_DIST_1990_C1;
-                    1: layout_const_SMALL_SHOPPING_DIST_1990_C2;
-                    2: layout_const_SMALL_SHOPPING_DIST_1990_C2;
+                    0: layout_const1_SMALL_SHOPPING_DIST_1990_C;
+                    1: layout_const2_SMALL_SHOPPING_DIST_1990_C;
+                    2: layout_const3_SMALL_SHOPPING_DIST_1990_C;
                 }
 
                 switch(FEAT_HOUSES, SELF, layout_const_SMALL_SHOPPING_DIST_1990_D, construction_state) {
-                    0: layout_const_SMALL_SHOPPING_DIST_1990_D1;
-                    1: layout_const_SMALL_SHOPPING_DIST_1990_D2;
-                    2: layout_const_SMALL_SHOPPING_DIST_1990_D2;
+                    0: layout_const1_SMALL_SHOPPING_DIST_1990_D;
+                    1: layout_const2_SMALL_SHOPPING_DIST_1990_D;
+                    2: layout_const3_SMALL_SHOPPING_DIST_1990_D;
                 }
 
             // SMALL_SHOPPING_DIST_1990
                 spritelayout layout_building_normal_SMALL_SHOPPING_DIST_1990_A {
                     ground {
-                        sprite:          set_building_groundnormal_SMALL_SHOPPING_DIST_1990_A;
+                        sprite:          set_building_ground_normal_SMALL_SHOPPING_DIST_1990_A;
                     }
 
                     building {
@@ -1932,12 +1985,12 @@
                 }
 
                 spriteset (set_building_normal_SMALL_SHOPPING_DIST_1990_A, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
-                    tmpl_low_building(160, 0)
+                    tmpl_low_building(240, 0)
                 }
 
                 spritelayout layout_building_snow_SMALL_SHOPPING_DIST_1990_A {
                     ground {
-                        sprite:          set_building_groundsnow_SMALL_SHOPPING_DIST_1990_A;
+                        sprite:          set_building_ground_snow_SMALL_SHOPPING_DIST_1990_A;
                     }
 
                     building {
@@ -1948,12 +2001,12 @@
                 }
 
                 spriteset (set_building_snow_SMALL_SHOPPING_DIST_1990_A, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
-                    tmpl_low_building(400, 0)
+                    tmpl_low_building(480, 0)
                 }
 
                 spritelayout layout_building_normal_SMALL_SHOPPING_DIST_1990_B {
                     ground {
-                        sprite:          set_building_groundnormal_SMALL_SHOPPING_DIST_1990_B;
+                        sprite:          set_building_ground_normal_SMALL_SHOPPING_DIST_1990_B;
                     }
 
                     building {
@@ -1964,12 +2017,12 @@
                 }
 
                 spriteset (set_building_normal_SMALL_SHOPPING_DIST_1990_B, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
-                    tmpl_low_building(160, 100)
+                    tmpl_low_building(240, 100)
                 }
 
                 spritelayout layout_building_snow_SMALL_SHOPPING_DIST_1990_B {
                     ground {
-                        sprite:          set_building_groundsnow_SMALL_SHOPPING_DIST_1990_B;
+                        sprite:          set_building_ground_snow_SMALL_SHOPPING_DIST_1990_B;
                     }
 
                     building {
@@ -1980,12 +2033,12 @@
                 }
 
                 spriteset (set_building_snow_SMALL_SHOPPING_DIST_1990_B, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
-                    tmpl_low_building(400, 100)
+                    tmpl_low_building(480, 100)
                 }
 
                 spritelayout layout_building_normal_SMALL_SHOPPING_DIST_1990_C {
                     ground {
-                        sprite:          set_building_groundnormal_SMALL_SHOPPING_DIST_1990_C;
+                        sprite:          set_building_ground_normal_SMALL_SHOPPING_DIST_1990_C;
                     }
 
                     building {
@@ -1996,12 +2049,12 @@
                 }
 
                 spriteset (set_building_normal_SMALL_SHOPPING_DIST_1990_C, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
-                    tmpl_low_building(160, 200)
+                    tmpl_low_building(240, 200)
                 }
 
                 spritelayout layout_building_snow_SMALL_SHOPPING_DIST_1990_C {
                     ground {
-                        sprite:          set_building_groundsnow_SMALL_SHOPPING_DIST_1990_C;
+                        sprite:          set_building_ground_snow_SMALL_SHOPPING_DIST_1990_C;
                     }
 
                     building {
@@ -2012,12 +2065,12 @@
                 }
 
                 spriteset (set_building_snow_SMALL_SHOPPING_DIST_1990_C, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
-                    tmpl_low_building(400, 200)
+                    tmpl_low_building(480, 200)
                 }
 
                 spritelayout layout_building_normal_SMALL_SHOPPING_DIST_1990_D {
                     ground {
-                        sprite:          set_building_groundnormal_SMALL_SHOPPING_DIST_1990_D;
+                        sprite:          set_building_ground_normal_SMALL_SHOPPING_DIST_1990_D;
                     }
 
                     building {
@@ -2028,12 +2081,12 @@
                 }
 
                 spriteset (set_building_normal_SMALL_SHOPPING_DIST_1990_D, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
-                    tmpl_low_building(160, 300)
+                    tmpl_low_building(240, 300)
                 }
 
                 spritelayout layout_building_snow_SMALL_SHOPPING_DIST_1990_D {
                     ground {
-                        sprite:          set_building_groundsnow_SMALL_SHOPPING_DIST_1990_D;
+                        sprite:          set_building_ground_snow_SMALL_SHOPPING_DIST_1990_D;
                     }
 
                     building {
@@ -2044,56 +2097,56 @@
                 }
 
                 spriteset (set_building_snow_SMALL_SHOPPING_DIST_1990_D, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
-                    tmpl_low_building(400, 300)
+                    tmpl_low_building(480, 300)
                 }
 
             // Ground
-                spriteset (set_groundconst_SMALL_SHOPPING_DIST_1990_A, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
-                    tmpl_low_building(240, 0)
-                }
-
-                spriteset (set_groundconst_SMALL_SHOPPING_DIST_1990_B, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
-                    tmpl_low_building(240, 100)
-                }
-
-                spriteset (set_groundconst_SMALL_SHOPPING_DIST_1990_C, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
-                    tmpl_low_building(240, 200)
-                }
-
-                spriteset (set_groundconst_SMALL_SHOPPING_DIST_1990_D, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
-                    tmpl_low_building(240, 300)
-                }
-
-                spriteset (set_building_groundnormal_SMALL_SHOPPING_DIST_1990_A, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                spriteset (set_ground_const_SMALL_SHOPPING_DIST_1990_A, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
                     tmpl_low_building(320, 0)
                 }
 
-                spriteset (set_building_groundnormal_SMALL_SHOPPING_DIST_1990_B, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                spriteset (set_ground_const_SMALL_SHOPPING_DIST_1990_B, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
                     tmpl_low_building(320, 100)
                 }
 
-                spriteset (set_building_groundnormal_SMALL_SHOPPING_DIST_1990_C, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                spriteset (set_ground_const_SMALL_SHOPPING_DIST_1990_C, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
                     tmpl_low_building(320, 200)
                 }
 
-                spriteset (set_building_groundnormal_SMALL_SHOPPING_DIST_1990_D, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                spriteset (set_ground_const_SMALL_SHOPPING_DIST_1990_D, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
                     tmpl_low_building(320, 300)
+                }
+
+                spriteset (set_building_ground_normal_SMALL_SHOPPING_DIST_1990_A, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                    tmpl_low_building(400, 0)
+                }
+
+                spriteset (set_building_ground_normal_SMALL_SHOPPING_DIST_1990_B, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                    tmpl_low_building(400, 100)
+                }
+
+                spriteset (set_building_ground_normal_SMALL_SHOPPING_DIST_1990_C, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                    tmpl_low_building(400, 200)
+                }
+
+                spriteset (set_building_ground_normal_SMALL_SHOPPING_DIST_1990_D, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                    tmpl_low_building(400, 300)
                 } 
 
-                spriteset (set_building_groundsnow_SMALL_SHOPPING_DIST_1990_A, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
-                    tmpl_low_building(480, 0)
+                spriteset (set_building_ground_snow_SMALL_SHOPPING_DIST_1990_A, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                    tmpl_low_building(560, 0)
                 }
 
-                spriteset (set_building_groundsnow_SMALL_SHOPPING_DIST_1990_B, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
-                    tmpl_low_building(480, 100)
+                spriteset (set_building_ground_snow_SMALL_SHOPPING_DIST_1990_B, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                    tmpl_low_building(560, 100)
                 }
 
-                spriteset (set_building_groundsnow_SMALL_SHOPPING_DIST_1990_C, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
-                    tmpl_low_building(480, 200)
+                spriteset (set_building_ground_snow_SMALL_SHOPPING_DIST_1990_C, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                    tmpl_low_building(560, 200)
                 }
 
-                spriteset (set_building_groundsnow_SMALL_SHOPPING_DIST_1990_D, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
-                    tmpl_low_building(480, 300)
+                spriteset (set_building_ground_snow_SMALL_SHOPPING_DIST_1990_D, "./Korean_Town_Set/gfx/SMALL_SHOPPING_DIST_1990.png") {
+                    tmpl_low_building(560, 300)
                 } 
 
             // Switch
@@ -2702,11 +2755,11 @@
                         years_available:                [1990, 65535];
                         minimum_lifetime:               4*(para_lifetime);
 
-                        population:                     100;
-                        mail_multiplier:                50;
+                        population:                     125;
+                        mail_multiplier:                60;
                         accepted_cargos:                [[PASS, 7], [MAIL, 3], [GOOD, 4]];
                     
-                        local_authority_impact:         120;
+                        local_authority_impact:         125;
                         removal_cost_multiplier:        150;
 
                         building_class:                 9;
@@ -4035,12 +4088,12 @@
                         years_available:                [2000, 65535];
                         minimum_lifetime:               4*(para_lifetime);
 
-                        population:                     105;
-                        mail_multiplier:                55;
+                        population:                     125;
+                        mail_multiplier:                65;
                         accepted_cargos:                [[PASS, 8], [MAIL, 3], [GOOD, 4]];
                     
-                        local_authority_impact:         120;
-                        removal_cost_multiplier:        150;
+                        local_authority_impact:         130;
+                        removal_cost_multiplier:        155;
 
                         building_class:                 9;
                         building_flags:                 bitmask(HOUSE_FLAG_ANIMATE);
@@ -4709,21 +4762,23 @@
             // construction_1
                 spritelayout layout_const1_LARGE_OFFICE_2010_A_north {
                     ground {
-                        sprite:          set_const_ground_LARGE_OFFICE_2010_A_north;
+                        sprite:                         set_const_ground_LARGE_OFFICE_2010_A_north;
                     }
 
                     building {
-                        sprite:          set_const1_LARGE_OFFICE_2010_A_north;
+                        sprite:                         set_const1_LARGE_OFFICE_2010_A_north;
+                        zextent:                        240;
                     }                    
                 }
 
                 spritelayout layout_const1_LARGE_OFFICE_2010_A_west {
                     ground {
-                        sprite:          set_const_ground_LARGE_OFFICE_2010_A_west;
+                        sprite:                         set_const_ground_LARGE_OFFICE_2010_A_west;
                     }
 
                     building {
-                        sprite:          set_const1_LARGE_OFFICE_2010_A_west;
+                        sprite:                         set_const1_LARGE_OFFICE_2010_A_west;
+                        zextent:                        240;
                     }                    
                 }
 
@@ -4736,27 +4791,29 @@
                 }
 
                 switch(FEAT_HOUSES, SELF, sw_const1_LARGE_OFFICE_2010_A, house_tile) {
-                    HOUSE_TILE_NORTH:    layout_const1_LARGE_OFFICE_2010_A_north;
-                    HOUSE_TILE_WEST:     layout_const1_LARGE_OFFICE_2010_A_west;
+                    HOUSE_TILE_NORTH:                   layout_const1_LARGE_OFFICE_2010_A_north;
+                    HOUSE_TILE_WEST:                    layout_const1_LARGE_OFFICE_2010_A_west;
                 }
 
                 spritelayout layout_const1_LARGE_OFFICE_2010_B_north {
                     ground {
-                        sprite:          set_const_ground_LARGE_OFFICE_2010_B_north;
+                        sprite:                         set_const_ground_LARGE_OFFICE_2010_B_north;
                     }
 
                     building {
-                        sprite:          set_const1_LARGE_OFFICE_2010_B_north;
+                        sprite:                         set_const1_LARGE_OFFICE_2010_B_north;
+                        zextent:                        240;
                     }                    
                 }
 
                 spritelayout layout_const1_LARGE_OFFICE_2010_B_west {
                     ground {
-                        sprite:          set_const_ground_LARGE_OFFICE_2010_B_west;
+                        sprite:                         set_const_ground_LARGE_OFFICE_2010_B_west;
                     }
 
                     building {
-                        sprite:          set_const1_LARGE_OFFICE_2010_B_west;
+                        sprite:                         set_const1_LARGE_OFFICE_2010_B_west;
+                        zextent:                        240;
                     }                    
                 }
 
@@ -4769,28 +4826,30 @@
                 }
 
                 switch(FEAT_HOUSES, SELF, sw_const1_LARGE_OFFICE_2010_B, house_tile) {
-                    HOUSE_TILE_NORTH:    layout_const1_LARGE_OFFICE_2010_B_north;
-                    HOUSE_TILE_WEST:     layout_const1_LARGE_OFFICE_2010_B_west;
+                    HOUSE_TILE_NORTH:                   layout_const1_LARGE_OFFICE_2010_B_north;
+                    HOUSE_TILE_WEST:                    layout_const1_LARGE_OFFICE_2010_B_west;
                 }
 
             // construction_2
                 spritelayout layout_const2_LARGE_OFFICE_2010_A_north {
                     ground {
-                        sprite:          set_const_ground_LARGE_OFFICE_2010_A_north;
+                        sprite:                         set_const_ground_LARGE_OFFICE_2010_A_north;
                     }
 
                     building {
-                        sprite:          set_const2_LARGE_OFFICE_2010_A_north;
+                        sprite:                         set_const2_LARGE_OFFICE_2010_A_north;
+                        zextent:                        240;
                     }                    
                 }
 
                 spritelayout layout_const2_LARGE_OFFICE_2010_A_west {
                     ground {
-                        sprite:          set_const_ground_LARGE_OFFICE_2010_A_west;
+                        sprite:                         set_const_ground_LARGE_OFFICE_2010_A_west;
                     }
 
                     building {
-                        sprite:          set_const2_LARGE_OFFICE_2010_A_west;
+                        sprite:                         set_const2_LARGE_OFFICE_2010_A_west;
+                        zextent:                        240;
                     }                    
                 }
 
@@ -4803,27 +4862,29 @@
                 }
 
                 switch(FEAT_HOUSES, SELF, sw_const2_LARGE_OFFICE_2010_A, house_tile) {
-                    HOUSE_TILE_NORTH:    layout_const2_LARGE_OFFICE_2010_A_north;
-                    HOUSE_TILE_WEST:     layout_const2_LARGE_OFFICE_2010_A_west;
+                    HOUSE_TILE_NORTH:                   layout_const2_LARGE_OFFICE_2010_A_north;
+                    HOUSE_TILE_WEST:                    layout_const2_LARGE_OFFICE_2010_A_west;
                 }
 
                 spritelayout layout_const2_LARGE_OFFICE_2010_B_north {
                     ground {
-                        sprite:          set_const_ground_LARGE_OFFICE_2010_B_north;
+                        sprite:                         set_const_ground_LARGE_OFFICE_2010_B_north;
                     }
 
                     building {
-                        sprite:          set_const2_LARGE_OFFICE_2010_B_north;
+                        sprite:                         set_const2_LARGE_OFFICE_2010_B_north;
+                        zextent:                        240;
                     }                    
                 }
 
                 spritelayout layout_const2_LARGE_OFFICE_2010_B_west {
                     ground {
-                        sprite:          set_const_ground_LARGE_OFFICE_2010_B_west;
+                        sprite:                         set_const_ground_LARGE_OFFICE_2010_B_west;
                     }
 
                     building {
-                        sprite:          set_const2_LARGE_OFFICE_2010_B_west;
+                        sprite:                         set_const2_LARGE_OFFICE_2010_B_west;
+                        zextent:                        240;
                     }                    
                 }
 
@@ -4836,28 +4897,30 @@
                 }
 
                 switch(FEAT_HOUSES, SELF, sw_const2_LARGE_OFFICE_2010_B, house_tile) {
-                    HOUSE_TILE_NORTH:    layout_const2_LARGE_OFFICE_2010_B_north;
-                    HOUSE_TILE_WEST:     layout_const2_LARGE_OFFICE_2010_B_west;
+                    HOUSE_TILE_NORTH:                   layout_const2_LARGE_OFFICE_2010_B_north;
+                    HOUSE_TILE_WEST:                    layout_const2_LARGE_OFFICE_2010_B_west;
                 }
 
             // construction_3
                 spritelayout layout_const3_LARGE_OFFICE_2010_A_north {
                     ground {
-                        sprite:          set_const_ground_LARGE_OFFICE_2010_A_north;
+                        sprite:                         set_const_ground_LARGE_OFFICE_2010_A_north;
                     }
 
                     building {
-                        sprite:          set_const3_LARGE_OFFICE_2010_A_north;
+                        sprite:                         set_const3_LARGE_OFFICE_2010_A_north;
+                        zextent:                        240;
                     }                    
                 }
 
                 spritelayout layout_const3_LARGE_OFFICE_2010_A_west {
                     ground {
-                        sprite:          set_const_ground_LARGE_OFFICE_2010_A_west;
+                        sprite:                         set_const_ground_LARGE_OFFICE_2010_A_west;
                     }
 
                     building {
-                        sprite:          set_const3_LARGE_OFFICE_2010_A_west;
+                        sprite:                         set_const3_LARGE_OFFICE_2010_A_west;
+                        zextent:                        240;
                     }                    
                 }
 
@@ -4870,27 +4933,29 @@
                 }
 
                 switch(FEAT_HOUSES, SELF, sw_const3_LARGE_OFFICE_2010_A, house_tile) {
-                    HOUSE_TILE_NORTH:    layout_const3_LARGE_OFFICE_2010_A_north;
-                    HOUSE_TILE_WEST:     layout_const3_LARGE_OFFICE_2010_A_west;
+                    HOUSE_TILE_NORTH:                   layout_const3_LARGE_OFFICE_2010_A_north;
+                    HOUSE_TILE_WEST:                    layout_const3_LARGE_OFFICE_2010_A_west;
                 }
 
                 spritelayout layout_const3_LARGE_OFFICE_2010_B_north {
                     ground {
-                        sprite:          set_const_ground_LARGE_OFFICE_2010_B_north;
+                        sprite:                         set_const_ground_LARGE_OFFICE_2010_B_north;
                     }
 
                     building {
-                        sprite:          set_const3_LARGE_OFFICE_2010_B_north;
+                        sprite:                         set_const3_LARGE_OFFICE_2010_B_north;
+                        zextent:                        240;
                     }                    
                 }
 
                 spritelayout layout_const3_LARGE_OFFICE_2010_B_west {
                     ground {
-                        sprite:          set_const_ground_LARGE_OFFICE_2010_B_west;
+                        sprite:                         set_const_ground_LARGE_OFFICE_2010_B_west;
                     }
 
                     building {
-                        sprite:          set_const3_LARGE_OFFICE_2010_B_west;
+                        sprite:                         set_const3_LARGE_OFFICE_2010_B_west;
+                        zextent:                        240;
                     }                    
                 }
 
@@ -4903,8 +4968,8 @@
                 }
 
                 switch(FEAT_HOUSES, SELF, sw_const3_LARGE_OFFICE_2010_B, house_tile) {
-                    HOUSE_TILE_NORTH:    layout_const3_LARGE_OFFICE_2010_B_north;
-                    HOUSE_TILE_WEST:     layout_const3_LARGE_OFFICE_2010_B_west;
+                    HOUSE_TILE_NORTH:                   layout_const3_LARGE_OFFICE_2010_B_north;
+                    HOUSE_TILE_WEST:                    layout_const3_LARGE_OFFICE_2010_B_west;
                 }
 
             // construction general
@@ -4923,13 +4988,14 @@
             // LARGE_OFFICE_2010_A_normal
                 spritelayout layout_building_normal_LARGE_OFFICE_2010_A_north_anime1 {
                     ground {
-                        sprite:          set_ground_normal_LARGE_OFFICE_2010_A_north;
+                        sprite:                         set_ground_normal_LARGE_OFFICE_2010_A_north;
                     }
 
                     building {
-                        sprite:          set_building_normal_LARGE_OFFICE_2010_A_north_anime1;
-                        recolour_mode:   RECOLOUR_REMAP;
-                        palette:         PALETTE_USE_DEFAULT;
+                        sprite:                         set_building_normal_LARGE_OFFICE_2010_A_north_anime1;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                        zextent:                        240;
                     }
                 }
 
@@ -4939,13 +5005,14 @@
 
                 spritelayout layout_building_normal_LARGE_OFFICE_2010_A_north_anime2 {
                     ground {
-                        sprite:          set_ground_normal_LARGE_OFFICE_2010_A_north;
+                        sprite:                         set_ground_normal_LARGE_OFFICE_2010_A_north;
                     }
 
                     building {
-                        sprite:          set_building_normal_LARGE_OFFICE_2010_A_north_anime2;
-                        recolour_mode:   RECOLOUR_REMAP;
-                        palette:         PALETTE_USE_DEFAULT;
+                        sprite:                         set_building_normal_LARGE_OFFICE_2010_A_north_anime2;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                        zextent:                        240;
                     }
                 }
 
@@ -4955,13 +5022,14 @@
 
                 spritelayout layout_building_normal_LARGE_OFFICE_2010_A_west_anime1 {
                     ground {
-                        sprite:          set_ground_normal_LARGE_OFFICE_2010_A_west;
+                        sprite:                         set_ground_normal_LARGE_OFFICE_2010_A_west;
                     }
 
                     building {
-                        sprite:          set_building_normal_LARGE_OFFICE_2010_A_west_anime1;
-                        recolour_mode:   RECOLOUR_REMAP;
-                        palette:         PALETTE_USE_DEFAULT;
+                        sprite:                         set_building_normal_LARGE_OFFICE_2010_A_west_anime1;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                        zextent:                        240;
                     }
                 }
 
@@ -4971,13 +5039,14 @@
 
                 spritelayout layout_building_normal_LARGE_OFFICE_2010_A_west_anime2 {
                     ground {
-                        sprite:          set_ground_normal_LARGE_OFFICE_2010_A_west;
+                        sprite:                         set_ground_normal_LARGE_OFFICE_2010_A_west;
                     }
 
                     building {
-                        sprite:          set_building_normal_LARGE_OFFICE_2010_A_west_anime2;
-                        recolour_mode:   RECOLOUR_REMAP;
-                        palette:         PALETTE_USE_DEFAULT;
+                        sprite:                         set_building_normal_LARGE_OFFICE_2010_A_west_anime2;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                        zextent:                        240;
                     }
                 }
 
@@ -4988,13 +5057,14 @@
             // LARGE_OFFICE_2010_A_snow
                 spritelayout layout_building_snow_LARGE_OFFICE_2010_A_north_anime1 {
                     ground {
-                        sprite:          set_ground_snow_LARGE_OFFICE_2010_A_north;
+                        sprite:                         set_ground_snow_LARGE_OFFICE_2010_A_north;
                     }
 
                     building {
-                        sprite:          set_building_snow_LARGE_OFFICE_2010_A_north_anime1;
-                        recolour_mode:   RECOLOUR_REMAP;
-                        palette:         PALETTE_USE_DEFAULT;
+                        sprite:                         set_building_snow_LARGE_OFFICE_2010_A_north_anime1;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                        zextent:                        240;
                     }
                 }
 
@@ -5004,13 +5074,14 @@
 
                 spritelayout layout_building_snow_LARGE_OFFICE_2010_A_north_anime2 {
                     ground {
-                        sprite:          set_ground_snow_LARGE_OFFICE_2010_A_north;
+                        sprite:                         set_ground_snow_LARGE_OFFICE_2010_A_north;
                     }
 
                     building {
-                        sprite:          set_building_snow_LARGE_OFFICE_2010_A_north_anime2;
-                        recolour_mode:   RECOLOUR_REMAP;
-                        palette:         PALETTE_USE_DEFAULT;
+                        sprite:                         set_building_snow_LARGE_OFFICE_2010_A_north_anime2;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                        zextent:                        240;
                     }
                 }
 
@@ -5020,13 +5091,14 @@
 
                 spritelayout layout_building_snow_LARGE_OFFICE_2010_A_west_anime1 {
                     ground {
-                        sprite:          set_ground_snow_LARGE_OFFICE_2010_A_west;
+                        sprite:                         set_ground_snow_LARGE_OFFICE_2010_A_west;
                     }
 
                     building {
-                        sprite:          set_building_snow_LARGE_OFFICE_2010_A_west_anime1;
-                        recolour_mode:   RECOLOUR_REMAP;
-                        palette:         PALETTE_USE_DEFAULT;
+                        sprite:                         set_building_snow_LARGE_OFFICE_2010_A_west_anime1;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                        zextent:                        240;
                     }
                 }
 
@@ -5036,13 +5108,14 @@
 
                 spritelayout layout_building_snow_LARGE_OFFICE_2010_A_west_anime2 {
                     ground {
-                        sprite:          set_ground_snow_LARGE_OFFICE_2010_A_west;
+                        sprite:                         set_ground_snow_LARGE_OFFICE_2010_A_west;
                     }
 
                     building {
-                        sprite:          set_building_snow_LARGE_OFFICE_2010_A_west_anime2;
-                        recolour_mode:   RECOLOUR_REMAP;
-                        palette:         PALETTE_USE_DEFAULT;
+                        sprite:                         set_building_snow_LARGE_OFFICE_2010_A_west_anime2;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                        zextent:                        240;
                     }
                 }
 
@@ -5053,13 +5126,14 @@
             // LARGE_OFFICE_2010_B_normal
                 spritelayout layout_building_normal_LARGE_OFFICE_2010_B_north_anime1 {
                     ground {
-                        sprite:          set_ground_normal_LARGE_OFFICE_2010_B_north;
+                        sprite:                         set_ground_normal_LARGE_OFFICE_2010_B_north;
                     }
 
                     building {
-                        sprite:          set_building_normal_LARGE_OFFICE_2010_B_north_anime1;
-                        recolour_mode:   RECOLOUR_REMAP;
-                        palette:         PALETTE_USE_DEFAULT;
+                        sprite:                         set_building_normal_LARGE_OFFICE_2010_B_north_anime1;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                        zextent:                        240;
                     }
                 }
 
@@ -5069,13 +5143,14 @@
 
                 spritelayout layout_building_normal_LARGE_OFFICE_2010_B_north_anime2 {
                     ground {
-                        sprite:          set_ground_normal_LARGE_OFFICE_2010_B_north;
+                        sprite:                         set_ground_normal_LARGE_OFFICE_2010_B_north;
                     }
 
                     building {
-                        sprite:          set_building_normal_LARGE_OFFICE_2010_B_north_anime2;
-                        recolour_mode:   RECOLOUR_REMAP;
-                        palette:         PALETTE_USE_DEFAULT;
+                        sprite:                         set_building_normal_LARGE_OFFICE_2010_B_north_anime2;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                        zextent:                        240;
                     }
                 }
 
@@ -5085,13 +5160,14 @@
 
                 spritelayout layout_building_normal_LARGE_OFFICE_2010_B_west_anime1 {
                     ground {
-                        sprite:          set_ground_normal_LARGE_OFFICE_2010_B_west;
+                        sprite:                         set_ground_normal_LARGE_OFFICE_2010_B_west;
                     }
 
                     building {
-                        sprite:          set_building_normal_LARGE_OFFICE_2010_B_west_anime1;
-                        recolour_mode:   RECOLOUR_REMAP;
-                        palette:         PALETTE_USE_DEFAULT;
+                        sprite:                         set_building_normal_LARGE_OFFICE_2010_B_west_anime1;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                        zextent:                        240;
                     }
                 }
 
@@ -5101,13 +5177,14 @@
 
                 spritelayout layout_building_normal_LARGE_OFFICE_2010_B_west_anime2 {
                     ground {
-                        sprite:          set_ground_normal_LARGE_OFFICE_2010_B_west;
+                        sprite:                         set_ground_normal_LARGE_OFFICE_2010_B_west;
                     }
 
                     building {
-                        sprite:          set_building_normal_LARGE_OFFICE_2010_B_west_anime2;
-                        recolour_mode:   RECOLOUR_REMAP;
-                        palette:         PALETTE_USE_DEFAULT;
+                        sprite:                         set_building_normal_LARGE_OFFICE_2010_B_west_anime2;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                        zextent:                        240;
                     }
                 }
 
@@ -5118,13 +5195,14 @@
             // LARGE_OFFICE_2010_B_snow
                 spritelayout layout_building_snow_LARGE_OFFICE_2010_B_north_anime1 {
                     ground {
-                        sprite:          set_ground_snow_LARGE_OFFICE_2010_B_north;
+                        sprite:                         set_ground_snow_LARGE_OFFICE_2010_B_north;
                     }
 
                     building {
-                        sprite:          set_building_snow_LARGE_OFFICE_2010_B_north_anime1;
-                        recolour_mode:   RECOLOUR_REMAP;
-                        palette:         PALETTE_USE_DEFAULT;
+                        sprite:                         set_building_snow_LARGE_OFFICE_2010_B_north_anime1;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                        zextent:                        240;
                     }
                 }
 
@@ -5134,13 +5212,14 @@
 
                 spritelayout layout_building_snow_LARGE_OFFICE_2010_B_north_anime2 {
                     ground {
-                        sprite:          set_ground_snow_LARGE_OFFICE_2010_B_north;
+                        sprite:                         set_ground_snow_LARGE_OFFICE_2010_B_north;
                     }
 
                     building {
-                        sprite:          set_building_snow_LARGE_OFFICE_2010_B_north_anime2;
-                        recolour_mode:   RECOLOUR_REMAP;
-                        palette:         PALETTE_USE_DEFAULT;
+                        sprite:                         set_building_snow_LARGE_OFFICE_2010_B_north_anime2;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                        zextent:                        240;
                     }
                 }
 
@@ -5150,13 +5229,14 @@
 
                 spritelayout layout_building_snow_LARGE_OFFICE_2010_B_west_anime1 {
                     ground {
-                        sprite:          set_ground_snow_LARGE_OFFICE_2010_B_west;
+                        sprite:                         set_ground_snow_LARGE_OFFICE_2010_B_west;
                     }
 
                     building {
-                        sprite:          set_building_snow_LARGE_OFFICE_2010_B_west_anime1;
-                        recolour_mode:   RECOLOUR_REMAP;
-                        palette:         PALETTE_USE_DEFAULT;
+                        sprite:                         set_building_snow_LARGE_OFFICE_2010_B_west_anime1;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                        zextent:                        240;
                     }
                 }
 
@@ -5166,13 +5246,14 @@
 
                 spritelayout layout_building_snow_LARGE_OFFICE_2010_B_west_anime2 {
                     ground {
-                        sprite:          set_ground_snow_LARGE_OFFICE_2010_B_west;
+                        sprite:                         set_ground_snow_LARGE_OFFICE_2010_B_west;
                     }
 
                     building {
-                        sprite:          set_building_snow_LARGE_OFFICE_2010_B_west_anime2;
-                        recolour_mode:   RECOLOUR_REMAP;
-                        palette:         PALETTE_USE_DEFAULT;
+                        sprite:                         set_building_snow_LARGE_OFFICE_2010_B_west_anime2;
+                        recolour_mode:                  RECOLOUR_REMAP;
+                        palette:                        PALETTE_USE_DEFAULT;
+                        zextent:                        240;
                     }
                 }
 
@@ -5271,23 +5352,23 @@
                 }
 
                 switch(FEAT_HOUSES, SELF, sw_building_normal_LARGE_OFFICE_2010_A, house_tile) {
-                    HOUSE_TILE_NORTH:        sw_building_normal_LARGE_OFFICE_2010_A_north;
-                    HOUSE_TILE_WEST:         sw_building_normal_LARGE_OFFICE_2010_A_west;
+                    HOUSE_TILE_NORTH:                   sw_building_normal_LARGE_OFFICE_2010_A_north;
+                    HOUSE_TILE_WEST:                    sw_building_normal_LARGE_OFFICE_2010_A_west;
                 }
 
                 switch(FEAT_HOUSES, SELF, sw_building_snow_LARGE_OFFICE_2010_A, house_tile) {
-                    HOUSE_TILE_NORTH:        sw_building_snow_LARGE_OFFICE_2010_A_north;
-                    HOUSE_TILE_WEST:         sw_building_snow_LARGE_OFFICE_2010_A_west;
+                    HOUSE_TILE_NORTH:                   sw_building_snow_LARGE_OFFICE_2010_A_north;
+                    HOUSE_TILE_WEST:                    sw_building_snow_LARGE_OFFICE_2010_A_west;
                 }
 
                 switch(FEAT_HOUSES, SELF, sw_building_normal_LARGE_OFFICE_2010_B, house_tile) {
-                    HOUSE_TILE_NORTH:        sw_building_normal_LARGE_OFFICE_2010_B_north;
-                    HOUSE_TILE_WEST:         sw_building_normal_LARGE_OFFICE_2010_B_west;
+                    HOUSE_TILE_NORTH:                   sw_building_normal_LARGE_OFFICE_2010_B_north;
+                    HOUSE_TILE_WEST:                    sw_building_normal_LARGE_OFFICE_2010_B_west;
                 }
 
                 switch(FEAT_HOUSES, SELF, sw_building_snow_LARGE_OFFICE_2010_B, house_tile) {
-                    HOUSE_TILE_NORTH:        sw_building_snow_LARGE_OFFICE_2010_B_north;
-                    HOUSE_TILE_WEST:         sw_building_snow_LARGE_OFFICE_2010_B_west;
+                    HOUSE_TILE_NORTH:                   sw_building_snow_LARGE_OFFICE_2010_B_north;
+                    HOUSE_TILE_WEST:                    sw_building_snow_LARGE_OFFICE_2010_B_west;
                 }
 
                 switch(FEAT_HOUSES, SELF, sw_building_LARGE_OFFICE_2010_A, terrain_type) {
@@ -5327,12 +5408,12 @@
                         years_available:                [2010, 65535];
                         minimum_lifetime:               8*(para_lifetime);
 
-                        population:                     150;
-                        mail_multiplier:                75;
+                        population:                     225;
+                        mail_multiplier:                100;
                         accepted_cargos:                [[PASS, 8], [MAIL, 6], [GOOD, 8]];
                     
-                        local_authority_impact:         160;
-                        removal_cost_multiplier:        200;
+                        local_authority_impact:         180;
+                        removal_cost_multiplier:        220;
 
                         building_class:                 10;
                         building_flags:                 bitmask(HOUSE_FLAG_ANIMATE);
@@ -5611,12 +5692,12 @@
                         years_available:                [1990, 65535];
                         minimum_lifetime:               6*(para_lifetime);
 
-                        population:                     85;
-                        mail_multiplier:                30;
+                        population:                     115;
+                        mail_multiplier:                40;
                         accepted_cargos:                [[PASS, 7], [MAIL, 3], [GOOD, 2]];
                     
-                        local_authority_impact:         105;
-                        removal_cost_multiplier:        135;
+                        local_authority_impact:         115;
+                        removal_cost_multiplier:        145;
 
                         building_class:                 23;
                     }
@@ -5740,12 +5821,12 @@
                         years_available:                [2000, 65535];
                         minimum_lifetime:               6*(para_lifetime);
 
-                        population:                     70;
-                        mail_multiplier:                30;
+                        population:                     105;
+                        mail_multiplier:                35;
                         accepted_cargos:                [[PASS, 7], [MAIL, 3], [GOOD, 2]];
                     
-                        local_authority_impact:         100;
-                        removal_cost_multiplier:        135;
+                        local_authority_impact:         110;
+                        removal_cost_multiplier:        145;
 
                         building_class:                 24;
                     }
@@ -5956,12 +6037,12 @@
                         years_available:                [1980, 65535];
                         minimum_lifetime:               8*(para_lifetime);
 
-                        population:                     115;
-                        mail_multiplier:                30;
+                        population:                     175;
+                        mail_multiplier:                55;
                         accepted_cargos:                [[PASS, 7], [MAIL, 4], [GOOD, 2]];
                     
-                        local_authority_impact:         125;
-                        removal_cost_multiplier:        165;
+                        local_authority_impact:         140;
+                        removal_cost_multiplier:        175;
 
                         building_class:                 31;
                     }
@@ -6124,12 +6205,12 @@
                         years_available:                [1990, 65535];
                         minimum_lifetime:               6*(para_lifetime);
 
-                        population:                     115;
-                        mail_multiplier:                30;
+                        population:                     150;
+                        mail_multiplier:                45;
                         accepted_cargos:                [[PASS, 7], [MAIL, 4], [GOOD, 2]];
                     
-                        local_authority_impact:         125;
-                        removal_cost_multiplier:        165;
+                        local_authority_impact:         135;
+                        removal_cost_multiplier:        170;
 
                         building_class:                 32;
                     }
@@ -6563,12 +6644,12 @@
                         years_available:                [2000, 65535];
                         minimum_lifetime:               6*(para_lifetime);
 
-                        population:                     125;
-                        mail_multiplier:                35;
+                        population:                     160;
+                        mail_multiplier:                50;
                         accepted_cargos:                [[PASS, 8], [MAIL, 4], [GOOD, 2]];
                     
-                        local_authority_impact:         125;
-                        removal_cost_multiplier:        165;
+                        local_authority_impact:         135;
+                        removal_cost_multiplier:        175;
 
                         building_class:                 33;
                     }
@@ -6808,12 +6889,12 @@
                         years_available:                [2010, 65535];
                         minimum_lifetime:               6*(para_lifetime);
 
-                        population:                     105;
-                        mail_multiplier:                30;
+                        population:                     150;
+                        mail_multiplier:                45;
                         accepted_cargos:                [[PASS, 8], [MAIL, 4], [GOOD, 4]];
                     
-                        local_authority_impact:         125;
-                        removal_cost_multiplier:        165;
+                        local_authority_impact:         135;
+                        removal_cost_multiplier:        170;
 
                         building_class:                 34;
                     }
@@ -6867,8 +6948,8 @@
     kt_THATCHED_ROOF_HOUSE:                             110,    1
     kt_TILED_ROOF_HOUSE:                                111,    1
 
-   *kt_SINGLE_HOUSE_1900:                               120,    2
-   *kt_SINGLE_HOUSE_1960:                               121,    2
+   *kt_SINGLE_HOUSE_0000:                               120,    2
+   *kt_SINGLE_HOUSE_1950:                               121,    2
    *kt_SINGLE_HOUSE_1980:                               122,    2
     kt_SINGLE_HOUSE_1990:                               123,    2
    *kt_SINGLE_HOUSE_2000:                               124,    2
@@ -6876,12 +6957,12 @@
    *kt_SINGLE_HOUSE_2020:                               126,    2
 
    *kt_VILLA_1900:                                      130,    3
-   *kt_VILLA_1960:                                      131,    3
+   *kt_VILLA_1950:                                      131,    3
     kt_VILLA_1980:                                      132,    3
     kt_VILLA_2000:                                      133,    3
    *kt_VILLA_2020:                                      134,    3
 
-   *kt_SHOP:                                            140,    4
+   *kt_SHOP_0000:                                       140,    4
 
    *kt_SMALL_SHOPPING_DIST_1910:                        150,    5
    *kt_SMALL_SHOPPING_DIST_1940:                        151,    5
@@ -6889,7 +6970,7 @@
     kt_SMALL_SHOPPING_DIST_1990:                        153,    5
     kt_SMALL_SHOPPING_DIST_2010:                        154,    5
 
-   *kt_MID_SHOPPING_DIST_1930:                          160,    6
+   *kt_MID_SHOPPING_DIST_1920:                          160,    6
    *kt_MID_SHOPPING_DIST_1960:                          161,    6
    *kt_MID_SHOPPING_DIST_1970:                          162,    6
    *kt_MID_SHOPPING_DIST_1980:                          163,    6
@@ -6898,7 +6979,8 @@
    *kt_MID_SHOPPING_DIST_2010:                          166,    6
    *kt_MID_SHOPPING_DIST_2020:                          167,    6
 
-   *kt_TALL_SHOPPING_DIST_1980:                         170,    7
+   *kt_TALL_SHOPPING_DIST_1960:                         170,    7
+   *kt_TALL_SHOPPING_DIST_1980:                         171,    7
    *kt_TALL_SHOPPING_DIST_2000:                         172,    7
    *kt_TALL_SHOPPING_DIST_2020:                         174,    7
 
@@ -6943,7 +7025,7 @@
    *kt_TALL_APT_2020:                                   232,    42
 
    *kt_PARK_1960:                                       235,    45
-    kt_PARK_2000:                                       236,    45
+    kt_PARK_2000:                                       236,    45 // 새 건물 추가시 아이템번호 변경바람
 
    *kt_CITYHALL_1960:                                  0..3,    50
    *kt_CITYHALL_2000:                                  4..7,    50
