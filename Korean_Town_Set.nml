@@ -1,10 +1,10 @@
-// NewGRF general    
+// NewGRF general
     grf {
-        grfid:                              "KSTS"; 
+        grfid:                              "KSTS";
         name:                               string(STR_GRF_NAME);
         desc:                               string(STR_GRF_DESC);
         url:                                string(STR_GRF_URL);
-        version:                            231113;
+        version:                            231114;
         min_compatible_version:             230624;
     
         // Parameters
@@ -6994,7 +6994,7 @@
                         random_colours:                 [COLOUR_CREAM, COLOUR_GREY, COLOUR_BROWN, COLOUR_PINK];
                         probability:                    15;
                         years_available:                [1990, 65535];
-                        minimum_lifetime:               6*(para_lifetime);
+                        minimum_lifetime:               8*(para_lifetime);
 
                         population:                     150;
                         mail_multiplier:                45;
@@ -7433,7 +7433,7 @@
                         random_colours:                 [COLOUR_DARK_GREEN, COLOUR_BROWN, COLOUR_CREAM, COLOUR_MAUVE];
                         probability:                    15;
                         years_available:                [2000, 65535];
-                        minimum_lifetime:               6*(para_lifetime);
+                        minimum_lifetime:               8*(para_lifetime);
 
                         population:                     160;
                         mail_multiplier:                50;
@@ -7678,7 +7678,7 @@
                         random_colours:                 [COLOUR_ORANGE, COLOUR_BLUE, COLOUR_PINK, COLOUR_PURPLE];
                         probability:                    15;
                         years_available:                [2010, 65535];
-                        minimum_lifetime:               6*(para_lifetime);
+                        minimum_lifetime:               8*(para_lifetime);
 
                         population:                     150;
                         mail_multiplier:                45;
@@ -8097,7 +8097,7 @@
                         random_colours:                 [COLOUR_PALE_GREEN, COLOUR_DARK_GREEN, COLOUR_CREAM, COLOUR_BROWN];
                         probability:                    15;
                         years_available:                [2020, 65535];
-                        minimum_lifetime:               6*(para_lifetime);
+                        minimum_lifetime:               8*(para_lifetime);
 
                         population:                     225;
                         mail_multiplier:                80;
@@ -8530,7 +8530,7 @@
                         availability_mask:              [ALL_TOWNZONES, ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
                         probability:                    15;
                         years_available:                [2010, 65535];
-                        minimum_lifetime:               20*(para_lifetime);
+                        minimum_lifetime:               10*(para_lifetime);
 
                         population:                     65;
                         mail_multiplier:                55;
