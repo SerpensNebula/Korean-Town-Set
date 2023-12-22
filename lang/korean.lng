@@ -1,7 +1,7 @@
 ##grflangid 0x3A
 
 # GRF name and description
-STR_GRF_NAME                                      	:한국 도시 세트 beta0.4.1
+STR_GRF_NAME                                      	:한국 도시 세트 beta0.5.0
 STR_GRF_DESC                                      	:이 NewGRF는 북한을 제외한 한국 스타일의 건물을 추가해줍니다. {}{}{YELLOW}2000년 이후부터 플레이를 권장합니다. 과거의 건물들은 추가 예정입니다! {}{}{BLACK}특별히 고마우신 분들: {SILVER}작가, 키위트리, 텔크 {}{}{BLACK}라이센스: {SILVER}GNU GPL v3
 
 STR_GRF_URL                                       	:https://github.com/SerpensNebula/Korean-Town-Set
@@ -15,13 +15,13 @@ STR_PARAM_LIFETIME_DESC                           	:모든 건물의 최소수�
 # Building names
 STR_CITY_HALL_NAME									:시청
 STR_SCHOOL_NAME										:학교
-STR_POLICE_STATION									:경찰서
-STR_FIRE_STATION									:소방서
-STR_POST_OFFICE										:우체국
-STR_HOSPITAL										:종합병원
+STR_POLICE_STATION_NAME								:경찰서
+STR_FIRE_STATION_NAME								:소방서
+STR_POST_OFFICE_NAME								:우체국
+STR_HOSPITAL_NAME									:종합병원
 
-STR_TILED_ROOF_HOUSE                              	:기와집
-STR_THATCHED_ROOF_HOUSE								:초가집
+STR_TILED_ROOF_HOUSE_NAME							:기와집
+STR_THATCHED_ROOF_HOUSE_NAME						:초가집
 STR_SINGLE_HOUSE_NAME                             	:단독주택
 STR_VILLA_NAME                                    	:빌라
 STR_LOW_APT_NAME                                  	:저층 아파트

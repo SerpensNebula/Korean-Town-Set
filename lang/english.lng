@@ -1,7 +1,7 @@
 ##grflangid 0x01
 
 # GRF name and description
-STR_GRF_NAME                                      	:Korean Town Set beta0.4.1
+STR_GRF_NAME                                      	:Korean Town Set beta0.5.0
 STR_GRF_DESC                                      	:Korean Town Set includes Korean style buildings except North Korea. {}{}{YELLOW}Highly recommanded to use this NewGRF after year 2000. More buildings will be added soon! {}{}{BLACK}Special thanks: {SILVER}Jakga, Kiwitree, Telk {}{}{BLACK}License: {SILVER}GNU GPL v3
 
 STR_GRF_URL                                       	:https://github.com/SerpensNebula/Korean-Town-Set
@@ -15,13 +15,13 @@ STR_PARAM_LIFETIME_DESC                           	:Set minimal lifetime of all 
 # Building names
 STR_CITY_HALL_NAME									:City hall
 STR_SCHOOL_NAME										:School
-STR_POLICE_STATION									:Police station
-STR_FIRE_STATION									:Fire station
-STR_POST_OFFICE										:Post office
-STR_HOSPITAL										:Hospital
+STR_POLICE_STATION_NAME								:Police station
+STR_FIRE_STATION_NAME								:Fire station
+STR_POST_OFFICE_NAME								:Post office
+STR_HOSPITAL_NAME									:Hospital
 
-STR_TILED_ROOF_HOUSE                              	:Tiled-roof Hanok
-STR_THATCHED_ROOF_HOUSE							  	:Thatched-roof Hanok
+STR_TILED_ROOF_HOUSE_NAME							:Tiled-roof Hanok
+STR_THATCHED_ROOF_HOUSE_NAME					  	:Thatched-roof Hanok
 STR_SINGLE_HOUSE_NAME                             	:House
 STR_VILLA_NAME                                    	:Townhouse
 STR_LOW_APT_NAME                                  	:Low-rise apartment
@@ -29,7 +29,7 @@ STR_MID_APT_NAME                                  	:Apartment
 STR_TALL_APT_NAME                                 	:High-rise apartment
 STR_SHOP_NAME                                     	:Shops
 STR_SMALL_SHOPPING_DIST_NAME                      	:Small shopping district
-STR_MID_SHOPPING_DIST_NAME                        	:Middle shopping district
+STR_MID_SHOPPING_DIST_NAME                        	:Shopping district
 STR_LARGE_SHOPPING_DIST_NAME                      	:Large shopping district 
 STR_SMALL_OFFICE_NAME                             	:Low-rise office building
 STR_MID_OFFICE_NAME                               	:High-rise office building
