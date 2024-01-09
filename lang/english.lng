@@ -1,7 +1,7 @@
 ##grflangid 0x01
 
 # GRF name and description
-STR_GRF_NAME                                      	:Korean Town Set beta0.5.0
+STR_GRF_NAME                                      	:Korean Town Set beta0.6.0
 STR_GRF_DESC                                      	:Korean Town Set includes Korean style buildings except North Korea. {}{}{YELLOW}Highly recommanded to use this NewGRF after year 2000. More buildings will be added soon! {}{}{BLACK}Special thanks: {SILVER}Jakga, Kiwitree, Telk {}{}{BLACK}License: {SILVER}GNU GPL v3
 
 STR_GRF_URL                                       	:https://github.com/SerpensNebula/Korean-Town-Set
@@ -35,3 +35,8 @@ STR_SMALL_OFFICE_NAME                             	:Low-rise office building
 STR_MID_OFFICE_NAME                               	:High-rise office building
 STR_LARGE_OFFICE_NAME                             	:Skyscraper
 STR_PARK_NAME                                     	:Park
+
+# Object names
+STR_OBJECT_KTS_NAME									:Korean Town Set Objects
+STR_OBJECT_63BUILDING_NAME							:63 Building
+STR_OBJECT_63building_DESC							:Year completed: 1985
