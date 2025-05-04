@@ -1,4 +1,4 @@
-# Korean-Town-Set beta0.7.0
+# Korean-Town-Set beta0.7.1
 
 한국도시세트의 홈페이지입니다. 현재 열심히 작업중입니다. 
 This is main page of OpenTTD NewGRF 'Korean Town Set'. It's WORK IN PROGRESS!
