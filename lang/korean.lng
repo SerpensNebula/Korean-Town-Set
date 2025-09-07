@@ -1,8 +1,8 @@
 ##grflangid 0x3A
 
 # GRF name and description
-STR_GRF_NAME                                      	:한국 도시 세트 beta0.7.3
-STR_GRF_DESC                                      	:이 NewGRF는 북한을 제외한 한국 스타일의 건물을 추가해줍니다. {}{}{YELLOW}2000년 이후부터 플레이를 권장합니다. 과거의 건물들은 추가 예정입니다! {}{}{BLACK}특별히 고마우신 분들: {SILVER}작가, 키위트리, 텔크 {}{}{BLACK}라이센스: {SILVER}GNU GPL v3
+STR_GRF_NAME                                      	:한국 도시 세트 beta0.8.0
+STR_GRF_DESC                                      	:이 NewGRF는 북한을 제외한 한국 스타일의 건물을 추가해줍니다. {}{}{YELLOW}1990년 이후부터 플레이를 권장합니다. 과거의 건물들은 추가 예정입니다! {}{}{BLACK}도움을 주신 분들: {SILVER} 텔크, 작가, 명운, 키위트리 {}{}{BLACK}라이센스: {SILVER}GNU GPL v3
 
 STR_GRF_URL                                       	:https://github.com/SerpensNebula/Korean-Town-Set
 
@@ -10,7 +10,7 @@ STR_GRF_URL                                       	:https://github.com/SerpensNe
 STR_PARAM_OVERRIDE_NAME                         	:기본 건물을 생성하지 않게 함
 STR_PARAM_OVERRIDE_DESC                           	:이 매개변수를 켜면 오픈트타 기본 건물이 더이상 나타나지 않습니다.
 STR_PARAM_LIFETIME_NAME                           	:건물 최소수명 설정
-STR_PARAM_LIFETIME_DESC                           	:모든 건물의 최소수명을 설정합니다. 최소수명을 줄이면 건물들의 재건축 빈도가 짧아지고 도시의 모습도 빠르게 바뀝니다. 0 으로 하면 건물이 준공되자마자 철거될 수 있습니다. {}{}기본값은 10(x4, 대부분 40년)입니다.
+STR_PARAM_LIFETIME_DESC                           	:모든 건물의 최소수명을 설정합니다. 최소수명을 줄이면 건물들의 재건축 빈도가 짧아지고 도시의 모습도 빠르게 바뀝니다. 0 으로 하면 건물이 준공되자마자 철거될 수 있습니다. {}{}기본값은 10(x4, 대부분 40~60년)입니다.
 
 # Building names
 STR_CITY_HALL_NAME									:시청
@@ -19,6 +19,7 @@ STR_POLICE_STATION_NAME								:경찰서
 STR_FIRE_STATION_NAME								:소방서
 STR_POST_OFFICE_NAME								:우체국
 STR_HOSPITAL_NAME									:종합병원
+STR_DEPARTMENT_STORE_NAME							:백화점
 
 STR_TILED_ROOF_HOUSE_NAME							:기와집
 STR_THATCHED_ROOF_HOUSE_NAME						:초가집

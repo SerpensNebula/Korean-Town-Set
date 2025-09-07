@@ -1,15 +1,15 @@
 ##grflangid 0x01
 
 # GRF name and description
-STR_GRF_NAME                                      	:Korean Town Set beta0.7.3
-STR_GRF_DESC                                      	:Korean Town Set includes Korean style buildings except North Korea. {}{}{YELLOW}Highly recommanded to use this NewGRF after year 2000. More buildings will be added soon! {}{}{BLACK}Special thanks: {SILVER}Jakga, Kiwitree, Telk {}{}{BLACK}License: {SILVER}GNU GPL v3
+STR_GRF_NAME                                      	:Korean Town Set beta0.8.0
+STR_GRF_DESC                                      	:Korean Town Set includes Korean style buildings except North Korea. {}{}{YELLOW}Highly recommanded to use this NewGRF after year 1990. More buildings will be added soon! {}{}{BLACK}Special thanks: {SILVER}Jakga, Kiwitree, Telk, Myeong-Un {}{}{BLACK}License: {SILVER}GNU GPL v3
 
 STR_GRF_URL                                       	:https://github.com/SerpensNebula/Korean-Town-Set
 
 # Parameters
 STR_PARAM_OVERRIDE_NAME                           	:Override original buildings
 STR_PARAM_OVERRIDE_DESC                           	:If you enable this setting, default OpenTTD buildings never appears on the map.
-STR_PARAM_LIFETIME_NAME                           	:Set minimal lifetime
+STR_PARAM_LIFETIME_NAME                           	:Set minimal lifetime multiplier
 STR_PARAM_LIFETIME_DESC                           	:Set minimal lifetime of all buildings. The shorter this setting, the more frequent the building will be rebuilt. {}{}Default is 10(x4, most are 40 years).
 
 # Building names
@@ -19,9 +19,10 @@ STR_POLICE_STATION_NAME								:Police station
 STR_FIRE_STATION_NAME								:Fire station
 STR_POST_OFFICE_NAME								:Post office
 STR_HOSPITAL_NAME									:Hospital
+STR_DEPARTMENT_STORE_NAME							:Department Store
 
-STR_TILED_ROOF_HOUSE_NAME							:Tiled-roof Hanok
-STR_THATCHED_ROOF_HOUSE_NAME					  	:Thatched-roof Hanok
+STR_TILED_ROOF_HOUSE_NAME							:Giwajip (tiled-roof Hanok)
+STR_THATCHED_ROOF_HOUSE_NAME					  	:Chogajip (thatched-roof Hanok)
 STR_SINGLE_HOUSE_NAME                             	:House
 STR_VILLA_NAME                                    	:Townhouse
 STR_LOW_APT_NAME                                  	:Low-rise apartment
