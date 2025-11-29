@@ -3,8 +3,8 @@
 한국도시세트의 홈페이지입니다. 현재 열심히 작업중입니다. 
 This is main page of OpenTTD NewGRF 'Korean Town Set'. It's WORK IN PROGRESS!
 
-오브젝트 버전은 [한국도시세트 오브젝트](https://github.com/SerpensNebula/Korean-Town-Set)를 사용해주세요.
-If you want object version, please use [Korean Town Set As Objects](https://github.com/SerpensNebula/Korean-Town-Set).
+오브젝트 버전은 [한국도시세트 오브젝트](https://github.com/SerpensNebula/Korean-Town-Set-As-Objects)를 사용해주세요.
+If you want object version, please use [Korean Town Set As Objects](https://github.com/SerpensNebula/Korean-Town-Set-As-Objects).
 
 2000년 이후부터 플레이를 권장합니다!!
 Highly recommanded to use this NewGRF after year 2000!! Older buildings will be added soon!
