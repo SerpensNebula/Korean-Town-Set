@@ -1,7 +1,7 @@
 ##grflangid 0x3A
 
 # GRF name and description
-STR_GRF_NAME                                      	:한국 도시 세트 beta0.8.0
+STR_GRF_NAME                                      	:한국 도시 세트 beta0.9.0
 STR_GRF_DESC                                      	:이 NewGRF는 북한을 제외한 한국 스타일의 건물을 추가해줍니다. {}{}{YELLOW}1990년 이후부터 플레이를 권장합니다. 과거의 건물들은 추가 예정입니다! {}{}{BLACK}도움을 주신 분들: {SILVER} 텔크, 작가, 명운, 키위트리 {}{}{BLACK}라이센스: {SILVER}GNU GPL v3
 
 STR_GRF_URL                                       	:https://github.com/SerpensNebula/Korean-Town-Set
@@ -29,21 +29,10 @@ STR_LOW_APT_NAME                                  	:저층 아파트
 STR_MID_APT_NAME                                  	:고층 아파트
 STR_TALL_APT_NAME                                 	:초고층 주상복합 아파트
 STR_SHOP_NAME                                     	:가게
-STR_SMALL_SHOPPING_DIST_NAME                      	:작은 상가
+STR_SMALL_SHOPPING_DIST_NAME                      	:소형 상가
 STR_MID_SHOPPING_DIST_NAME                        	:상가
-STR_LARGE_SHOPPING_DIST_NAME                      	:큰 상가
+STR_LARGE_SHOPPING_DIST_NAME                      	:대형 상가
 STR_SMALL_OFFICE_NAME                             	:저층 오피스 빌딩
 STR_MID_OFFICE_NAME                               	:고층 오피스 빌딩
 STR_LARGE_OFFICE_NAME                             	:마천루
 STR_PARK_NAME                                     	:공원
-
-# Object names
-STR_OBJECT_KTS_NAME									:한국도시세트 오브젝트
-STR_OBJECT_31BUILDING_NAME							:31빌딩
-STR_OBJECT_31BUILDING_DESC							:준공년도: 1970년
-STR_OBJECT_HQ_512_NAME								:한국철도공사 서울본부 (철도청 서울역 서부역 청사)
-STR_OBJECT_HQ_512_DESC								:준공년도: 1975년
-STR_OBJECT_N_SEOUL_TOWER_NAME						:N서울타워
-STR_OBJECT_N_SEOUL_TOWER_DESC						:준공년도: 1975년
-STR_OBJECT_63BUILDING_NAME							:63빌딩
-STR_OBJECT_63BUILDING_DESC							:준공년도: 1985년

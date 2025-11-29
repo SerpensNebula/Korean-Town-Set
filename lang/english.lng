@@ -1,7 +1,7 @@
 ##grflangid 0x01
 
 # GRF name and description
-STR_GRF_NAME                                      	:Korean Town Set beta0.8.0
+STR_GRF_NAME                                      	:Korean Town Set beta0.9.0
 STR_GRF_DESC                                      	:Korean Town Set includes Korean style buildings except North Korea. {}{}{YELLOW}Highly recommanded to use this NewGRF after year 1990. More buildings will be added soon! {}{}{BLACK}Special thanks: {SILVER}Jakga, Kiwitree, Telk, Myeong-Un {}{}{BLACK}License: {SILVER}GNU GPL v3
 
 STR_GRF_URL                                       	:https://github.com/SerpensNebula/Korean-Town-Set
@@ -26,8 +26,8 @@ STR_THATCHED_ROOF_HOUSE_NAME					  	:Chogajip (thatched-roof Hanok)
 STR_SINGLE_HOUSE_NAME                             	:House
 STR_VILLA_NAME                                    	:Townhouse
 STR_LOW_APT_NAME                                  	:Low-rise apartment
-STR_MID_APT_NAME                                  	:Apartment
-STR_TALL_APT_NAME                                 	:High-rise apartment
+STR_MID_APT_NAME                                  	:High-rise apartment
+STR_TALL_APT_NAME                                 	:High-rise apartment complex
 STR_SHOP_NAME                                     	:Shops
 STR_SMALL_SHOPPING_DIST_NAME                      	:Small shopping district
 STR_MID_SHOPPING_DIST_NAME                        	:Shopping district
@@ -36,14 +36,3 @@ STR_SMALL_OFFICE_NAME                             	:Low-rise office building
 STR_MID_OFFICE_NAME                               	:High-rise office building
 STR_LARGE_OFFICE_NAME                             	:Skyscraper
 STR_PARK_NAME                                     	:Park
-
-# Object names
-STR_OBJECT_KTS_NAME									:Korean Town Set Objects
-STR_OBJECT_31BUILDING_NAME							:31 Building
-STR_OBJECT_31BUILDING_DESC							:Year Of Completion: 1970
-STR_OBJECT_HQ_512_NAME								:KORAIL Seoul Headquaters
-STR_OBJECT_HQ_512_DESC								:Year Of Completion: 1975
-STR_OBJECT_N_SEOUL_TOWER_NAME						:N Seoul Tower
-STR_OBJECT_N_SEOUL_TOWER_DESC						:Year Of Completion: 1975
-STR_OBJECT_63BUILDING_NAME							:63 Building
-STR_OBJECT_63BUILDING_DESC							:Year Of Completion: 1985
