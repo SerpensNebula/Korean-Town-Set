@@ -1,38 +1,87 @@
 ##grflangid 0x01
 
 # GRF name and description
-STR_GRF_NAME                                      	:Korean Town Set beta0.9.0
-STR_GRF_DESC                                      	:Korean Town Set includes Korean style buildings except North Korea. {}{}{YELLOW}Highly recommanded to use this NewGRF after year 1990. More buildings will be added soon! {}{}{BLACK}Special thanks: {SILVER}Jakga, Kiwitree, Telk, Myeong-Un {}{}{BLACK}License: {SILVER}GNU GPL v3
+STR_GRF_NAME                                      	:Korean Town Set As Objects 1.0.0
+STR_GRF_DESC                                      	:Korean Town Set As Objects adds object version of town houses of Korean Town Set AND more unique landmarks of South Korea. {}{}{BLACK}License: {SILVER}GNU GPL v3
 
-STR_GRF_URL                                       	:https://github.com/SerpensNebula/Korean-Town-Set
+STR_GRF_URL                                       	:https://github.com/SerpensNebula/Korean-Town-Set-As-Objects
 
-# Parameters
-STR_PARAM_OVERRIDE_NAME                           	:Override original buildings
-STR_PARAM_OVERRIDE_DESC                           	:If you enable this setting, default OpenTTD buildings never appears on the map.
-STR_PARAM_LIFETIME_NAME                           	:Set minimal lifetime multiplier
-STR_PARAM_LIFETIME_DESC                           	:Set minimal lifetime of all buildings. The shorter this setting, the more frequent the building will be rebuilt. {}{}Default is 10(x4, most are 40 years).
+# Menu name
+STR_OBJECT_MENU_NAME								:　
 
-# Building names
-STR_CITY_HALL_NAME									:City hall
-STR_SCHOOL_NAME										:School
-STR_POLICE_STATION_NAME								:Police station
-STR_FIRE_STATION_NAME								:Fire station
-STR_POST_OFFICE_NAME								:Post office
-STR_HOSPITAL_NAME									:Hospital
-STR_DEPARTMENT_STORE_NAME							:Department Store
+STR_OBJECT_KOMH_NAME								:Korean Town Set As Objects - Town Houses
+STR_OBJECT_KOKT_NAME                                :    Korean Traditional Houses
+STR_OBJECT_KOSH_NAME								:    Single Houses
+STR_OBJECT_KTOV_NAME								:    Villas
+STR_OBJECT_KOSS_NAME								:    Small Shopping Districts
+STR_OBJECT_KOMS_NAME								:    Shopping Districts
+STR_OBJECT_KOSF_NAME								:    Low-rise office buildings
+STR_OBJECT_KOMF_NAME								:    High-rise office buildings
+STR_OBJECT_KOLF_NAME								:    Skyscrapers
+STR_OBJECT_KTOP_NAME								:    Parks
+STR_OBJECT_KOPB_NAME                                :    Public Buildings
 
-STR_TILED_ROOF_HOUSE_NAME							:Giwajip (tiled-roof Hanok)
-STR_THATCHED_ROOF_HOUSE_NAME					  	:Chogajip (thatched-roof Hanok)
-STR_SINGLE_HOUSE_NAME                             	:House
-STR_VILLA_NAME                                    	:Townhouse
-STR_LOW_APT_NAME                                  	:Low-rise apartment
-STR_MID_APT_NAME                                  	:High-rise apartment
-STR_TALL_APT_NAME                                 	:High-rise apartment complex
-STR_SHOP_NAME                                     	:Shops
-STR_SMALL_SHOPPING_DIST_NAME                      	:Small shopping district
-STR_MID_SHOPPING_DIST_NAME                        	:Shopping district
-STR_LARGE_SHOPPING_DIST_NAME                      	:Large shopping district 
-STR_SMALL_OFFICE_NAME                             	:Low-rise office building
-STR_MID_OFFICE_NAME                               	:High-rise office building
-STR_LARGE_OFFICE_NAME                             	:Skyscraper
-STR_PARK_NAME                                     	:Park
+STR_OBJECT_KOAP_NAME								:Korean Town Set As Objects - Apartments
+STR_OBJECT_KOLA_NAME								:    Low-rise apartments
+STR_OBJECT_KOMA_NAME								:    High-rise apartments
+STR_OBJECT_KOTA_NAME								:    High-rise apartment Complexes
+
+STR_OBJECT_KOMO_NAME								:Korean Town Set As Objects
+STR_OBJECT_KTOO_NAME								:    Offices
+STR_OBJECT_KTOK_NAME								:    Landmarks
+STR_OBJECT_KTOA_NAME								:    Apartments
+
+# Building name
+STR_OBJECT_THATCHED_ROOF_HOUSE_NAME                 :Chogajip (thatched-roof Hanok)
+STR_OBJECT_TILED_ROOF_HOUSE_NAME                    :Giwajip (tiled-roof Hanok)
+STR_OBJECT_SINGLE_HOUSE_1990_NAME					:Single House - 1990s
+STR_OBJECT_VILLA_1980_NAME							:Villa - 1980s
+STR_OBJECT_VILLA_2000_NAME							:Villa - 2000s
+STR_OBJECT_SMALL_SHOPPING_DIST_1990_NAME			:Small Shopping District - 1990s
+STR_OBJECT_SMALL_SHOPPING_DIST_2000_NAME			:Small Shopping District - 2000s
+STR_OBJECT_MID_SHOPPING_DIST_1990_NAME				:Shopping District - 1990s
+STR_OBJECT_MID_SHOPPING_DIST_2000_NAME				:Shopping District - 2000s
+STR_OBJECT_SMALL_OFFICE_1980_NAME					:Low-rise office building - 1980s
+STR_OBJECT_SMALL_OFFICE_2000_NAME					:Low-rise office building - 2000s
+STR_OBJECT_MID_OFFICE_1970_NAME						:High-rise office building - 1970s
+STR_OBJECT_MID_OFFICE_1990_NAME						:High-rise office building - 1990s
+STR_OBJECT_MID_OFFICE_2000_NAME						:High-rise office building - 2000s
+STR_OBJECT_LARGE_OFFICE_1990_NAME					:Skyscraper - 1990s
+STR_OBJECT_LARGE_OFFICE_2010_NAME					:Skyscraper - 2010s
+STR_OBJECT_PARK_2000_NAME							:Park - 2000s
+STR_OBJECT_CITY_HALL_2010_NAME						:City Hall - 2010s
+STR_OBJECT_SCHOOL_1980_NAME                         :School - 1980s
+STR_OBJECT_SCHOOL_2010_NAME                         :School - 2010s
+STR_OBJECT_POLICE_STATION_2010_NAME                 :Police Station - 2010s
+STR_OBJECT_FIRE_STATION_2010_NAME                   :Fire Station - 2010s
+STR_OBJECT_DEPARTMENT_STORE_2010_NAME               :Department Store - 2010s
+
+STR_OBJECT_PARK_APT_2000_NAME						:Apartment Playground - 2000s
+STR_OBJECT_LOW_APT_1970_NAME						:Low-rise apartment - 1970s
+STR_OBJECT_LOW_APT_1990_NAME						:Low-rise apartment - 1990s
+STR_OBJECT_LOW_APT_2000_NAME						:Low-rise apartment - 2000s
+STR_OBJECT_MID_APT_1970_NAME						:High-rise apartment - 1970s
+STR_OBJECT_MID_APT_1980_NAME						:High-rise apartment - 1980s
+STR_OBJECT_MID_APT_1990_NAME						:High-rise apartment - 1990s
+STR_OBJECT_MID_APT_2000_PART1_NAME					:High-rise apartment - 2000s (Part 1)
+STR_OBJECT_MID_APT_2000_PART2_NAME					:High-rise apartment - 2000s (Part 2)
+STR_OBJECT_MID_APT_2010_NAME						:High-rise apartment - 2010s
+STR_OBJECT_TALL_APT_2015_NAME						:High-rise apartment Complexes - 2015
+
+# Object name
+STR_OBJECT_31BUILDING_NAME							:31 Building
+STR_OBJECT_31BUILDING_DESC							:Completed: 1970
+STR_OBJECT_HQ_512_NAME								:KORAIL Seoul Headquaters
+STR_OBJECT_HQ_512_DESC								:Completed: 1975
+STR_OBJECT_N_SEOUL_TOWER_NAME						:N Seoul Tower
+STR_OBJECT_N_SEOUL_TOWER_DESC						:Completed: 1975
+STR_OBJECT_63BUILDING_NAME							:63 Building
+STR_OBJECT_63BUILDING_DESC							:Completed: 1985
+STR_OBJECT_GANGNAM_TRADE_TOWER_NAME					:Trade Tower, WTC Seoul
+STR_OBJECT_GANGNAM_TRADE_TOWER_DESC					:Completed: 1988
+STR_OBJECT_LOTTE_WORLD_TOWER_PART1_NAME				:Lotte World Tower (Part 1)
+STR_OBJECT_LOTTE_WORLD_TOWER_PART1_DESC				:Completed: 2016년
+STR_OBJECT_LOTTE_WORLD_TOWER_PART2_NAME				:Lotte World Tower (Part 2)
+
+STR_OBJECT_APT001_NAME								:Seongsan-Siyeong Apt, Mapo-gu
+STR_OBJECT_APT001_DESC								:Completed: 1986
