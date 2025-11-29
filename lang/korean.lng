@@ -1,88 +1,38 @@
 ##grflangid 0x3A
 
 # GRF name and description
-STR_GRF_NAME                                        :한국 도시 세트 오브젝트 1.0.0
-STR_GRF_DESC                                        :오브젝트로 된 한국도시세트의 도시건물들과, 고유의 랜드마크와 아파트 오브젝트를 추가하는 NewGRF입니다. {}{}{BLACK}라이센스: {SILVER}GNU GPL v3
+STR_GRF_NAME                                      	:한국 도시 세트 beta0.9.0
+STR_GRF_DESC                                      	:이 NewGRF는 북한을 제외한 한국 스타일의 건물을 추가해줍니다. {}{}{YELLOW}1990년 이후부터 플레이를 권장합니다. 과거의 건물들은 추가 예정입니다! {}{}{BLACK}도움을 주신 분들: {SILVER} 텔크, 작가, 명운, 키위트리 {}{}{BLACK}라이센스: {SILVER}GNU GPL v3
 
-STR_GRF_URL                                         :https://github.com/SerpensNebula/Korean-Town-Set-As-Objects
+STR_GRF_URL                                       	:https://github.com/SerpensNebula/Korean-Town-Set
 
-# Menu name
-STR_OBJECT_MENU_NAME								:　
+# Parameters
+STR_PARAM_OVERRIDE_NAME                         	:기본 건물을 생성하지 않게 함
+STR_PARAM_OVERRIDE_DESC                           	:이 매개변수를 켜면 오픈트타 기본 건물이 더이상 나타나지 않습니다.
+STR_PARAM_LIFETIME_NAME                           	:건물 최소수명 설정
+STR_PARAM_LIFETIME_DESC                           	:모든 건물의 최소수명을 설정합니다. 최소수명을 줄이면 건물들의 재건축 빈도가 짧아지고 도시의 모습도 빠르게 바뀝니다. 0 으로 하면 건물이 준공되자마자 철거될 수 있습니다. {}{}기본값은 10(x4, 대부분 40~60년)입니다.
 
-STR_OBJECT_KOMH_NAME                                :한국도시세트 오브젝트 - 도시건물
-STR_OBJECT_KOKT_NAME                                :    한옥
-STR_OBJECT_KOSH_NAME                                :    단독주택
-STR_OBJECT_KTOV_NAME                                :    빌라
-STR_OBJECT_KOSS_NAME                                :    소형 상가
-STR_OBJECT_KOMS_NAME                                :    상가
-STR_OBJECT_KOSF_NAME                                :    저층 오피스 빌딩
-STR_OBJECT_KOMF_NAME                                :    고층 오피스 빌딩
-STR_OBJECT_KOLF_NAME                                :    마천루
-STR_OBJECT_KTOP_NAME                                :    공원
-STR_OBJECT_KOPB_NAME                                :    공공건물
+# Building names
+STR_CITY_HALL_NAME									:시청
+STR_SCHOOL_NAME										:학교
+STR_POLICE_STATION_NAME								:경찰서
+STR_FIRE_STATION_NAME								:소방서
+STR_POST_OFFICE_NAME								:우체국
+STR_HOSPITAL_NAME									:종합병원
+STR_DEPARTMENT_STORE_NAME							:백화점
 
-STR_OBJECT_KOAP_NAME                                :한국도시세트 오브젝트 - 아파트
-STR_OBJECT_KOLA_NAME                                :    저층 아파트
-STR_OBJECT_KOMA_NAME                                :    고층 아파트
-STR_OBJECT_KOTA_NAME                                :    초고층 주상복합 아파트
-
-
-STR_OBJECT_KOMO_NAME                                :한국도시세트 오브젝트
-STR_OBJECT_KTOO_NAME                                :    오피스
-STR_OBJECT_KTOK_NAME                                :    랜드마크
-STR_OBJECT_KTOA_NAME                                :    아파트
-
-# Building name
-STR_OBJECT_THATCHED_ROOF_HOUSE_NAME                 :초가집
-STR_OBJECT_TILED_ROOF_HOUSE_NAME                    :기와집
-STR_OBJECT_SINGLE_HOUSE_1990_NAME					:단독주택 - 1990년대
-STR_OBJECT_VILLA_1980_NAME							:빌라 - 1980년대
-STR_OBJECT_VILLA_2000_NAME							:빌라 - 2000년대
-STR_OBJECT_SMALL_SHOPPING_DIST_1990_NAME			:소형 상가 - 1990년대
-STR_OBJECT_SMALL_SHOPPING_DIST_2000_NAME			:소형 상가 - 2000년대
-STR_OBJECT_MID_SHOPPING_DIST_1990_NAME				:상가 - 1990년대
-STR_OBJECT_MID_SHOPPING_DIST_2000_NAME				:상가 - 2000년대
-STR_OBJECT_SMALL_OFFICE_1980_NAME					:저층 오피스 빌딩 - 1980년대
-STR_OBJECT_SMALL_OFFICE_2000_NAME					:저층 오피스 빌딩 - 2000년대
-STR_OBJECT_MID_OFFICE_1970_NAME						:고층 오피스 빌딩 - 1970년대
-STR_OBJECT_MID_OFFICE_1990_NAME						:고층 오피스 빌딩 - 1990년대
-STR_OBJECT_MID_OFFICE_2000_NAME						:고층 오피스 빌딩 - 2000년대
-STR_OBJECT_LARGE_OFFICE_1990_NAME					:마천루 - 1990년대
-STR_OBJECT_LARGE_OFFICE_2010_NAME					:마천루 - 2010년대
-STR_OBJECT_PARK_2000_NAME							:공원 - 2000년대
-STR_OBJECT_CITY_HALL_2010_NAME						:시청 - 2010년대
-STR_OBJECT_SCHOOL_1980_NAME                         :학교 - 1980년대
-STR_OBJECT_SCHOOL_2010_NAME                         :학교 - 2010년대
-STR_OBJECT_POLICE_STATION_2010_NAME                 :경찰서 - 2010년대
-STR_OBJECT_FIRE_STATION_2010_NAME                   :소방서 - 2010년대
-STR_OBJECT_DEPARTMENT_STORE_2010_NAME               :백화점 - 2010년대
-
-STR_OBJECT_PARK_APT_2000_NAME						:아파트 놀이터 - 2000년대
-STR_OBJECT_LOW_APT_1970_NAME						:저층 아파트 - 1970년대
-STR_OBJECT_LOW_APT_1990_NAME						:저층 아파트 - 1990년대
-STR_OBJECT_LOW_APT_2000_NAME						:저층 아파트 - 2000년대
-STR_OBJECT_MID_APT_1970_NAME						:고층 아파트 - 1970년대
-STR_OBJECT_MID_APT_1980_NAME						:고층 아파트 - 1980년대
-STR_OBJECT_MID_APT_1990_NAME						:고층 아파트 - 1990년대
-STR_OBJECT_MID_APT_2000_PART1_NAME					:고층 아파트 - 2000년대 (파트1)
-STR_OBJECT_MID_APT_2000_PART2_NAME					:고층 아파트 - 2000년대 (파트2)
-STR_OBJECT_MID_APT_2010_NAME						:고층 아파트 - 2010년대
-STR_OBJECT_TALL_APT_2015_NAME						:초고층 주상복합 아파트 - 2015년
-
-# Object name
-STR_OBJECT_31BUILDING_NAME							:31빌딩
-STR_OBJECT_31BUILDING_DESC							:준공년도: 1970년
-STR_OBJECT_HQ_512_NAME								:한국철도공사 서울본부 (철도청 서울역 서부역 청사)
-STR_OBJECT_HQ_512_DESC								:준공년도: 1975년
-STR_OBJECT_N_SEOUL_TOWER_NAME						:N서울타워
-STR_OBJECT_N_SEOUL_TOWER_DESC						:준공년도: 1975년
-STR_OBJECT_63BUILDING_NAME							:63빌딩
-STR_OBJECT_63BUILDING_DESC							:준공년도: 1985년
-STR_OBJECT_GANGNAM_TRADE_TOWER_NAME					:한국종합무역센터 트레이드타워
-STR_OBJECT_GANGNAM_TRADE_TOWER_DESC					:준공년도: 1988년
-STR_OBJECT_LOTTE_WORLD_TOWER_PART1_NAME				:롯데월드타워 (파트1)
-STR_OBJECT_LOTTE_WORLD_TOWER_PART1_DESC				:준공년도: 2016년
-STR_OBJECT_LOTTE_WORLD_TOWER_PART2_NAME				:롯데월드타워 (파트2)
-
-STR_OBJECT_APT001_NAME								:마포 성산시영아파트
-STR_OBJECT_APT001_DESC								:준공년도: 1986년
+STR_TILED_ROOF_HOUSE_NAME							:기와집
+STR_THATCHED_ROOF_HOUSE_NAME						:초가집
+STR_SINGLE_HOUSE_NAME                             	:단독주택
+STR_VILLA_NAME                                    	:빌라
+STR_LOW_APT_NAME                                  	:저층 아파트
+STR_MID_APT_NAME                                  	:고층 아파트
+STR_TALL_APT_NAME                                 	:초고층 주상복합 아파트
+STR_SHOP_NAME                                     	:가게
+STR_SMALL_SHOPPING_DIST_NAME                      	:소형 상가
+STR_MID_SHOPPING_DIST_NAME                        	:상가
+STR_LARGE_SHOPPING_DIST_NAME                      	:대형 상가
+STR_SMALL_OFFICE_NAME                             	:저층 오피스 빌딩
+STR_MID_OFFICE_NAME                               	:고층 오피스 빌딩
+STR_LARGE_OFFICE_NAME                             	:마천루
+STR_PARK_NAME                                     	:공원
