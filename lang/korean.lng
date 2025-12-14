@@ -1,8 +1,8 @@
 ##grflangid 0x3A
 
 # GRF name and description
-STR_GRF_NAME                                      	:한국 도시 세트 beta0.9.0
-STR_GRF_DESC                                      	:이 NewGRF는 북한을 제외한 한국 스타일의 건물을 추가해줍니다. {}{}{YELLOW}1990년 이후부터 플레이를 권장합니다. 과거의 건물들은 추가 예정입니다! {}{}{BLACK}도움을 주신 분들: {SILVER} 텔크, 작가, 명운, 키위트리 {}{}{BLACK}라이센스: {SILVER}GNU GPL v3
+STR_GRF_NAME                                      	:한국 도시 세트 beta0.10.0
+STR_GRF_DESC                                      	:이 NewGRF는 북한을 제외한 한국 스타일의 건물을 추가해줍니다. {}{}{YELLOW}1990년 이후부터 플레이를 권장합니다. 과거의 건물들은 추가 예정입니다! {}{}{BLACK}코딩: {SILVER}네뷸라 {}{BLACK}그래픽: {SILVER}네뷸라, 명운, Kiwitree, CoconutKR {}{}{BLACK}특별히 고마우신 분들: {SILVER} TELK, 작가 {}{}{BLACK}라이센스: {SILVER}GNU GPL v3
 
 STR_GRF_URL                                       	:https://github.com/SerpensNebula/Korean-Town-Set
 
